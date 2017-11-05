@@ -1,3 +1,3 @@
-sqlite3 -init news.sql news.db //Iniciar database
+sqlite3 -init list.sql list.db //Iniciar database
 
-sqlite3 news.db //Change Database
+sqlite3 list.db //Change Database
