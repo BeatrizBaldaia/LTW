@@ -6,6 +6,8 @@
   </head>
   <body>
     <header>
+      <h1>To-Do Lists</h1>
+      <h2>Organize your life!</h2>
       <div id="signup">
 	<?php
 	  if(isset($_SESSION['username'])) { ?>

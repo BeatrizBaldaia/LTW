@@ -7,4 +7,12 @@
     $stmt->execute(array($username, $password));
     return ($stmt->fetch() !== false);
   }
+//TODO Wrong
+  function registerUser($username, $name, $password, $check){
+    global $db;
+    $stmt = $db->prepare('INSERT INTO users (username, password, name)
+VALUES (?,?,?);');
+    $stmt->execute(array($username, $password));
+    return ($stmt->fetch() !== false);
+  }
 ?>
