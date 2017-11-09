@@ -7,12 +7,21 @@
     $stmt->execute(array($username, $password));
     return ($stmt->fetch() !== false);
   }
-//TODO Wrong
+  
+  function usernameExists($username){
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
+    $stmt->execute(array($username));
+    return ($stmt->fetch() !== false);
+  }
+  
+//TODO 
   function registerUser($username, $name, $password, $check){
     global $db;
+    if($password != $check) return false;
+    $password = sha1($password);
     $stmt = $db->prepare('INSERT INTO users (username, password, name)
 VALUES (?,?,?);');
-    $stmt->execute(array($username, $password));
-    return ($stmt->fetch() !== false);
+    return $stmt->execute(array($username, $password, $name));
   }
 ?>

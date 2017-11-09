@@ -2,6 +2,9 @@
       <h1>Register</h1>
       <form action="action_register.php" method="post">
         <label>
+          Name <input type="text" name="name">
+        </label>
+        <label>
           Username <input type="text" name="username">
         </label>
         <label>
