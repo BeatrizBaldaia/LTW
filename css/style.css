@@ -1,17 +1,17 @@
-#login {
+#user {
   margin: 0 auto;
   width: 20em;
 }
-#login h1{
+#user h1{
   display: none;
 }
-#login label{
+#user label{
   display: block;
   padding: 1em 2em 0;
 }
-#login form > input{
+#user form div > input{
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
   border: 0;
   padding: 1em;
   width: 20em;
