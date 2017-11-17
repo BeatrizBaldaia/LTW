@@ -3,7 +3,7 @@
   <?php 
     $lists = getLists($_SESSION['username']);
     foreach( $lists as $list) { ?>
-    <article>
+    <article class="list">
       <h1><?=$list['name']?></h1>
       <ul>
       <?php $items = getItems($list['id']); 
