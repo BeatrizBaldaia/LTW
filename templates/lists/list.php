@@ -1,6 +1,7 @@
 <?php   include_once('database/lists.php');?>
 <section id=lists>
-  <?php  $lists = getLists($_SESSION['username']);
+  <?php 
+    $lists = getLists($_SESSION['username']);
     foreach( $lists as $list) { ?>
     <article>
       <h1><?=$list['name']?></h1>

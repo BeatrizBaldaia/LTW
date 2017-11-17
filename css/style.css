@@ -1,0 +1,24 @@
+#user {
+  margin: 0 auto;
+  width: 20em;
+}
+#user h1{
+  display: none;
+}
+#user label{
+  display: block;
+  padding: 1em 2em 0;
+}
+#user form div > input{
+  display: block;
+  margin: 1em auto;
+  border: 0;
+  padding: 1em;
+  width: 20em;
+}
+/* VAMOS TER TE ALTERA TODO*/
+header {
+  background-image: url('../images/site/logo.jpg');
+  margin: 0 auto;
+  width: 20em;
+}

@@ -3,6 +3,7 @@
   <head>
     <title>To-Do</title>
     <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -10,5 +11,5 @@
         <h1>To-Do Lists</h1>
         <h2>Organize your life!</h2>
       </div>
-       <?php include_once('templates/common/user.php'); ?>
     </header>
+    <?php include('templates/users/user.php'); ?>
