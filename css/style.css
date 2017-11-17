@@ -7,6 +7,25 @@
 #user h1{
   display: none;
 }
+#user a{
+  color: black;
+  background-color: #d6d6d6;
+  display: block;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 0 10%;
+  width: 5em;
+  text-align: center;
+}
+#user h6{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+#user img{
+  display: block;
+  margin: 0 auto;
+}
 #user label{
   display: block;
   padding: 1em 2em 0;
@@ -38,7 +57,11 @@ body {
 }
 .list{
   background-color: grey;
-  margin: 1em;
+  margin: .5em;
+  padding: 1em;
+}
+.list h1{
+  text-align: center;
 }
 footer {
   grid-column: 1 / 3;
