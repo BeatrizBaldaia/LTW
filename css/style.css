@@ -1,0 +1,24 @@
+#login {
+  margin: 0 auto;
+  width: 20em;
+}
+#login h1{
+  display: none;
+}
+#login label{
+  display: block;
+  padding: 1em 2em 0;
+}
+#login form > input{
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  padding: 1em;
+  width: 20em;
+}
+/* VAMOS TER TE ALTERA TODO*/
+header {
+  background-image: url('../images/site/logo.jpg');
+  margin: 0 auto;
+  width: 20em;
+}
