@@ -6,6 +6,12 @@
     $stmt->execute(array($username));
     return $stmt->fetchAll();
   }
+  function getListById($id){
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM lists WHERE (id = ?)');
+    $stmt->execute(array($id));
+    return $stmt->fetch();
+  }
   
   function getItems($id_list){
     global $db;

@@ -1,7 +1,5 @@
-<section id="lists">
-  <h2>Todo-Lists</h2>
-    <?php foreach( $lists as $list) { ?>
-    <article>
+<section id="list_unique">
+    <article class="lists">
       <h1><?=$list['name']?></h1>
       <ul>
       <?php $items = getItems($list['id']);
@@ -10,5 +8,4 @@
       <?}?>
       </ul>
     </article>
-    <?} ?>
 </section>

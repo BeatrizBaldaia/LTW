@@ -4,7 +4,7 @@
     $lists = getLists($_SESSION['username']);
     foreach( $lists as $list) { ?>
     <article class="list">
-      <h1><?=$list['name']?></h1>
+      <a href="list_page.php?id_list=<?=$list['id']?>"><h1><?=$list['name']?></h1></a>
       <ul>
       <?php $items = getItems($list['id']); 
         foreach( $items as $item) { ?>
