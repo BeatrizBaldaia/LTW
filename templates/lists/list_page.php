@@ -4,7 +4,9 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-          <li><?=$item['name']?> </li>
+          <li><?=$item['name']?> 
+          <input type="checkbox" name="complete" value="complete" <?= ($item['complet'] ? 'checked' : '')?>>
+          </li>
       <?}?>
       </ul>
     </article>

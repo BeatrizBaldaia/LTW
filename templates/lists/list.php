@@ -8,7 +8,9 @@
       <ul>
       <?php $items = getItems($list['id']); 
         foreach( $items as $item) { ?>
-          <li><?=$item['name']?> </li>      
+          <li><?=$item['name']?>
+          </li>
+               
       <?}?>
       </ul>
     </article>
