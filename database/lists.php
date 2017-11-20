@@ -19,4 +19,17 @@
     $stmt->execute(array($id_list));
     return $stmt->fetchAll();
   }
-  ?>
+  
+  function markItem($id, $complete){
+    global $db;
+    $stmt = $db->prepare('UPDATE items SET complet = ? WHERE (id = ?)');
+    $value = 0;
+    if($complete == 'true'){
+      $value = 1;
+    }
+    $stmt->execute(array($value, $id));
+    return;
+  }
+
+
+?>
