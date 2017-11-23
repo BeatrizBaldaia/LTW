@@ -4,6 +4,7 @@
           <h6><?=$_SESSION['username']?></h6>
           <img src="images/users/<?=$_SESSION['username']?>.jpeg" alt="Profile Picture">
           <a href="action_logout.php">Logout</a>
+          <a href="edit_profile.php">Edit Profile</a>
       <?php } else { ?>
         <h1>Login</h1>
         <form action="action_login.php" method="post">
