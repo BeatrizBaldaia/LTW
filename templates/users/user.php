@@ -2,7 +2,7 @@
     <div id="user">
       <?php if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
           <h6><?=$_SESSION['username']?></h6>
-          <img src="images/users/<?=$_SESSION['username']?>.png" alt="Profile Picture">
+          <img src="images/users/<?=$_SESSION['username']?>.jpeg" alt="Profile Picture">
           <a href="action_logout.php">Logout</a>
       <?php } else { ?>
         <h1>Login</h1>

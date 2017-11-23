@@ -8,9 +8,39 @@
     //TODO avisar username ja usado
     die;
   }
+
   if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password']))
     $_SESSION['username'] = $_POST['username'];
   else
     print("ERROR action_register");
-  header('Location: initial_page.php');
+
+  if(isset($_FILES['profile_picture'])){
+    $type = exif_imagetype($_FILES['profile_picture']['tmp_name']);
+      switch ($type) {
+        case IMAGETYPE_JPEG:
+          $original = imagecreatefromjpeg($_FILES['profile_picture']['tmp_name']);
+          break;
+        case IMAGETYPE_PNG:
+          $original = imagecreatefrompng($_FILES['profile_picture']['tmp_name']);
+          break;
+        default:
+          //TODO Not a valid type
+          header('Location: initial_page.php');
+          die;
+          break;
+      }
+      $width = imagesx($original);
+      $height = imagesy($original);
+      $square = min($width, $height);
+      $small = imagecreatetruecolor(100, 100);
+      imagecopyresized($small, $original,
+      0, 0,
+      ($width>$square)?($width-$square)/2:0, ($height>$square)?($height-$square)/2:0,
+      100, 100,
+      $square, $square);
+      $username = $_POST['username'];
+      imagejpeg($small, "images/users/$username.jpeg");
+      echo 'CENAS';
+  }
+ //header('Location: initial_page.php');
 ?>
