@@ -9,7 +9,7 @@
         }
         $list = $lists[$i]; ?>
     <article class="list">
-      <a href="list_page.php?id_list=<?=$list['id']?>"><h1><?=$list['name']?></h1></a>
+      <a href="list_page.php?id_list=<?=$list['id']?>"><h3><?=$list['name']?></h3></a>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>

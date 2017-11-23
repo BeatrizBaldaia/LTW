@@ -1,4 +1,5 @@
 body {
+	margin: 0;
 	display: grid;
 	grid-template-columns: 70% 10% 20%;
 	grid-template-rows: 20% 80% 1em;
@@ -57,15 +58,37 @@ header {
 #lists {
 	margin: 0;
 	display: flex;
-	grid-column: 1 / 2;
-	grid-row: 2 / 3;
+	/*justify-content: center;*/
+	/*flex-flow: row wrap;*/
+	grid-column: 1;
+	grid-row: 2;
 }
 
 #lists > article {
-	display: inline;
+	display: inline-grid;
+	margin: 1em;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+#lists > article > a > h3 {
+	text-align: center;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#lists > article > ul {
+	align-self: start;
+	grid-column: 1;
+	grid-row: 2;
 }
 
 footer {
 	grid-column: 1 / 4;
-	grid-row: 3 / 4;
+	grid-row: 3;
+}
+
+footer > p {
+	background-color: lightgrey;
+	margin: 0;
 }
