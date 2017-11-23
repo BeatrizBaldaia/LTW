@@ -6,7 +6,7 @@ list.addEventListener('change', markComplete);
 function markComplete(event){
   let item = event.srcElement;
   let request = new XMLHttpRequest();
-  request.open('get', 'mark_complete.php?' + encodeForAjax({'id_item': item.value, 'complete': item.checked}), true);
+  request.open('get', 'action_mark_complete.php?' + encodeForAjax({'id_item': item.value, 'complete': item.checked}), true);
   request.send();
 }
 //Funcao do professor

@@ -20,8 +20,7 @@
     global $db;
     if($password != $check) return false;
     $password = sha1($password);
-    $stmt = $db->prepare('INSERT INTO users (username, password, name)
-VALUES (?,?,?);');
+    $stmt = $db->prepare('INSERT INTO users (username, password, name) VALUES (?,?,?);');
     return $stmt->execute(array($username, $password, $name));
   }
 
@@ -37,6 +36,7 @@ VALUES (?,?,?);');
     $stmt = $db->prepare('UPDATE users SET name = ? WHERE username = ?');
     return $stmt->execute(array($name,$username));
   }
+
   function updateUserPassword($username, $password, $check){
     global $db;
     if($password != $check) return false;
