@@ -15,9 +15,15 @@
         foreach( $items as $item) { ?>
           <li><?=$item['name']?>
           </li>
-
       <?}?>
       </ul>
     </article>
   <?}?>
 </section>
+<aside id="sidebar">
+  <ul>
+    <?php foreach( $lists as $list) { ?>
+        <li><a href="list_page.php?id_list=<?=$list['id']?>"><?=$list['name']?></a></li>
+    <?} ?>
+  <ul>
+</aside>

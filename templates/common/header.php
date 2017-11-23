@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link href="css/logged_in_style.css" rel="stylesheet">
     <script src="scripts/complete_item.js" defer></script>
+    <script src="scripts/add_item.js" defer></script>
   </head>
   <body>
     <header>
