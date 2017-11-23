@@ -1,0 +1,36 @@
+body {
+	display: grid;
+	grid-template-columns: 70% 10% 20%;
+	grid-template-rows: 20% 80% 1em;
+}
+
+header {
+	background-image: url('../images/site/logo.jpg');
+	justify-items: start;
+	align-items: start;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+
+#user h6, a {
+	margin: 0;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+
+#user img {
+	margin: 0;
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+}
+
+#lists {
+	margin: 0;
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+}
+
+footer {
+	grid-column: 1 / 4;
+	grid-row: 3 / 4;
+}
