@@ -23,7 +23,7 @@ header {
 	align-items: end;
 }
 
-#user h6, a {
+#user p, a {
 	margin: 0;
 	text-decoration: none;
 	justify-self: end;
@@ -47,7 +47,7 @@ header {
 	grid-row: 4;
 }
 
-#user img {
+#user > img {
 	margin: 0;
 	align-self: end;
 	grid-column: 2;
@@ -56,8 +56,13 @@ header {
 
 #lists {
 	margin: 0;
+	display: flex;
 	grid-column: 1 / 2;
 	grid-row: 2 / 3;
+}
+
+#lists > article {
+	display: inline;
 }
 
 footer {
