@@ -69,13 +69,19 @@ header {
 	margin: 1em;
 	border: 2px solid black;
 	border-radius: 5px;
+
+	grid-template-rows: 4em auto;
 }
 
-#lists > article > a > h3 {
-	text-align: center;
+#lists > article > a {
 	grid-column: 1;
 	grid-row: 1;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
 }
+
+
 
 #lists > article > ul {
 	align-self: start;
