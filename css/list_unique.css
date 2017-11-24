@@ -1,0 +1,25 @@
+#list_unique .id {
+  display: none;
+}
+#list_unique {
+  display: block;
+  margin: 1em auto;
+  grid-column: 1 / 4;
+	grid-row: 2 / 3;
+}
+#list_unique > article {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+#list_unique > article > h1 {
+	text-align: center;
+}
+
+#list_unique > article > ul {
+  margin-bottom: 0;
+}
+#list_unique > article > #new_item {
+  padding-left: 40px;
+}

@@ -16,6 +16,17 @@
   <?}?>
 </section>
 <aside id="sidebar">
+  <div id="NewList">
+    <input type="checkbox" id="CheckNewList">
+    <label for="CheckNewList">Add New List</label>
+    <form id="NewListName" action="action_new_list.php" method="get">
+      <label>List Name:
+        <input type="text" name="list_name">
+      </label>
+        <input type="submit" name="New List">
+    </form>
+
+  </div>
   <ul>
     <?php foreach( $lists as $list) { ?>
         <li><a href="list_page.php?id_list=<?=$list['id']?>"><?=$list['name']?></a></li>

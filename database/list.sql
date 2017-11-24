@@ -1,3 +1,5 @@
+PRAGMA foreign_keys=ON;
+
 CREATE TABLE users (
   username VARCHAR PRIMARY KEY,
   password VARCHAR,
@@ -6,7 +8,7 @@ CREATE TABLE users (
 
 CREATE TABLE lists (
   id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
-  username VARCHAR REFERENCES users,
+  username VARCHAR REFERENCES users ON DELETE CASCADE,
   name VARCHAR
 );
 
@@ -14,7 +16,7 @@ CREATE TABLE items (
   id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
   name VARCHAR,
   complet INTEGER DEFAULT 0,
-  id_lists VARCHAR REFERENCES lists
+  id_lists VARCHAR REFERENCES lists ON DELETE CASCADE
 );
 
 INSERT INTO users VALUES ('dominic', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Dominic Woods');

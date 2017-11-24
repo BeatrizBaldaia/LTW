@@ -43,5 +43,18 @@
     $stmt->execute(array($id));
     return $stmt->fetch();
   }
-
+  function addList($username, $name){
+    global $db;
+    $stmt = $db->prepare('INSERT INTO lists (username, name) VALUES (?,?);');
+    if(!$stmt->execute(array($username, $name))){
+      //TODO ERRO
+      return false;
+    }
+    return $db->lastInsertId();
+  }
+  function deleteList($id){
+    global $db;
+    $stmt = $db->prepare('DELETE FROM lists WHERE id = ?;');
+    return $stmt->execute(array($id));
+  }
 ?>
