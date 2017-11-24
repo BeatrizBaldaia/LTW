@@ -3,7 +3,7 @@
 }
 #list_unique {
   display: block;
-  margin: 1em auto;
+  margin: auto;
   grid-column: 1 / 4;
 	grid-row: 2 / 3;
 }
