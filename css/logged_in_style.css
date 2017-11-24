@@ -96,7 +96,7 @@ header {
 
 footer {
 	grid-column: 1 / 4;
-	grid-row: 3;
+	grid-row: 3 / 4;
 }
 
 footer > p {
