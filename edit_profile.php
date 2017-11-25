@@ -2,12 +2,9 @@
   include_once('includes/init.php');
   include_once('database/users.php');
 
-  if(isset($_SESSION['username'])){
-    header('Location: initial_page.php');
-    die;
-  }
+  $user = getUser($_SESSION['username']);
 
   include('templates/common/header.php');
-  //include('templates/users/user.php');
+  include('templates/users/edit_profile.php');
   include('templates/common/footer.php');
 ?>

@@ -1,0 +1,112 @@
+body {
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 70% 10% 20%;
+	grid-template-rows: 20% 1fr 1em;
+}
+
+header {
+	background-image: url('../images/site/logo.jpg');
+	justify-items: start;
+	align-items: start;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#user {
+	margin: 0;
+	grid-column: 2 / 4;
+	grid-row: 1;
+
+	display: grid;
+	grid-template-columns: 33% auto;
+	grid-template-rows: auto 1em 1em 1em;
+	align-items: end;
+}
+
+#user p, a {
+	margin: 0;
+	text-decoration: none;
+	justify-self: end;
+
+	grid-column: 1;
+}
+
+#user > div {
+	grid-row: 1;
+}
+
+#user > h6 {
+	grid-row: 2;
+}
+
+#user > a:nth-child(1) {
+	grid-row: 3;
+}
+
+#user > a:nth-child(2) {
+	grid-row: 4;
+}
+
+#user > img {
+	margin: 0;
+	align-self: end;
+	grid-column: 2;
+	grid-row: 1 / 5;
+}
+
+#lists {
+	margin: 0;
+	display: flex;
+	/*flex-flow: row wrap;*/
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#lists > article {
+	display: inline-grid;
+	flex: 1;
+	margin: 1em;
+	border: 2px solid black;
+	border-radius: 5px;
+
+	grid-template-rows: 4em auto;
+}
+
+#lists > article > a {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+}
+
+#lists > article > ul {
+	align-self: start;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#sidebar {
+	grid-column: 3;
+	grid-row: 2;
+}
+
+#sidebar #NewList #NewListName, #sidebar #NewList > input{
+	display: none;
+}
+#sidebar #NewList #CheckNewList:checked ~ #NewListName{
+	display: block;
+}
+
+footer {
+	display: block;
+	grid-column: 1 / 4;
+	grid-row: 3 / 4;
+}
+
+footer > p {
+	background-color: lightgrey;
+	margin: 0;
+}
