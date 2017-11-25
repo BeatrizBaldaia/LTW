@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Arima+Madurai);
+
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  background: url('../images/site/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+header {
+  font-family: 'Arima Madurai';
+  /*font-size: 22px;*/
+  height: 400px;
+  width: 400px;
+  background-image: url('../images/site/todo.jpg');
+  position:relative;
+  grid-area: 1 / 1 / span 2 / span 3;
+  justify-self: center;
+  align-self: center;
+
+}
+
+#info {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -70px;
+  width: 100%;
+  text-align: center;
+}
+
+#info > * {
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align:center;
+}
+
+#login{
+  grid-area: 3 / 2 / span 1 / span 1;
+  align-self: center;
+  margin-top: 20px;
+}
+
+#login form > * {
+  display: block;
+  text-align:center;
+  margin-bottom: 20px;
+  font-family: 'Amatic SC';
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+#login form > div > * {
+  display: block;
+  text-align:center;
+  margin: 0px auto 10px auto;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end;
+}

@@ -3,7 +3,8 @@
   <head>
     <title>To-Do</title>
     <meta charset="UTF-8">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+    <link href="css/utils.css" rel="stylesheet">
     <script src="scripts/complete_item.js" defer></script>
   </head>
   <body>
