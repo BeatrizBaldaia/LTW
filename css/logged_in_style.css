@@ -1,4 +1,4 @@
-body {
+/*body {
 	height: 100vh;
 	margin: 0;
 	display: grid;
@@ -12,7 +12,8 @@ header {
 	align-items: start;
 	grid-column: 1;
 	grid-row: 1;
-}
+}*/
+
 
 #user {
 	margin: 0;

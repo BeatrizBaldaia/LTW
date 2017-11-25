@@ -1,0 +1,16 @@
+
+body {
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 70% 10% 20%;
+	grid-template-rows: 20% 1fr 1em;
+}
+
+header.after_login {
+	background-image: url('../images/site/background.jpg');
+	justify-items: start;
+	align-items: start;
+	grid-column: 1;
+	grid-row: 1;
+}
