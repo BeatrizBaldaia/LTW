@@ -52,13 +52,13 @@ div.before_login > * {
   text-align:center;
 }
 
-#login{
+#before_login{
   grid-area: 3 / 2 / span 1 / span 1;
   align-self: center;
   margin-top: 20px;
 }
 
-#login form > * {
+#before_login form > * {
   display: block;
   text-align:center;
   margin-bottom: 20px;
@@ -68,7 +68,7 @@ div.before_login > * {
 }
 
 
-#login form > div > * {
+#before_login form > div > * {
   display: block;
   text-align:center;
   margin: 0px auto 10px auto;

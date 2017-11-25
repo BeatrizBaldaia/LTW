@@ -15,18 +15,20 @@ header {
 }*/
 
 
-#user {
+#after_login {
 	margin: 0;
 	grid-column: 2 / 4;
 	grid-row: 1;
+	background-color: rgb(189, 204, 255);
 
 	display: grid;
-	grid-template-columns: 33% auto;
+	grid-template-columns: 70% 30%;
+	grid-column-gap: 15px;
 	grid-template-rows: auto 1em 1em 1em;
 	align-items: end;
 }
 
-#user p, a {
+#after_login p, a {
 	margin: 0;
 	text-decoration: none;
 	justify-self: end;
@@ -34,23 +36,20 @@ header {
 	grid-column: 1;
 }
 
-#user > div {
-	grid-row: 1;
-}
 
-#user > h6 {
+#after_login p {
 	grid-row: 2;
 }
 
-#user > a:nth-child(1) {
+#after_login a:nth-of-type(1) {
 	grid-row: 3;
 }
 
-#user > a:nth-child(2) {
+#after_login a:nth-of-type(2) {
 	grid-row: 4;
 }
 
-#user > img {
+#after_login > img {
 	margin: 0;
 	align-self: end;
 	grid-column: 2;
