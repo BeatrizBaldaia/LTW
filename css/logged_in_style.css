@@ -60,19 +60,26 @@ header {
 #lists {
 	margin: 0;
 	display: flex;
+	justify-content: start;
 	/*flex-flow: row wrap;*/
 	grid-column: 1;
 	grid-row: 2;
 }
 
 #lists > article {
+	background-color: lightblue;
 	display: inline-grid;
-	flex: 1;
+	width: 12em;
+	/*flex: 1;*/
 	margin: 1em;
-	border: 2px solid black;
-	border-radius: 5px;
+	border: 0px solid darkblue;
+	border-radius: 2px;
 
 	grid-template-rows: 4em auto;
+}
+
+#lists > article:hover {
+	background-color: lightskyblue;
 }
 
 #lists > article > a {
@@ -87,6 +94,11 @@ header {
 	align-self: start;
 	grid-column: 1;
 	grid-row: 2;
+}
+
+#lists > article li {
+	/*list-style-type: decimal;*/
+	color: green;
 }
 
 #sidebar {

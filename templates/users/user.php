@@ -1,10 +1,11 @@
 
     <div id="login">
       <?php if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
-          <h6><?=$_SESSION['username']?></h6>
+          <div></div>
+          <p><?=$_SESSION['username']?></p>
           <img src="images/users/<?=$_SESSION['username']?>.jpeg" alt="Profile Picture">
-          <a href="action_logout.php">Logout</a>
           <a href="edit_profile.php">Edit Profile</a>
+          <a href="action_logout.php">Logout</a>
       <?php } else { ?>
         <form action="action_login.php" method="post">
           <label>
