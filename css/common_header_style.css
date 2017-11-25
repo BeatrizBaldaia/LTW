@@ -1,14 +1,25 @@
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
 
-body {
-	height: 100vh;
-	margin: 0;
-	display: grid;
+body.after_login {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  background: url('../images/site/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
 	grid-template-columns: 70% 10% 20%;
 	grid-template-rows: 20% 1fr 1em;
 }
 
 header.after_login {
-	background-image: url('../images/site/background.jpg');
+	background-color: rgb(189, 204, 255);
 	justify-items: start;
 	align-items: start;
 	grid-column: 1;

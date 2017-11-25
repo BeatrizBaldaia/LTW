@@ -7,7 +7,7 @@ html {
    width: 100%;
 }
 
-body {
+body.before_login {
   margin: 0px;
   min-height: 100%;
   width: 100%;
@@ -24,9 +24,12 @@ body {
 header.before_login {
   font-family: 'Arima Madurai';
   /*font-size: 22px;*/
-  height: 400px;
+
   width: 400px;
-  background-image: url('../images/site/todo.jpg');
+  height: 400px;
+  background-position: -50px 60px;
+  background-image: url('../images/site/todo_logo.png');
+  background-size: cover;
   position:relative;
   grid-area: 1 / 1 / span 2 / span 3;
   justify-self: center;

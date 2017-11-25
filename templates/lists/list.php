@@ -10,10 +10,10 @@
         foreach( $items as $item) { ?>
           <li><?=$item['name']?>
           </li>
-      <?}?>
+      <?php } ?>
       </ul>
     </article>
-  <?}?>
+  <?php } ?>
 </section>
 <aside id="sidebar">
   <div id="NewList">
@@ -30,6 +30,6 @@
   <ul>
     <?php foreach( $lists as $list) { ?>
         <li><a href="list_page.php?id_list=<?=$list['id']?>"><?=$list['name']?></a></li>
-    <?} ?>
+    <?php } ?>
   <ul>
 </aside>
