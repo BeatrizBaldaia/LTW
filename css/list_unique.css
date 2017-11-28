@@ -23,3 +23,8 @@
 #list_unique > article > #new_item {
   padding-left: 40px;
 }
+#list_unique span.delete a:before {
+  content: 'X';
+  color: white;
+  background-color: black;
+}

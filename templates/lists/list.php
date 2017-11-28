@@ -10,6 +10,7 @@
         $list = $lists[$i]; ?>
     <article class="list">
       <a href="list_page.php?id_list=<?=$list['id']?>"><h3><?=$list['name']?></h3></a>
+<span class="delete"><a href="action_delete_list.php?list_id=<?=$list['id']?>"></a></span>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>

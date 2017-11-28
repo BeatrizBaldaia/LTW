@@ -100,6 +100,12 @@ header {
 	color: green;
 }
 
+.list span.delete a:before {
+  content: 'X';
+  color: white;
+  background-color: black;
+}
+
 #sidebar {
 	grid-column: 3;
 	grid-row: 2;

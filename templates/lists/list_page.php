@@ -2,6 +2,7 @@
     <article class="lists">
       <h1><?=$list['name']?></h1>
       <span class="id"><?=$list['id']?></span>
+      <span class="delete"><a href="action_delete_list.php?list_id=<?=$list['id']?>"></a></span>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
