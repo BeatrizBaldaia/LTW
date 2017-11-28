@@ -2,7 +2,7 @@
   <h1>Edit</h1>
   <form action="action_edit_profile.php" method="post" enctype="multipart/form-data">
     <label>
-      Name <input type="text" name="name" value="<?=$user['name']?>">
+      Name <input type="text" name="name" value="<?=htmlentities($user['name'])?>">
     </label>
     <label>
       Password <input type="password" name="password">

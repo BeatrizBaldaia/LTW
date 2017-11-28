@@ -2,9 +2,9 @@
       <?php if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
         <div id="after_login">
 
-          <p><?=$_SESSION['username']?></p>
+          <p><?=htmlentities($_SESSION['username'])?></p>
           <div class="container">
-            <img src="images/users/<?=$_SESSION['username']?>.jpeg" alt="Profile Picture" width="100" height="100">
+            <img src="images/users/<?=urlencode($_SESSION['username'])?>.jpeg" alt="Profile Picture" width="100" height="100">
             <div id="overlay">
               <a class="link" href="edit_profile.php">Edit Profile</a>
             </div>

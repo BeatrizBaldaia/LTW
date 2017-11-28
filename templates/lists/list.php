@@ -9,11 +9,12 @@
         }
         $list = $lists[$i]; ?>
     <article class="list">
-      <a class="title_link" href="list_page.php?id_list=<?=$list['id']?>"><h3><?=$list['name']?></h3></a>
+      <a class="title_link" href="list_page.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
+<span class="delete"><a href="action_delete_list.php?list_id=<?=urlencode($list['id'])?>"></a></span>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-          <li><?=$item['name']?>
+          <li><?=htmlentities($item['name'])?>
           </li>
       <?php } ?>
       </ul>
@@ -34,7 +35,7 @@
   </div>
   <ul>
     <?php foreach( $lists as $list) { ?>
-        <li><a href="list_page.php?id_list=<?=$list['id']?>"><?=$list['name']?></a></li>
+        <li><a href="list_page.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?></a></li>
     <?php } ?>
   <ul>
 </aside>
