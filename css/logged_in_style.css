@@ -22,7 +22,7 @@ header {
 	background-color: rgb(189, 204, 255);
 
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: auto auto;
 	grid-column-gap: 15px;
 	grid-template-rows: auto 1em 1em 1em;
 	align-items: end;
@@ -52,8 +52,8 @@ header {
 #after_login > img {
 	margin: 0;
 	align-self: end;
-	grid-column: 2;
-	grid-row: 1 / 5;
+	grid-column: 2 / 3;
+	grid-row: 1 / 4;
 }
 
 #lists {

@@ -9,7 +9,7 @@
   
   $list = getListById($_GET['id_list']);
   
-  include('templates/common/header.php');
+  set_header("after_login");
   include('templates/lists/list_page.php');
   include('templates/common/footer.php');
 ?>
