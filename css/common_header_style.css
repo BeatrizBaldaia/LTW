@@ -8,6 +8,7 @@ body.after_login {
   margin: 0px;
   min-height: 100%;
   width: 100%;
+  font-family: 'Arima Madurai';
   background: url('../images/site/background.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -24,4 +25,12 @@ header.after_login {
 	align-items: start;
 	grid-column: 1;
 	grid-row: 1;
+}
+
+header.after_login div {
+  margin: 20px;
+}
+
+header.after_login div > * {
+  margin-bottom: -20px;
 }
