@@ -58,7 +58,7 @@ header {
 
 #lists {
 	margin: 0;
-	/*display: flex;*/
+	display: flex;
 	justify-content: start;
 	/*flex-flow: row wrap;*/
 	grid-column: 1;
