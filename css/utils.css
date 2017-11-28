@@ -41,6 +41,13 @@
   text-shadow: 0 0 3px #FEFFCE, 0 0 5px #FFFFEB;
 }
 
+.title_link {
+  font-family: 'Arima Madurai';
+  text-align: center;
+  font-size: 1vw;
+  color: black;
+  font-weight: bold;
+}
 input[type=text] {
   width: 50%;
   padding: 10px;
