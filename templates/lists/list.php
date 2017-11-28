@@ -10,12 +10,11 @@
         $list = $lists[$i]; ?>
     <article class="list">
       <a class="title_link" href="list_page.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
-<span class="delete"><a href="action_delete_list.php?list_id=<?=urlencode($list['id'])?>"></a></span>
+      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>';"/>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-          <li><?=htmlentities($item['name'])?>
-          </li>
+          <li class="normal_text" ><?=htmlentities($item['name'])?></li>
       <?php } ?>
       </ul>
     </article>

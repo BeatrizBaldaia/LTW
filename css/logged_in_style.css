@@ -4,7 +4,7 @@
 	margin: 0;
 	grid-column: 2 / 4;
 	grid-row: 1;
-	background-color: rgb(189, 204, 255);
+	background-image: linear-gradient(#CACACA, #FAFDFF);
 
 	display: grid;
 	grid-template-columns: auto auto;
@@ -24,6 +24,9 @@
 
 #after_login p {
 	grid-row: 3;
+	font-family: 'Amatic SC';
+  font-size: 22px;
+	font-weight: bold;
 }
 
 
@@ -89,6 +92,7 @@ div#overlay a {
 }
 
 #lists > article {
+	position: relative;
 	background-image: url('../images/site/lined-paper.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -108,7 +112,6 @@ div#overlay a {
 }
 
 #lists > article > a {
-	
 	grid-column: 1;
 	grid-row: 1;
 	justify-self: center;
@@ -129,15 +132,16 @@ div#overlay a {
 	grid-row: 2;
 }
 
-#lists > article li {
-	/*list-style-type: decimal;*/
-	color: green;
-}
-
-.list span.delete a:before {
-  content: 'X';
-  color: white;
-  background-color: black;
+.list input {
+	position: absolute;
+	margin: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	right: 0;
+	background-image: url('../images/site/X.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
 }
 
 #sidebar {
