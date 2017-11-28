@@ -13,9 +13,9 @@
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
     </head>
-    <body class=<?=$id?>>
-      <header class=<?=$id?>>
-        <div id="info" class=<?=$id?>>
+    <body class=<?=htmlentities($id)?>>
+      <header class=<?=htmlentities($id)?>>
+        <div id="info" class=<?=htmlentities($id)?>>
           <h1>To-Do Lists</h1>
           <h2>Organize your life!</h2>
         </div>
