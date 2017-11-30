@@ -50,8 +50,8 @@ header.register {
   background-image: linear-gradient(#CACACA, #FAFDFF);
 	justify-items: start;
 	align-items: start;
-	grid-column: 1;
-	grid-row: 1;
+	/*grid-column: 1;
+	grid-row: 1;*/
 }
 
 header.register div {
@@ -74,14 +74,8 @@ body.register {
   -o-background-size: cover;
   background-size: cover;
   display: grid;
-	grid-template-columns: 70% 10% 20%;
+	grid-template-columns: auto;
 	grid-template-rows: 20% 1fr auto;
   /*overflow-x: hidden;
   overflow-y: hidden;*/
-}
-.register #before_login {
-    align-self: center;
-    margin-top: 20px;
-    grid-column: 2 / 4;
-    grid-row: 1;
 }

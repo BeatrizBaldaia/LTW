@@ -1,0 +1,15 @@
+#register label > input {
+  width: auto;
+  flex-grow: 1;
+}
+#register label {
+  display: flex;
+  align-items: center;
+}
+.register #before_login {
+  display: none;
+}
+#register {
+  	grid-row: 2;
+    margin: auto;
+}
