@@ -134,7 +134,7 @@ div#overlay a {
 	overflow-x: hidden;
 }
 
-#lists > article .done li {
+.strikeout {
 	text-decoration: line-through;
 }
 

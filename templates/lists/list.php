@@ -14,8 +14,8 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-            <div class="<?=($item['complet'] ? 'done' : 'undone')?>">
-                <li class="normal_text"><?=htmlentities($item['name'])?></li>
+            <div class="list_li_wrapper">
+                <li class="normal_text<?=($item['complet'] ? ' strikeout' : '')?>"><?=htmlentities($item['name'])?></li>
             </div>
       <?php } ?>
       </ul>
