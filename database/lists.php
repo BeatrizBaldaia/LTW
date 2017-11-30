@@ -66,8 +66,8 @@
 
   function getCategory($id) {
     global $db;
-    $cat = $db->prepare('SELECT categories.name AS cat FROM lists, categories WHERE lists.category = categories.id');
-    $cat->execute();
+    $cat = $db->prepare('SELECT categories.name AS cat FROM categories WHERE categories.id = ?');
+    $cat->execute(array($id));
     return $cat->fetch();
   }
 ?>
