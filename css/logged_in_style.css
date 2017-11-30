@@ -165,11 +165,13 @@ div#overlay a {
 }
 
 #addNewList .button_popup {
-	 font-size: 1em;
+	 width: 100%;
+	 font-size: 1em !important;
 	 padding: 10px;
 	 font-weight: bold;
 	 color: rgb(75, 182, 182);
 	 border: 2px solid rgb(75, 182, 182);
+	 display: inline-block;
 	 border-radius: 20px/50px;
 	 text-decoration: none;
 	 cursor: pointer;
