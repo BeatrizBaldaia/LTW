@@ -75,9 +75,3 @@ div.before_login > * {
   font-size: 17px;
   text-decoration: none;
 }
-
-footer {
-  grid-column: 1;
-  grid-row: 3;
-  align-self: end;
-}

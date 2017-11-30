@@ -1,0 +1,16 @@
+footer {
+	display: block;
+	grid-column: 1 / 4;
+	grid-row: 3;
+}
+
+footer > p {
+	background-color: lightgrey;
+	margin: 0;
+}
+
+.before_login footer {
+  grid-column: span(3);
+  grid-row: 3;
+  align-self: end;
+}

@@ -32,6 +32,7 @@
 .input_text {
   font-family: 'Amatic SC';
   font-size: 22px;
+  color: black;
   text-align:center;
   font-weight: bold;
 }
@@ -39,6 +40,7 @@
 .title_text {
   font-family: 'Arima Madurai';
   text-align: center;
+  color: black;
   text-shadow: 0 0 3px #FEFFCE, 0 0 5px #FFFFEB;
 }
 
@@ -61,17 +63,17 @@ input[type=text] {
   padding: 10px;
   margin: 8px 8px;
   box-sizing: border-box;
-  border: 2px ridge rgb(171, 195, 249);
+  border: 2px ridge rgb(75, 182, 182);
   border-radius: 5px;
   background-color: rgb(171, 195, 249);
-  color: rgb(171, 195, 249);
+  color: rgb(75, 182, 182);
 }
 
 input[type=text]:focus {
-    box-shadow: 0px 0px 20px rgb(171, 195, 249);
+    box-shadow: 0px 0px 20px rgb(75, 182, 182);
 }
 input[type=password]:focus {
-    box-shadow: 0px 0px 20px rgb(171, 195, 249);
+    box-shadow: 0px 0px 20px rgb(75, 182, 182);
 }
 
 input[type=password] {
@@ -79,10 +81,10 @@ input[type=password] {
   padding: 10px;
   margin: 8px 8px;
   box-sizing: border-box;
-  border: 2px ridge rgb(171, 195, 249);
+  border: 2px ridge rgb(75, 182, 182);
   border-radius: 5px;
-  background-color: rgb(75, 182, 182);
-  color: rgb(171, 195, 249);
+  background-color: rgb(171, 195, 249);
+  color: rgb(75, 182, 182);
 }
 
 
@@ -97,7 +99,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-text-fill-color: rgb(75, 182, 182);
-  -webkit-box-shadow: 0 0 0 50px rgb(171, 195, 249) inset;
+  -webkit-box-shadow: 0 0 0 50px rgb(171, 195, 249)inset;
 }
 
 input[type=submit] {
