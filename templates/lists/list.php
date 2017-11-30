@@ -45,7 +45,7 @@
   </div>
   <ul>
     <?php foreach( $lists as $list) { ?>
-        <li><a href="list_page.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?></a></li>
+        <li><a href="list_page.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?>;Categoria n = <?=htmlentities($list['category'])?>;Categoria nome = <?php $cat = getCategory($list['category']);echo($cat['cat']);?></a></li>
     <?php } ?>
   <ul>
 </aside>

@@ -39,7 +39,7 @@ insert into categories (id, name) values (1, 'pink');
 insert into categories (id, name) values (2, 'white');
 insert into categories (id, name) values (3, 'black');
 
-INSERT INTO lists (username, name, category) VALUES ('abril', 'Wedding', 1);
+INSERT INTO lists (username, name, category) VALUES ('abril', 'Wedding', 2);
 insert into lists (username, name, category) values ('abril', 'Nunc rhoncus dui vel sem.', 1);
 insert into lists (username, name, category) values ('alicia', 'Curabitur convallis.', 2);
 insert into lists (username, name, category) values ('zachary', 'Etiam justo.', 2);
