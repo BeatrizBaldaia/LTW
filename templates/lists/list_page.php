@@ -2,7 +2,7 @@
     <article class="lists">
       <h1><?=htmlentities($list['name'])?></h1>
       <span class="id"><?=htmlentities($list['id'])?></span>
-      <span class="delete"><a href="action_delete_list.php?list_id=<?=urlencode($list['id'])?>"></a></span>
+      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>';"/>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>

@@ -11,6 +11,7 @@
 	border: 2px solid black;
 	border-radius: 5px;
 	padding: 1em;
+  position: relative;
 }
 
 #list_unique > article > h1 {
@@ -25,6 +26,20 @@
 #list_unique > article > ul input{
   float: right;
 }
+
+#list_unique > article > input {
+  position: absolute;
+	margin: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	right: 0;
+  top: 0;
+	background-image: url('../images/site/X.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+
 #list_unique > article > #new_item {
   padding-left: 40px;
   background-color: grey;

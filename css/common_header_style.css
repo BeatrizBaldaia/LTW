@@ -17,7 +17,7 @@ body.after_login {
   background-size: cover;
   display: grid;
 	grid-template-columns: 70% 10% 20%;
-	grid-template-rows: 20% 1fr 1em;
+	grid-template-rows: 20% 1fr auto;
   overflow-x: hidden;
   overflow-y: hidden;
 }

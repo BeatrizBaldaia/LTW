@@ -130,7 +130,7 @@ div#overlay a {
 	grid-column: 1;
 	grid-row: 2;
 	overflow-y: scroll;
-	max-height: 	60vh;;
+	max-height: 	60vh;
 }
 
 .list input {
@@ -159,15 +159,4 @@ div#overlay a {
 }
 #sidebar #NewList #CheckNewList:checked ~ #NewListName{
 	display: block;
-}
-
-footer {
-	display: block;
-	grid-column: 1 / 4;
-	grid-row: 3 / 4;
-}
-
-footer > p {
-	background-color: lightgrey;
-	margin: 0;
 }
