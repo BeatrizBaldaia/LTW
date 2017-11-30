@@ -21,16 +21,25 @@
   <?php } ?>
 </section>
 <aside id="sidebar">
-  <div id="NewList">
-    <input type="checkbox" id="CheckNewList">
-    <label for="CheckNewList">Add New List</label>
-    <form id="NewListName" action="action_new_list.php" method="get">
-      <label>List Name:
-        <input type="text" name="list_name">
-      </label>
-        <input type="submit" name="New List">
-    </form>
-
+  <div id="addNewList">
+    <div class="box_popup">
+      <a class="button_popup" href="#div_popup">
+        Add New List
+      </a>
+    </div>
+    <div id="div_popup" class="overlay_popup">
+      <div class="popup">
+      <a class="close" href="#">&times; </a>
+      <div class="content">
+        <form id="NewListName" action="action_new_list.php" method="get">
+          <label>List Name:
+            <input type="text" name="list_name">
+          </label>
+            <input type="submit" name="New List">
+        </form>
+      </div>
+      </div>
+    </div>
   </div>
   <ul>
     <?php foreach( $lists as $list) { ?>

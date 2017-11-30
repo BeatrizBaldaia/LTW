@@ -155,11 +155,86 @@ div#overlay a {
 	word-wrap: break-word;
 }
 
-#sidebar #NewList #NewListName, #sidebar #NewList > input{
-	display: none;
+/*POPUP*/
+
+#addNewList .box_popup {
+	width: 40%;
+  margin: 0 auto;
+  padding: 35px;
+	text-align: center;
 }
-#sidebar #NewList #CheckNewList:checked ~ #NewListName{
-	display: block;
+
+#addNewList .button_popup {
+	 font-size: 1em;
+	 padding: 10px;
+	 font-weight: bold;
+	 color: rgb(75, 182, 182);
+	 border: 2px solid rgb(75, 182, 182);
+	 border-radius: 20px/50px;
+	 text-decoration: none;
+	 cursor: pointer;
+	 transition: all 0.3s ease-out;
+}
+
+#addNewList .button_popup:hover {
+	color: rgb(171, 195, 249);
+	background: rgb(75, 182, 182);
+}
+
+.overlay_popup {
+	position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay_popup:target {
+	visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+	margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .close {
+	position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+	color: rgb(75, 182, 182);
+}
+
+.popup .content {
+	max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box_popup{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
 
 #sidebar > ul {
