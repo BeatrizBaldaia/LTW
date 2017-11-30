@@ -41,3 +41,47 @@ header.after_login div {
 header.after_login div * {
   margin-bottom: -20px;
 }
+
+header.register a {
+  color: inherit;
+}
+
+header.register {
+  background-image: linear-gradient(#CACACA, #FAFDFF);
+	justify-items: start;
+	align-items: start;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+header.register div {
+  margin: 20px;
+}
+
+header.register div * {
+  margin-bottom: -20px;
+}
+
+body.register {
+  margin: 0px;
+  min-height: 100%;
+  max-height: 100vh;
+  width: 100%;
+  font-family: 'Arima Madurai';
+  background: url('../images/site/white_background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+	grid-template-columns: 70% 10% 20%;
+	grid-template-rows: 20% 1fr auto;
+  /*overflow-x: hidden;
+  overflow-y: hidden;*/
+}
+.register #before_login {
+    align-self: center;
+    margin-top: 20px;
+    grid-column: 2 / 4;
+    grid-row: 1;
+}

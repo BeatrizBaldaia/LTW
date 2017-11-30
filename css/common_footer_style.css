@@ -15,3 +15,8 @@ footer > p {
   grid-row: 4;
   align-self: end;
 }
+.register footer {
+    /* display: block; */
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
