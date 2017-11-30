@@ -134,6 +134,10 @@ div#overlay a {
 	overflow-x: hidden;
 }
 
+.strikeout {
+	text-decoration: line-through;
+}
+
 .list input {
 	position: absolute;
 	margin: 10px;
@@ -237,4 +241,22 @@ div#overlay a {
   .popup{
     width: 70%;
   }
+}
+
+#sidebar > ul {
+	/*border: 1px solid black;
+	border-radius: 2px;
+	background-color: #dfdfdf;*/
+}
+
+#sidebar > ul li {
+	list-style-type: none;
+}
+
+#sidebar > ul a {
+	color: black;
+}
+
+#sidebar > ul a:hover {
+	font-weight: bold;
 }

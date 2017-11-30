@@ -14,7 +14,7 @@
   }
   function getItems($id_list){
     global $db;
-    $stmt = $db->prepare('SELECT * FROM items WHERE (id_lists = ?)');
+    $stmt = $db->prepare('SELECT * FROM items WHERE (id_lists = ?) ORDER BY dateDue');
     $stmt->execute(array($id_list));
     return $stmt->fetchAll();
   }
