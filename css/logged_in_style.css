@@ -134,6 +134,10 @@ div#overlay a {
 	overflow-x: hidden;
 }
 
+#lists > article .done li {
+	text-decoration: line-through;
+}
+
 .list input {
 	position: absolute;
 	margin: 10px;
