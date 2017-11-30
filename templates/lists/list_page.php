@@ -1,5 +1,5 @@
 <section id="list_unique">
-    <article class="lists">
+    <article class="lists <?= getCategory($list['category'])['cat'] ?>">
       <h1><?=htmlentities($list['name'])?></h1>
       <span class="id"><?=htmlentities($list['id'])?></span>
       <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>';"/>
