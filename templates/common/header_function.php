@@ -18,7 +18,7 @@
     <body class=<?=htmlentities($id)?>>
       <header class=<?=htmlentities($id)?>>
         <div id="info" class=<?=htmlentities($id)?>>
-          <h1>To-Do Lists</h1>
+          <a href="initial_page.php"><h1>To-Do Lists</h1></a>
           <h2>Organize your life!</h2>
         </div>
       </header>

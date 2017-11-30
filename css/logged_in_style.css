@@ -129,8 +129,9 @@ div#overlay a {
 	align-self: start;
 	grid-column: 1;
 	grid-row: 2;
-	overflow-y: scroll;
+	overflow-y: auto;
 	max-height: 	60vh;
+	overflow-x: hidden;
 }
 
 .list input {

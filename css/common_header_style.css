@@ -22,6 +22,10 @@ body.after_login {
   overflow-y: hidden;
 }
 
+header.after_login a {
+  color: inherit;
+}
+
 header.after_login {
   background-image: linear-gradient(#CACACA, #FAFDFF);
 	justify-items: start;
@@ -34,6 +38,6 @@ header.after_login div {
   margin: 20px;
 }
 
-header.after_login div > * {
+header.after_login div * {
   margin-bottom: -20px;
 }

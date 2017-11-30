@@ -12,6 +12,9 @@
 	border-radius: 5px;
 	padding: 1em;
   position: relative;
+  background-image: url('../images/site/lined-paper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover
 }
 
 #list_unique > article > h1 {
@@ -21,7 +24,10 @@
 #list_unique > article > ul {
   margin-bottom: 0;
   max-height: 45vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+#list_unique > article > ul input{
+  float: right;
 }
 
 #list_unique > article > input {
@@ -38,11 +44,23 @@
 }
 
 #list_unique > article > #new_item {
-  padding-left: 40px;
-  background-color: grey;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+#list_unique > article > #new_item > input[type=text] {
+  width: auto;
+  flex-grow: 1;
 }
 #list_unique > article > #new_item > input[type=submit] {
-
+	background-image: url('../images/site/plus.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(0, 0, 0, 0);
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  margin: 8px 8px;
 }
 #list_unique span.delete a:before {
   content: 'X';

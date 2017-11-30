@@ -18,7 +18,7 @@ body.before_login {
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 10px;
 }
 
 header.before_login {
@@ -46,7 +46,11 @@ div.before_login {
   text-align: center;
 }
 
-div.before_login > * {
+div.before_login a {
+  color: inherit;
+}
+
+div.before_login * {
   margin-bottom: 0;
   margin-top: 0;
   text-align:center;
