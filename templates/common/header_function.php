@@ -9,6 +9,7 @@
       <link href="css/list_unique.css" rel="stylesheet">
       <link href="css/logged_in_style.css" rel="stylesheet">
       <link href="css/login_style.css" rel="stylesheet">
+      <link href="css/edit_profile.css" rel="stylesheet">
       <link href="css/common_footer_style.css" rel="stylesheet">
       <link href="css/utils.css" rel="stylesheet">
       <script src="scripts/complete_item.js" defer></script>
