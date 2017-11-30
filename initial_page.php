@@ -5,7 +5,7 @@
     header('Location: login.php');
     die;
   }
-  // include('templates/common/header.php');
+  
   set_header("after_login");
   include('templates/lists/list.php');
   include('templates/common/footer.php');

@@ -3,19 +3,19 @@
       <form action="action_register.php" method="post" enctype="multipart/form-data">
         <label>
           Name <input type="text" name="name">
-        </label>
+        </label><br/>
         <label>
           Username <input type="text" name="username">
-        </label>
+        </label><br/>
         <label>
           Password <input type="password" name="password">
-        </label>
+        </label><br/>
 		<label>
           Confirm Password <input type="password" name="check_password">
-        </label>
+        </label><br/>
         <label>Profile picture:
         <input type="file" name="profile_picture">
-        </label>
+        </label><br/>
         <input type="submit" value="Register">
       </form>
     </section>
