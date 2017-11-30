@@ -18,7 +18,7 @@ body.before_login {
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 10px;
 }
 
 header.before_login {

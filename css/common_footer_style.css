@@ -1,16 +1,17 @@
-footer {
-	display: block;
-	grid-column: 1 / 4;
+.after_login footer {
+	/*display: block;*/
+	grid-column: 1 / span 3;
 	grid-row: 3;
 }
 
 footer > p {
+	font-family: 'Arima Madurai';
 	background-color: lightgrey;
 	margin: 0;
 }
 
 .before_login footer {
-  grid-column: span(3);
-  grid-row: 3;
+  grid-column: 1/ span 3;
+  grid-row: 4;
   align-self: end;
 }
