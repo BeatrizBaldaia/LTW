@@ -47,7 +47,7 @@ insert into items (name, id_lists, dateDue) values ('Lemur catta', 9, '2017-12-0
 insert into items (name, id_lists, dateDue) values ('Galictis vittata', 9, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Vulpes chama', 8, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Dicrurus adsimilis', 7, '2017-12-01');
-insert into items (name, id_lists, dateDue) values ('Connochaetus taurinus', 1, '2017-12-01');
+insert into items (name, id_lists, dateDue) values ('Connochaetus taurinus', 1, '2017-11-01');
 insert into items (name, id_lists, dateDue) values ('Snycerus caffer', 5, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Macropus rufogriseus', 9, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Manouria emys', 1, '2017-12-01');
@@ -107,7 +107,7 @@ insert into items (name, id_lists, dateDue) values ('Sceloporus magister', 5, '2
 insert into items (name, id_lists, dateDue) values ('Megaderma spasma', 1, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Cygnus buccinator', 5, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Haliaeetus leucoryphus', 8, '2017-12-01');
-insert into items (name, id_lists, dateDue) values ('Aegypius tracheliotus', 2, '2017-12-01');
+insert into items (name, id_lists, dateDue) values ('Aegypius tracheliotus', 2, '2018-01-23');
 insert into items (name, id_lists, dateDue) values ('Pedetes capensis', 2, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Herpestes javanicus', 4, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Arctogalidia trivirgata', 10, '2017-12-01');
@@ -116,7 +116,7 @@ insert into items (name, id_lists, dateDue) values ('Canis aureus', 1, '2017-12-
 insert into items (name, id_lists, dateDue) values ('Merops nubicus', 6, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Ardea golieth', 11, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Himantopus himantopus', 7, '2017-12-01');
-insert into items (name, id_lists, dateDue) values ('Paradoxurus hermaphroditus', 2, '2017-12-01');
+insert into items (name, id_lists, dateDue) values ('Paradoxurus hermaphroditus', 2, '2017-10-31');
 insert into items (name, id_lists, dateDue) values ('Crotaphytus collaris', 3, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Spheniscus mendiculus', 8, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Sagittarius serpentarius', 4, '2017-12-01');
