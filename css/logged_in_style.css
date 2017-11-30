@@ -161,3 +161,21 @@ div#overlay a {
 #sidebar #NewList #CheckNewList:checked ~ #NewListName{
 	display: block;
 }
+
+#sidebar > ul {
+	/*border: 1px solid black;
+	border-radius: 2px;
+	background-color: #dfdfdf;*/
+}
+
+#sidebar > ul li {
+	list-style-type: none;
+}
+
+#sidebar > ul a {
+	color: black;
+}
+
+#sidebar > ul a:hover {
+	font-weight: bold;
+}
