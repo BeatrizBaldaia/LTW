@@ -1,5 +1,15 @@
 
-      <?php if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
+      <?php
+      const MAX_LOGIN_ATTEMPTS = 5;
+      const TIMEOUT_SECONDS = 3;
+      if (!isset($_SESSION['failedLoginAttempts'])) {
+          $_SESSION['failedLoginAttempts'] = 0;
+      }
+      if (!isset($_SESSION['endTimeout'])) {
+          $_SESSION['endTimeout'] = 0;
+      }
+
+      if (isset($_SESSION['username']) && $_SESSION['username'] != '') { ?>
         <div id="after_login">
 
           <p><?=htmlentities($_SESSION['username'])?></p>
@@ -25,6 +35,17 @@
             <div>
               <a class="link" href="register.php">Register</a>
             </div>
+            <?php
+            if ($_SESSION['failedLoginAttempts'] >= MAX_LOGIN_ATTEMPTS) {
+                $_SESSION['endTimeout'] = time() + TIMEOUT_SECONDS;
+            }
+            $currentTime = time();
+            if ($currentTime <= $_SESSION['endTimeout']) { ?>
+                <p>Wrong username or password, try again later</p>
+            <?php } else if ($_SESSION['failedLoginAttempts'] > 0) { ?>
+                <p>Wrong username or password</p>
+            <?php } ?>
+
           </div>
         </form>
       </div>
