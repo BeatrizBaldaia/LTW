@@ -34,17 +34,21 @@ INSERT INTO users VALUES ('zachary', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
 INSERT INTO users VALUES ('alicia', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Alicia Hamilton');
 INSERT INTO users VALUES ('abril', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Abril Cooley');
 
-INSERT INTO lists (username, name) VALUES ('abril', 'Wedding');
-insert into lists (username, name) values ('abril', 'Nunc rhoncus dui vel sem.');
-insert into lists (username, name) values ('alicia', 'Curabitur convallis.');
-insert into lists (username, name) values ('zachary', 'Etiam justo.');
-insert into lists (username, name) values ('abril', 'Ut at dolor quis odio consequat varius.');
-insert into lists (username, name) values ('zachary', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.');
-insert into lists (username, name) values ('dominic', 'Vestibulum ac est lacinia nisi venenatis tristique.');
+INSERT INTO lists (username, name) VALUES ('abril', 'Wedding', 1);
+insert into lists (username, name) values ('abril', 'Nunc rhoncus dui vel sem.', 1);
+insert into lists (username, name) values ('alicia', 'Curabitur convallis.', 2);
+insert into lists (username, name) values ('zachary', 'Etiam justo.', 2);
+insert into lists (username, name) values ('abril', 'Ut at dolor quis odio consequat varius.', 2);
+insert into lists (username, name) values ('zachary', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue.', 3);
+insert into lists (username, name) values ('dominic', 'Vestibulum ac est lacinia nisi venenatis tristique.', 1);
 insert into lists (username, name) values ('abril', 'Nullam varius.');
-insert into lists (username, name) values ('abril', 'Praesent id massa id nisl venenatis lacinia.');
-insert into lists (username, name) values ('alicia', 'Proin risus.');
-insert into lists (username, name) values ('dominic', 'Aliquam sit amet diam in magna bibendum imperdiet.');
+insert into lists (username, name) values ('abril', 'Praesent id massa id nisl venenatis lacinia.', 1);
+insert into lists (username, name) values ('alicia', 'Proin risus.', 1);
+insert into lists (username, name) values ('dominic', 'Aliquam sit amet diam in magna bibendum imperdiet.', 1);
+
+insert into categories (id, name) values (1, 'pink');
+insert into categories (id, name) values (2, 'white');
+insert into categories (id, name) values (3, 'black');
 
 INSERT INTO items (name, id_lists, dateDue) VALUES ('Buy cake', 1, '2017-12-01');
 insert into items (name, id_lists, dateDue) values ('Ploceus rubiginosus', 10, '2017-12-01');
