@@ -1,0 +1,8 @@
+section.pink > article {
+  background: url('../images/site/pink_sheet.jpg') no-repeat center center fixed;
+  background-size: contain;
+}
+
+section.white > article {
+  background: #fff;
+}

@@ -12,9 +12,6 @@
 	border-radius: 5px;
 	padding: 1em;
   position: relative;
-  background-image: url('../images/site/lined-paper.jpg');
-  background-repeat: no-repeat;
-  background-size: cover
 }
 
 #list_unique > article > h1 {

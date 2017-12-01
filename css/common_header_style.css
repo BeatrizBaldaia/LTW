@@ -4,7 +4,9 @@ html {
    width: 100%;
 }
 
-body.after_login {
+body.after_login,
+body.after_login_pink,
+body.after_login_white {
   margin: 0px;
   min-height: 100%;
   max-height: 100vh;
@@ -22,11 +24,23 @@ body.after_login {
   overflow-y: hidden;
 }
 
-header.after_login a {
+body.after_login_pink {
+  background: url('../images/site/pink_background.jpg') no-repeat center center fixed;
+}
+
+body.after_login_white {
+  background: url('../images/site/white.jpg') no-repeat center center fixed;
+}
+
+header.after_login a,
+header.after_login_pink a,
+header.after_login_white a {
   color: inherit;
 }
 
-header.after_login {
+header.after_login,
+header.after_login_pink,
+header.after_login_white {
   background-image: linear-gradient(#CACACA, #FAFDFF);
 	justify-items: start;
 	align-items: start;
@@ -34,11 +48,15 @@ header.after_login {
 	grid-row: 1;
 }
 
-header.after_login div {
+header.after_login div,
+header.after_login_pink div,
+header.after_login_white div {
   margin: 20px;
 }
 
-header.after_login div * {
+header.after_login div *,
+header.after_login_pink div *,
+header.after_login_white div * {
   margin-bottom: -20px;
 }
 
