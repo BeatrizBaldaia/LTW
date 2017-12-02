@@ -34,21 +34,22 @@
     </div>
     <div id="div_popup" class="overlay_popup">
       <div class="popup">
-      <a class="close" href="#">&times; </a>
-      <div class="content">
-        <form id="NewListName" action="action_new_list.php" method="get">
-          <label>List Name:
-            <input type="text" name="list_name">
-          <label>List Category:
-            <select name="list_category_id">
-              <?php foreach($categories as $category) { ?>
-                <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
-              <?php } ?>
-            </select>
-          </label>
+        <a class="close" href="#">&times; </a>
+        <div class="content">
+          <form id="NewListName" action="action_new_list.php" method="get">
+            <label>List Name:
+              <input type="text" name="list_name">
+            </label>
+            <label>List Category:
+              <select name="list_category_id">
+                <?php foreach($categories as $category) { ?>
+                  <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
+                <?php } ?>
+              </select>
+            </label>
             <input type="submit" name="New List">
-        </form>
-      </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
