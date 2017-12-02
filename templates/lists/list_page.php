@@ -9,7 +9,7 @@
           <li><?=htmlentities($item['name'])?>
           <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
           </li>
-      <?}?>
+      <?php } ?>
       </ul>
       <div id="new_item">
         <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
