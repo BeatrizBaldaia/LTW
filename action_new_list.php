@@ -9,7 +9,7 @@
 
   include_once('database/lists.php');
 
-  if(($id = addList($_SESSION['username'],$_GET['list_name'])) == false){
+  if(($id = addList($_SESSION['username'], $_GET['list_name'], $_GET['list_category_id'])) == false){
     //TODO erro ao adicioane
     die;
   }

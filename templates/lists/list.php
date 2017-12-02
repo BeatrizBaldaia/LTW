@@ -1,4 +1,7 @@
-<?php   include_once('database/lists.php');?>
+<?php   include_once('database/lists.php');
+  $categories = getCategories();
+?>
+
 <section id="lists">
   <?php
     $lists = getLists($_SESSION['username']);
@@ -36,6 +39,12 @@
         <form id="NewListName" action="action_new_list.php" method="get">
           <label>List Name:
             <input type="text" name="list_name">
+          <label>List Category:
+            <select name="list_category_id">
+              <?php foreach($categories as $category) { ?>
+                <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
+              <?php } ?>
+            </select>
           </label>
             <input type="submit" name="New List">
         </form>
