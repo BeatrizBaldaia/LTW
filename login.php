@@ -3,7 +3,7 @@
   include_once('database/users.php');
 
   if(isset($_SESSION['username'])){
-    header('Location: initial_page.php');
+    header('Location: main_page.php');
     die;
   }
 

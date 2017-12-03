@@ -6,7 +6,7 @@ function addItem(event){
   let itemName = document.querySelector('#list_unique #new_item input[type="text"]').value;
   let listId = document.querySelector('#list_unique .id').innerHTML;
   let request = new XMLHttpRequest();
-  request.open('get', 'action_add_item.php?' + encodeForAjax({'item': itemName, 'list': listId}), true);
+  request.open('get', 'action_add_new_item.php?' + encodeForAjax({'item': itemName, 'list': listId}), true);
   request.addEventListener('load', allItems);
   request.send();
 }

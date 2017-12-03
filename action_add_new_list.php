@@ -3,7 +3,7 @@
   include_once('includes/init.php');
 
   if((!isset($_SESSION['username'])) || (!isset($_GET['list_name']))){
-    header('Location: initial_page.php');
+    header('Location: main_page.php');
     die;
   }
 
@@ -13,5 +13,5 @@
     //TODO erro ao adicioane
     die;
   }
-  header("Location: list_page.php?id_list=$id");
+  header("Location: main_page_to-do_list.php?id_list=$id");
 ?>

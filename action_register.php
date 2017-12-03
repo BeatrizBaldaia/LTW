@@ -25,7 +25,7 @@
           break;
         default:
           //TODO Not a valid type
-          header('Location: initial_page.php');
+          header('Location: main_page.php');
           die;
           break;
       }
@@ -41,5 +41,5 @@
       $username = $_POST['username'];
       imagejpeg($small, "images/users/$username.jpeg");
   }
-  header('Location: initial_page.php');
+  header('Location: main_page.php');
 ?>

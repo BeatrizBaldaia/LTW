@@ -41,7 +41,10 @@ header.after_login_white a {
 header.after_login,
 header.after_login_pink,
 header.after_login_white {
-  background-image: linear-gradient(#CACACA, #FAFDFF);
+  background-image: url('../images/site/todo_logo.png'), linear-gradient(#CACACA, #FAFDFF);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 200px, auto;
+  background-position:200px 0, 0 0;
 	justify-items: start;
 	align-items: start;
 	grid-column: 1;
@@ -52,6 +55,7 @@ header.after_login div,
 header.after_login_pink div,
 header.after_login_white div {
   margin: 20px;
+  width: 200px;
 }
 
 header.after_login div *,
@@ -65,7 +69,10 @@ header.register a {
 }
 
 header.register {
-  background-image: linear-gradient(#CACACA, #FAFDFF);
+  background-image: url('../images/site/todo_logo.png'), linear-gradient(#CACACA, #FAFDFF);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 200px, auto;
+  background-position:200px 0, 0 0;
 	justify-items: start;
 	align-items: start;
 	/*grid-column: 1;

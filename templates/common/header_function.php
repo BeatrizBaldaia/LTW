@@ -20,7 +20,7 @@
     <body class=<?=$id?>>
       <header class=<?=$id?>>
         <div id="info" class=<?=$id?>>
-          <a href="initial_page.php"><h1>To-Do Lists</h1></a>
+          <a href="main_page.php"><h1>To-Do Lists</h1></a>
           <h2>Organize your life!</h2>
         </div>
       </header>

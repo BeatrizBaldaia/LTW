@@ -15,5 +15,5 @@ if ($currentTime > $_SESSION['endTimeout']) {
     }
 }
 
-header('Location: initial_page.php');
+header('Location: main_page.php');
 ?>

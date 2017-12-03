@@ -9,7 +9,7 @@
         }
         $list = $lists[$i]; ?>
     <article class="list">
-      <a class="title_link" href="list_page.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
+      <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
       <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>';"/>
       <ul>
       <?php $items = getItems($list['id']);
@@ -33,7 +33,7 @@
       <div class="popup">
       <a class="close" href="#">&times; </a>
       <div class="content">
-        <form id="NewListName" action="action_new_list.php" method="get">
+        <form id="NewListName" action="action_add_new_list.php" method="get">
           <label>List Name:
             <input type="text" name="list_name">
           </label>
@@ -45,7 +45,7 @@
   </div>
   <ul>
     <?php foreach( $lists as $list) { ?>
-        <li><a href="list_page.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?></a></li>
+        <li><a href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?></a></li>
     <?php } ?>
   <ul>
 </aside>

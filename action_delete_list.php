@@ -3,7 +3,7 @@
   include_once('includes/init.php');
 
   if((!isset($_SESSION['username'])) || (!isset($_GET['list_id']))){
-    header('Location: initial_page.php');
+    header('Location: main_page.php');
     die;
   }
 
@@ -14,5 +14,5 @@
     die;
   }
 
-  header('Location: initial_page.php');
+  header('Location: main_page.php');
 ?>
