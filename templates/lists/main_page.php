@@ -12,7 +12,7 @@
         }
         $list = $lists[$i]; ?>
     <article class="list">
-      <a class="title_link" href="list_page.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
+      <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
       <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
       <ul>
       <?php $items = getItems($list['id']);
