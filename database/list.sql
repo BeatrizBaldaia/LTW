@@ -30,10 +30,10 @@ CREATE TABLE items (
   dateDue DATE
 );
 
-INSERT INTO users VALUES ('dominic', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Dominic Woods');
-INSERT INTO users VALUES ('zachary', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Zachary Young');
-INSERT INTO users VALUES ('alicia', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Alicia Hamilton');
-INSERT INTO users VALUES ('abril', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Abril Cooley');
+INSERT INTO users VALUES ('dominic', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Dominic Woods');
+INSERT INTO users VALUES ('zachary', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Zachary Young');
+INSERT INTO users VALUES ('alicia', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Alicia Hamilton');
+INSERT INTO users VALUES ('abril', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 'Abril Cooley');
 
 insert into categories (id, name) values (1, 'pink');
 insert into categories (id, name) values (2, 'white');

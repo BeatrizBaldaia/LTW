@@ -4,6 +4,7 @@ include_once('includes/init.php');
 include_once('database/users.php');
 
 
+$_POST['password']=sha1($_POST['password']);
 $currentTime = time();
 if ($currentTime > $_SESSION['endTimeout']) {
     if (correctLogin($_POST['username'], $_POST['password'])) {

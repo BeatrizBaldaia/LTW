@@ -1,10 +1,8 @@
 'use strict';
 
 let list = document.querySelector('#list_unique');
-if (list != null) {
-  list.addEventListener('change', markComplete);
-}
 
+list.addEventListener('change', markComplete);
 function markComplete(event){
   let item = event.srcElement;
   let request = new XMLHttpRequest();

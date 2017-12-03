@@ -48,10 +48,10 @@
     $stmt->execute(array($id));
     return $stmt->fetch();
   }
-  function addList($username, $name, $category){
+  function addList($username, $name){
     global $db;
-    $stmt = $db->prepare('INSERT INTO lists (username, name, category) VALUES (?,?,?);');
-    if(!$stmt->execute(array($username, $name, $category))){
+    $stmt = $db->prepare('INSERT INTO lists (username, name) VALUES (?,?);');
+    if(!$stmt->execute(array($username, $name))){
       //TODO ERRO
       return false;
     }
@@ -69,12 +69,5 @@
     $cat = $db->prepare('SELECT categories.name AS cat FROM categories WHERE categories.id = ?');
     $cat->execute(array($id));
     return $cat->fetch();
-  }
-
-  function getCategories() {
-    global $db;
-    $stmt = $db->prepare('SELECT id, name FROM categories');
-    $stmt->execute();
-    return $stmt->fetchAll();
   }
 ?>

@@ -1,10 +1,7 @@
 'use strict';
 
 let btn_addItem = document.querySelector('#list_unique #new_item input[value="Add"]');
-if (btn_addItem != null) {
-  btn_addItem.addEventListener('click', addItem);
-}
-
+btn_addItem.addEventListener('click', addItem);
 function addItem(event){
   let itemName = document.querySelector('#list_unique #new_item input[type="text"]').value;
   let listId = document.querySelector('#list_unique .id').innerHTML;

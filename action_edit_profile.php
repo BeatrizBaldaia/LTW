@@ -3,11 +3,6 @@
   include_once('includes/init.php');
   include_once('database/users.php');
 
-  if (!isset($_GET['csrf']) || $_SESSION['csrf'] !== $_POST['csrf']) {
-    header('Location: initial_page.php');
-    die;
-  }
-
   if(!updateUserName($_SESSION['username'], $_POST['name'])){
     //TODO erro;
     echo "Falhou update do nome";

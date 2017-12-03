@@ -234,11 +234,6 @@ div#overlay a {
   overflow: auto;
 }
 
-#NewListName {
-	display: flex;
-	flex-direction: column;
-}
-
 @media screen and (max-width: 700px){
   .box_popup{
     width: 70%;
@@ -246,6 +241,12 @@ div#overlay a {
   .popup{
     width: 70%;
   }
+}
+
+#sidebar > ul {
+	/*border: 1px solid black;
+	border-radius: 2px;
+	background-color: #dfdfdf;*/
 }
 
 #sidebar > ul li {
