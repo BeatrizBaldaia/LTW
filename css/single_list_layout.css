@@ -1,33 +1,33 @@
-#list_unique .id {
+#setOfLists .id {
   display: none;
 }
-#list_unique {
+#setOfLists {
   display: block;
   margin: 1em auto;
   grid-column: 1 / 4;
 	grid-row: 2 / 3;
 }
-#list_unique > article {
+#setOfLists > article {
 	border: 2px solid black;
 	border-radius: 5px;
 	padding: 1em;
   position: relative;
 }
 
-#list_unique > article > h1 {
+#setOfLists > article > h1 {
 	text-align: center;
 }
 
-#list_unique > article > ul {
+#setOfLists > article > ul {
   margin-bottom: 0;
   max-height: 45vh;
   overflow-y: auto;
 }
-#list_unique > article > ul input{
+#setOfLists > article > ul input{
   float: right;
 }
 
-#list_unique > article > input {
+#setOfLists > article > input {
   position: absolute;
 	margin: 10px;
 	width: 1.5em;
@@ -40,16 +40,16 @@
 	cursor: pointer;
 }
 
-#list_unique > article > #new_item {
+#setOfLists > article > #new_item {
   background-color: #e0e0e0;
   display: flex;
   align-items: center;
 }
-#list_unique > article > #new_item > input[type=text] {
+#setOfLists > article > #new_item > input[type=text] {
   width: auto;
   flex-grow: 1;
 }
-#list_unique > article > #new_item > input[type=submit] {
+#setOfLists > article > #new_item > input[type=submit] {
 	background-image: url('../images/site/plus.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,7 +59,7 @@
   padding: 0;
   margin: 8px 8px;
 }
-#list_unique span.delete a:before {
+#setOfLists span.delete a:before {
   content: 'X';
   color: white;
   background-color: black;

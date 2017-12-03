@@ -3,8 +3,8 @@
   <head>
     <title>To-Do</title>
     <meta charset="UTF-8">
-    <link href="css/logged_in_style.css" rel="stylesheet">
-    <link href="css/list_unique.css" rel="stylesheet">
+    <link href="css/main_page_style.css" rel="stylesheet">
+    <link href="css/single_list_layout.css" rel="stylesheet">
     <script src="scripts/complete_item.js" defer></script>
     <script src="scripts/add_item.js" defer></script>
   </head>

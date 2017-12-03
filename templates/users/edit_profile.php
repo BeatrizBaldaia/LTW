@@ -1,4 +1,4 @@
-<section id="edit-profile">
+<section id="edit_profile">
   <h1>Edit</h1>
   <form action="action_edit_profile.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">

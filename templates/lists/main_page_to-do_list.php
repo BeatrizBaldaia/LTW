@@ -1,5 +1,5 @@
-<section id="list_unique" class=<?= getCategory($list['category'])['cat'] ?>>
-    <article class="lists">
+<section id="setOfLists" class=<?= getCategory($list['category'])['cat'] ?>>
+    <article>
       <h1><?=htmlentities($list['name'])?></h1>
       <span class="id"><?=htmlentities($list['id'])?></span>
       <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>

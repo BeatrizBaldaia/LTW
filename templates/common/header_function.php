@@ -7,8 +7,8 @@
 
       <link href="css/common_header_style.css" rel="stylesheet">
       <link href="css/categories_themes.css" rel="stylesheet">
-      <link href="css/list_unique.css" rel="stylesheet">
-      <link href="css/logged_in_style.css" rel="stylesheet">
+      <link href="css/single_list_layout.css" rel="stylesheet">
+      <link href="css/main_page_style.css" rel="stylesheet">
       <link href="css/login_style.css" rel="stylesheet">
       <link href="css/edit_profile.css" rel="stylesheet">
       <link href="css/common_footer_style.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     </head>
     <body class=<?=$id?>>
       <header class=<?=$id?>>
-        <div id="info" class=<?=$id?>>
+        <div class=<?=$id?>>
           <a href="main_page.php"><h1>To-Do Lists</h1></a>
           <h2>Organize your life!</h2>
         </div>

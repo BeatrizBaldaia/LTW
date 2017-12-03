@@ -17,7 +17,7 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-            <div class="list_li_wrapper">
+            <div>
                 <li class="normal_text<?=($item['complet'] ? ' strikeout' : '')?>"><?=htmlentities($item['name'])?></li>
             </div>
       <?php } ?>
@@ -48,7 +48,7 @@
                 <?php } ?>
               </select>
             </label>
-            <input type="submit" name="New List">
+            <input type="submit" name="New List" value="Save New List">
           </form>
         </div>
       </div>

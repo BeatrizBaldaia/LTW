@@ -10,7 +10,7 @@
         <label>
           Password <input type="password" name="password">
         </label><br/>
-		<label>
+		    <label>
           Confirm Password <input type="password" name="check_password">
         </label><br/>
         <label>Profile picture:
