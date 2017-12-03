@@ -1,4 +1,7 @@
-<?php   include_once('database/lists.php');?>
+<?php   include_once('database/lists.php');
+  $categories = getCategories();
+?>
+
 <section id="lists">
   <?php
     $lists = getLists($_SESSION['username']);
@@ -9,8 +12,8 @@
         }
         $list = $lists[$i]; ?>
     <article class="list">
-      <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
-      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>';"/>
+      <a class="title_link" href="list_page.php?id_list=<?=urlencode($list['id'])?>"><h3><?=htmlentities($list['name'])?></h3></a>
+      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($list['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
@@ -31,15 +34,23 @@
     </div>
     <div id="div_popup" class="overlay_popup">
       <div class="popup">
-      <a class="close" href="#">&times; </a>
-      <div class="content">
-        <form id="NewListName" action="action_add_new_list.php" method="get">
-          <label>List Name:
-            <input type="text" name="list_name">
-          </label>
+        <a class="close" href="#">&times; </a>
+        <div class="content">
+          <form id="NewListName" action="action_new_list.php" method="get">
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
+            <label>List Name:
+              <input type="text" name="list_name">
+            </label>
+            <label>List Category:
+              <select name="list_category_id">
+                <?php foreach($categories as $category) { ?>
+                  <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
+                <?php } ?>
+              </select>
+            </label>
             <input type="submit" name="New List">
-        </form>
-      </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
