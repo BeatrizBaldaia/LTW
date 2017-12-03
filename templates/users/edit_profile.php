@@ -1,6 +1,7 @@
 <section id="edit-profile">
   <h1>Edit</h1>
   <form action="action_edit_profile.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
     <label>
       Name <input type="text" name="name" value="<?=htmlentities($user['name'])?>">
     </label>
