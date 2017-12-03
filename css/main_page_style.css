@@ -152,6 +152,7 @@ div#overlay a {
 	overflow-y: auto;
 	overflow-x: hidden;
 	word-wrap: break-word;
+	border-left: 5px ridge;
 }
 
 /*POPUP*/
