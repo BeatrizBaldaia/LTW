@@ -19,7 +19,7 @@
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
             <div>
-                <li class="normal_text<?=($item['complet'] ? ' strikeout' : '')?>"><?=htmlentities($item['name'])?></li>
+                <li class="normal_text <?=($item['complet'] ? ' strikeout' : '')?>"><?=htmlentities($item['name'])?></li>
             </div>
       <?php } ?>
       </ul>

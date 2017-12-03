@@ -1,6 +1,6 @@
 'use strict';
 
-let list = document.querySelector('#list_unique');
+let list = document.querySelector('#setOfLists > article');
 if (list != null) {
   list.addEventListener('change', markComplete);
 }
