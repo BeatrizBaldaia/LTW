@@ -7,7 +7,6 @@ if (list != null) {
 
 function markComplete(event){
   let item = event.srcElement;
-  console.log(event);
   let request = new XMLHttpRequest();
   request.open('get', 'action_mark_complete.php?' + encodeForAjax({'id_item': item.value, 'complete': item.checked}), true);
   request.send();
