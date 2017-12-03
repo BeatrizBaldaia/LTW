@@ -13,7 +13,12 @@
       <?php } ?>
       </ul>
       <div id="new_item">
-        <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
+        <div>
+          <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
+          <label>Priority:
+            <input type="range" name="priority" min="1" max="3">
+          </label>
+        </div>
         <input type="submit" value="Add">
       </div>
     </article>
