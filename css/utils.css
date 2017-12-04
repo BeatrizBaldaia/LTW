@@ -150,12 +150,13 @@ input[type=submit]:hover {
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
-  margin: 20px 0;
+  margin: 0;
+  background: transparent;
 }
 /*Barra*/
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 40%;
   cursor: pointer;
   background-image: linear-gradient(to right, green, yellow, red);
   border-radius: 3px;
@@ -164,12 +165,23 @@ input[type=range]::-webkit-slider-runnable-track {
 /*Retangulo que desliza*/
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 1px 1px 1px gray, 0px 0px 1px gray;
-  border: 2px solid black;
-  height: 34px;
+  border: 1px solid black;
+  height: 2em;
   width: 16px;
   border-radius: 3px;
   background: white;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -13px;
+  margin-top: -1em;
+}
+
+.priority1 {
+  color: green;
+}
+.priority2 {
+  color: yellow;
+}
+.priority3 {
+  color: red;
+
 }
