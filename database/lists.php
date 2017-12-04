@@ -33,10 +33,10 @@
     return;
   }
 
-  function addItem($list, $itemName) {
+  function addItem($list, $itemName, $priority) {
     global $db;
     $stmt = $db->prepare('INSERT INTO items (name, id_lists, priority) VALUES (?, ?, ?);');
-    if(!$stmt->execute(array($itemName, $list))){
+    if(!$stmt->execute(array($itemName, $list, $priority))){
       //TODO ERRO
       return false;
     }
