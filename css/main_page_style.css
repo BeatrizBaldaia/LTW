@@ -246,6 +246,8 @@ form[id=NewListName] {
 form[id=NewListName] #popup_new_items {
 	margin-top: 2em;
 	margin-bottom: 2em;
+	max-height: 20em;
+	overflow-y: auto;
 }
 
 form[id=NewListName] .popup_new_item {

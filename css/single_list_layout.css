@@ -26,6 +26,9 @@
   max-height: 40vh;
   overflow-y: auto;
 }
+#setOfLists > article > ul > li > span {
+  color: black;
+}
 #setOfLists > article > ul input{
   float: right;
 }

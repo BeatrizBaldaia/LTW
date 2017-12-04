@@ -54,7 +54,7 @@
             </label>
             <div id="popup_new_items">
               <div class="popup_new_item">
-                <label>Item:
+                <label>Task:
                   <input type="text" name="item_name[]" required="required">
                 </label>
                 <label>Priority:
