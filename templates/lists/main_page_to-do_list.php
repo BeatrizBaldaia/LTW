@@ -7,6 +7,7 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
+          <input type="button" class="delete_item_btn" onclick="location.href='action_delete_item.php?item_id=<?=urlencode($item['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';" value="-"/>
           <li class="priority<?= getPriority($item['id'])['priority'] ?>"><span><?=htmlentities($item['name'])?>
           <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
         </span></li>
