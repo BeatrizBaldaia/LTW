@@ -37,7 +37,7 @@
       <div class="popup">
         <a class="close" href="#">&times; </a>
         <div class="content">
-          <form id="NewListName" action="action_new_list.php" method="get">
+          <form id="NewListName" action="action_add_new_list.php" method="post">
             <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
             <label>List Name:
               <input type="text" name="list_name">
@@ -48,6 +48,9 @@
                   <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
                 <?php } ?>
               </select>
+            </label>
+            <label>Deadline:
+              <input type="date" name="deadline">
             </label>
             <input type="submit" name="New List" value="Save New List">
           </form>
