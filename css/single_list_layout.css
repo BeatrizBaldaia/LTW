@@ -3,7 +3,7 @@
 }
 #setOfLists {
   display: block;
-  margin: 1em auto;
+  margin: 1em 0;
   grid-column: 1 / 4;
 	grid-row: 2 / 3;
 }
@@ -12,6 +12,9 @@
 	border-radius: 5px;
 	padding: 1em;
   position: relative;
+  height: 90%;
+  width: 20%;
+  margin: auto
 }
 
 #setOfLists > article > h1 {
@@ -20,7 +23,7 @@
 
 #setOfLists > article > ul {
   margin-bottom: 0;
-  max-height: 45vh;
+  max-height: 40vh;
   overflow-y: auto;
 }
 #setOfLists > article > ul input{
@@ -43,6 +46,9 @@
 #setOfLists > article > #new_item {
   height: 100px;
   margin-top: 30px;
+  width: 90%;
+  position: absolute;
+  bottom: 5%;
   background-color: #e0e0e0;
   display: flex;
   flex-direction: column;
