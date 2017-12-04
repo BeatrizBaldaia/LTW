@@ -95,7 +95,7 @@ div#overlay a {
 	opacity: 0.8;
 
 	display: inline-grid;
-	grid-template-rows: 5em auto;
+	grid-template-rows: 5em 2em auto;
 	flex: 1;
 	margin: 1em;
 	border-radius: 2px;
@@ -120,10 +120,18 @@ div#overlay a {
 	vertical-align: sub;
 	bottom: 0;
 }
+
+#lists > article > .dateDue {
+	grid-column: 1;
+	grid-row: 2;
+	margin-top: 0.5em;
+	margin-left: 1em;
+}
+
 #lists > article > ul {
 	align-self: start;
 	grid-column: 1;
-	grid-row: 2;
+	grid-row: 3;
 	overflow-y: auto;
 	max-height: 	60vh;
 	overflow-x: hidden;

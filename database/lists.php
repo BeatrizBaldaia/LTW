@@ -48,10 +48,10 @@
     $stmt->execute(array($id));
     return $stmt->fetch();
   }
-  function addList($username, $name, $category){
+  function addList($username, $name, $category, $dateDue){
     global $db;
-    $stmt = $db->prepare('INSERT INTO lists (username, name, category) VALUES (?,?,?);');
-    if(!$stmt->execute(array($username, $name, $category))){
+    $stmt = $db->prepare('INSERT INTO lists (username, name, category, dateDue) VALUES (?,?,?,?);');
+    if(!$stmt->execute(array($username, $name, $category, $dateDue))){
       //TODO ERRO
       return false;
     }

@@ -7,15 +7,15 @@
     die;
   } */
 
-  if(!isset($_SESSION['username']) || !isset($_GET['list_name'])
-      || !isset($_GET['csrf']) || $_SESSION['csrf'] !== $_GET['csrf']) {
+  if(!isset($_SESSION['username']) || !isset($_POST['list_name'])
+      || !isset($_POST['csrf']) || $_SESSION['csrf'] !== $_POST['csrf']) {
     header('Location: main_page.php');
     die;
   }
 
   include_once('database/lists.php');
 
-  if(($id = addList($_SESSION['username'], $_GET['list_name'], $_GET['list_category_id'])) == false){
+  if(($id = addList($_SESSION['username'], $_POST['list_name'], $_POST['list_category_id'], $_POST['deadline'])) == false){
     //TODO erro ao adicioane
     die;
   }
