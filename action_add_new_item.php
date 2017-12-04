@@ -8,7 +8,7 @@
 
   include_once('database/lists.php');
 
-  if(($id = addItem($_GET['list'], $_GET['item']), $_GET['priority'])) == false){
+  if(($id = addItem($_GET['list'], $_GET['item'], $_GET['priority'])) == false){
     //TODO erro ao adicioane
     die;
   }

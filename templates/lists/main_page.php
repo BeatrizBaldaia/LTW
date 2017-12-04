@@ -52,6 +52,16 @@
             <label>Deadline:
               <input type="date" name="deadline">
             </label>
+            <div id="popup_new_items">
+              <div class="popup_new_item">
+                <label>Item:</label>
+                <input type="text" name="item_name[]">
+                <label>Priority:
+                  <input type="range" name="priority[]" min="1" max="3">
+                </label>
+              </div>
+            </div>
+            <input type="button" name="add_item" value="Add Item">
             <input type="submit" name="New List" value="Save New List">
           </form>
         </div>

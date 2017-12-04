@@ -5,6 +5,12 @@ if (btn_addItem != null) {
   btn_addItem.addEventListener('click', addItem);
 }
 
+let btn_popup_addItem = document.querySelector('#NewListName input[name="add_item"]');
+if (btn_popup_addItem != null) {
+  btn_popup_addItem.addEventListener('click', popup_AddItem);
+}
+
+
 function addItem(event){
   let itemName = document.querySelector('#setOfLists > article > #new_item input[type="text"]').value;
   let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
@@ -22,7 +28,15 @@ function allItems(event){
   document.querySelector('#setOfLists > article > #new_item input[type="text"]').value = "";
 }
 
+
 //TODO PROFESSOR
 function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+
+function popup_AddItem(event) {
+  let itemsContainer = document.getElementById('popup_new_items');
+  let newItem = itemsContainer.children[0];
+  itemsContainer.innerHTML += newItem.outerHTML;
 }
