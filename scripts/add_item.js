@@ -42,7 +42,7 @@ function popup_AddItem(event) {
   newItem.className = "popup_new_item";
 
   let itemNameLabel = '<label>Item:';
-  itemNameLabel += '<input type="text" name="item_name[]">';
+  itemNameLabel += '<input type="text" name="item_name[]" required="required">';
   itemNameLabel += '</label>';
   let priorityLabel = '<label>Priority:';
   priorityLabel += '<input type="range" name="priority[]" min="1" max="3">';
