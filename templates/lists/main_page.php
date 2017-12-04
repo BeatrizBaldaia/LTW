@@ -61,8 +61,8 @@
                   <input type="range" name="priority[]" min="1" max="3">
                 </label>
               </div>
+              <input type="submit" name="add_item" value="Add Item">
             </div>
-            <input type="button" name="add_item" value="Add Item">
             <input type="submit" name="New List" value="Save New List">
           </form>
         </div>

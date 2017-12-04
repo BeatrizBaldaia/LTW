@@ -36,6 +36,7 @@ function htmlEntities(str) {
 
 
 function popup_AddItem(event) {
+  event.preventDefault();
   let itemsContainer = document.getElementById('popup_new_items');
   let newItem = document.createElement('div');
   newItem.className = "popup_new_item";
@@ -50,5 +51,5 @@ function popup_AddItem(event) {
   newItem.innerHTML = itemNameLabel;
   newItem.innerHTML += priorityLabel;
   
-  itemsContainer.appendChild(newItem);
+  itemsContainer.insertBefore(newItem, itemsContainer.lastElementChild);
 }
