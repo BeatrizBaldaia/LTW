@@ -54,8 +54,9 @@
             </label>
             <div id="popup_new_items">
               <div class="popup_new_item">
-                <label>Item:</label>
-                <input type="text" name="item_name[]">
+                <label>Item:
+                  <input type="text" name="item_name[]">
+                </label>
                 <label>Priority:
                   <input type="range" name="priority[]" min="1" max="3">
                 </label>

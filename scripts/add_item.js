@@ -38,11 +38,17 @@ function htmlEntities(str) {
 function popup_AddItem(event) {
   let itemsContainer = document.getElementById('popup_new_items');
   let newItem = document.createElement('div');
-  newItem.class = "popup_new_item";
-  newItem.innerHTML = '<label>Item:</label>';
-  newItem.innerHTML += '<input type="text" name="item_name[]">';
-  newItem.innerHTML += '<label>Priority:';
-  newItem.innerHTML += '<input type="range" name="priority[]" min="1" max="3">';
-  newItem.innerHTML += '</label>';
+  newItem.className = "popup_new_item";
+
+  let itemNameLabel = '<label>Item:';
+  itemNameLabel += '<input type="text" name="item_name[]">';
+  itemNameLabel += '</label>';
+  let priorityLabel = '<label>Priority:';
+  priorityLabel += '<input type="range" name="priority[]" min="1" max="3">';
+  priorityLabel += '</label>';
+
+  newItem.innerHTML = itemNameLabel;
+  newItem.innerHTML += priorityLabel;
+  
   itemsContainer.appendChild(newItem);
 }
