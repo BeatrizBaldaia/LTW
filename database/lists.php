@@ -64,6 +64,12 @@
     return $stmt->execute(array($id));
   }
 
+  function deleteItem($id) {
+    global $db;
+    $stmt = $db->prepare('DELETE FROM items WHERE id = ?;');
+    return $stmt->execute(array($id));
+  }
+
   function getCategory($id) {
     global $db;
     $cat = $db->prepare('SELECT categories.name AS cat FROM categories WHERE categories.id = ?');

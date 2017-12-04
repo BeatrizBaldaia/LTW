@@ -22,10 +22,20 @@
 }
 
 #setOfLists > article > ul {
+  padding-left: 5%;
   margin-bottom: 0;
   max-height: 40vh;
   overflow-y: auto;
 }
+
+#setOfLists > article > ul > input.delete_item_btn {
+	width: 1.5em;
+	height: 1.5em;
+  margin-right: 2em;
+  float: left;
+	cursor: pointer;
+}
+
 #setOfLists > article > ul > li > span {
   color: black;
 }
