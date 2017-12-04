@@ -3,7 +3,7 @@
 
   function getLists($username) {
     global $db;
-    $stmt = $db->prepare('SELECT * FROM lists WHERE (username = ?) ORDER BY dateDue');
+    $stmt = $db->prepare('SELECT *, (julianday(dateDue) - julianday("now")) AS diff FROM lists WHERE (username = ?) ORDER BY diff');
     $stmt->execute(array($username));
     return $stmt->fetchAll();
   }
