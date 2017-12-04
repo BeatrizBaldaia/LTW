@@ -7,7 +7,7 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-          <li class="priority<?= getPriority($list['id'])['priority'] ?>"><?=htmlentities($item['name'])?>
+          <li class="priority<?= getPriority($item['id'])['priority'] ?>"><?=htmlentities($item['name'])?>
           <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
           </li>
       <?php } ?>
