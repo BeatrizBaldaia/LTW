@@ -14,5 +14,10 @@ if ($currentTime > $_SESSION['endTimeout']) {
     }
 }
 
+
+if (correctLogin($_POST['username'], $_POST['password'])) {
+    $_SESSION['username'] = $_POST['username'];
+}
+
 header('Location: main_page.php');
 ?>

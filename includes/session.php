@@ -1,6 +1,6 @@
 <?php
   //Unsure if this is the correct $_SERVER variable.
-  session_set_cookie_params(0, '/', $_SERVER['SERVER_NAME'], true, true);
+  // session_set_cookie_params(0, '/', $_SERVER['SERVER_NAME'], true, true);
   session_start();
   if (!isset($_SESSION['csrf'])) {
     $_SESSION['csrf'] = generate_random_token();

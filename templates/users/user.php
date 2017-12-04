@@ -45,7 +45,6 @@
             <?php } else if ($_SESSION['failedLoginAttempts'] > 0) { ?>
                 <p>Wrong username or password</p>
             <?php } ?>
-
           </div>
         </form>
       </div>
