@@ -41,26 +41,34 @@
 }
 
 #setOfLists > article > #new_item {
+  height: 100px;
   margin-top: 30px;
   background-color: #e0e0e0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  /*align-items: center;*/
 }
 #setOfLists > article > #new_item > div {
+  height: auto;
   display: flex;
-  flex-direction: column;
 }
-#setOfLists > article > #new_item > div >input[type=text] {
+#setOfLists > article > #new_item > input[type=text] {
   width: auto;
+  height: 3em;
+}
+#setOfLists > article > #new_item > div > label {
   flex-grow: 1;
 }
+
 #setOfLists > article > #new_item > div > input[type=submit] {
 	background-image: url('../images/site/plus.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   color: rgba(0, 0, 0, 0);
-  width: 2em;
-  height: 2em;
+  width: 30%;
+  height: auto;
   padding: 0;
   margin: 8px 8px;
 }

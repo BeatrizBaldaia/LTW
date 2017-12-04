@@ -35,7 +35,7 @@
 
   function addItem($list, $itemName) {
     global $db;
-    $stmt = $db->prepare('INSERT INTO items (name, id_lists) VALUES (?,?);');
+    $stmt = $db->prepare('INSERT INTO items (name, id_lists, priority) VALUES (?, ?, ?);');
     if(!$stmt->execute(array($itemName, $list))){
       //TODO ERRO
       return false;
@@ -76,5 +76,12 @@
     $stmt = $db->prepare('SELECT id, name FROM categories');
     $stmt->execute();
     return $stmt->fetchAll();
+  }
+
+  function getPriority($id) {
+    global $db;
+    $stmt = $db->prepare('SELECT priority FROM items WHERE id = ?');
+    $stmt->execute(array($id));
+    return $stmt->fetch();
   }
 ?>

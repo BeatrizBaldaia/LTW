@@ -7,19 +7,19 @@
       <ul>
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
-          <li><?=htmlentities($item['name'])?>
+          <li class="priority<?= getPriority($item['id'])['priority'] ?>"><?=htmlentities($item['name'])?>
           <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
           </li>
       <?php } ?>
       </ul>
       <div id="new_item">
+        <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
         <div>
-          <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
           <label>Priority:
             <input type="range" name="priority" min="1" max="3">
           </label>
+          <input type="submit" value="Add">
         </div>
-        <input type="submit" value="Add">
       </div>
     </article>
 </section>
