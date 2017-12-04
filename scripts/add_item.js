@@ -6,8 +6,8 @@ if (btn_addItem != null) {
 }
 
 function addItem(event){
-  let itemName = document.querySelector('#setOfLists > article > #new_item input[type="text"]').value;
-  let itemPriority = document.querySelector('#setOfLists > article > #new_item div label input[type="range"]').value;
+  let itemName = document.querySelector('#setOfLists > article > #new_item > input[type="text"]').value;
+  let itemPriority = document.querySelector('#setOfLists > article > #new_item > div > label > input[type="range"]').value;
   let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
   let request = new XMLHttpRequest();
   request.open('get', 'action_add_new_item.php?' + encodeForAjax({'item': itemName, 'list': listId, 'priority': itemPriority}), true);
@@ -17,6 +17,7 @@ function addItem(event){
 function allItems(event){
   let new_item = document.createElement('li');
   let itemInfo = JSON.parse(this.responseText);
+  new_item.setAttribute('class', 'priority' + itemInfo.priority);
   new_item.innerHTML = htmlEntities(itemInfo.name) + '<input type="checkbox" name="item_complete" value="' + htmlEntities(itemInfo.id) + '">';
   let items = document.querySelector('#setOfLists > article > ul');
   items.append(new_item);
