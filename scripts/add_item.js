@@ -5,6 +5,12 @@ if (btn_addItem != null) {
   btn_addItem.addEventListener('click', addItem);
 }
 
+let btn_popup_addItem = document.querySelector('#NewListName input[name="add_item"]');
+if (btn_popup_addItem != null) {
+  btn_popup_addItem.addEventListener('click', popup_AddItem);
+}
+
+
 function addItem(event){
   let itemName = document.querySelector('#setOfLists > article > #new_item > input[type="text"]').value;
   let itemPriority = document.querySelector('#setOfLists > article > #new_item > div > label > input[type="range"]').value;
@@ -24,7 +30,28 @@ function allItems(event){
   document.querySelector('#setOfLists > article > #new_item input[type="text"]').value = "";
 }
 
+
 //TODO PROFESSOR
 function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+
+function popup_AddItem(event) {
+  event.preventDefault();
+  let itemsContainer = document.getElementById('popup_new_items');
+  let newItem = document.createElement('div');
+  newItem.className = "popup_new_item";
+
+  let itemNameLabel = '<label>Item:';
+  itemNameLabel += '<input type="text" name="item_name[]" required="required">';
+  itemNameLabel += '</label>';
+  let priorityLabel = '<label>Priority:';
+  priorityLabel += '<input type="range" name="priority[]" min="1" max="3">';
+  priorityLabel += '</label>';
+
+  newItem.innerHTML = itemNameLabel;
+  newItem.innerHTML += priorityLabel;
+  
+  itemsContainer.insertBefore(newItem, itemsContainer.lastElementChild);
 }

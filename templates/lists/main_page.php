@@ -40,7 +40,7 @@
           <form id="NewListName" action="action_add_new_list.php" method="post">
             <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
             <label>List Name:
-              <input type="text" name="list_name">
+              <input type="text" name="list_name" required="required">
             </label>
             <label>List Category:
               <select name="list_category_id">
@@ -50,8 +50,19 @@
               </select>
             </label>
             <label>Deadline:
-              <input type="date" name="deadline">
+              <input type="date" name="deadline" required="required">
             </label>
+            <div id="popup_new_items">
+              <div class="popup_new_item">
+                <label>Item:
+                  <input type="text" name="item_name[]" required="required">
+                </label>
+                <label>Priority:
+                  <input type="range" name="priority[]" min="1" max="3">
+                </label>
+              </div>
+              <input type="submit" name="add_item" value="Add Item">
+            </div>
             <input type="submit" name="New List" value="Save New List">
           </form>
         </div>

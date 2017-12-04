@@ -238,9 +238,45 @@ div#overlay a {
   overflow: auto;
 }
 
-#NewListName {
+form[id=NewListName] {
 	display: flex;
 	flex-direction: column;
+}
+
+form[id=NewListName] #popup_new_items {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+form[id=NewListName] .popup_new_item {
+	margin-bottom: 1em;
+	display: grid;
+}
+
+form[id=NewListName] .popup_new_item label:first-of-type {
+	grid-row: 1;
+}
+
+form[id=NewListName] .popup_new_item label:last-of-type {
+	grid-row: 2;
+	display: flex;
+}
+
+form[id=NewListName] .popup_new_item label:last-of-type input {
+	margin-left: 1em;
+	width: 50%;
+}
+
+form[id=NewListName] input[name=add_item] {
+	background-image: url('../images/site/plus.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  color: rgba(0, 0, 0, 0);
+  width: 30%;
+  height: auto;
+  padding: 0;
+  margin: 8px 0px;
 }
 
 @media screen and (max-width: 700px){
