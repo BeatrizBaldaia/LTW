@@ -147,7 +147,7 @@ insert into items (name, id_lists, priority) values ('Varanus salvator', 6, 1);
 insert into items (name, id_lists, priority) values ('Tachybaptus ruficollis', 2, 1);
 insert into items (name, id_lists, priority) values ('Ardea cinerea', 9, 1);
 insert into items (name, id_lists, priority) values ('Philetairus socius', 6, 1);
-insert into items (name, id_lists, priority) values ('Libellula quadrimaculata', 6);
+insert into items (name, id_lists, priority) values ('Libellula quadrimaculata', 6, 2);
 insert into items (name, id_lists, priority) values ('Myrmecophaga tridactyla', 8, 1);
 insert into items (name, id_lists, priority) values ('Coluber constrictor', 4, 1);
 insert into items (name, id_lists, priority) values ('Fulica cristata', 9, 1);

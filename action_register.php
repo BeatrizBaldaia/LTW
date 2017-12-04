@@ -9,11 +9,12 @@
     die;
   }
 
-  if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password']))
+  if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password'])) {
     $_SESSION['username'] = $_POST['username'];
-  else
+  } else {
     print("ERROR action_register");
-
+    die;
+  }
   if(isset($_FILES['profile_picture'])){
     $type = exif_imagetype($_FILES['profile_picture']['tmp_name']);
       switch ($type) {
