@@ -7,7 +7,7 @@
     die;
   }
 
-  if (!isset($_SESSION['username']) || !isset($_GET['item_id'])) {
+  if (!isset($_SESSION['username']) || !isset($_GET['item_id']) || !isset($_GET['list_id'])) {
     header('Location: main_page.php');
     die;
   }
@@ -19,5 +19,5 @@
     die;
   }
 
-  header('Location: main_page.php');
+  header('Location: main_page_to-do_list.php?id_list='.$_GET['list_id']);
 ?>
