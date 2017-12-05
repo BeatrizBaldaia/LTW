@@ -17,12 +17,12 @@
   }
 
 //TODO
-  function registerUser($username, $name, $password, $check){
+  function registerUser($username, $name, $password, $check, $email, $country){
     if($password != $check) return false;
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     global $db;
-    $stmt = $db->prepare('INSERT INTO users (username, password, name) VALUES (?,?,?);');
-    return $stmt->execute(array($username, $hashedPassword, $name));
+    $stmt = $db->prepare('INSERT INTO users (username, password, name, email, country) VALUES (?,?,?,?,?);');
+    return $stmt->execute(array($username, $hashedPassword, $name, $email, $country));
   }
 
   function getUser($username){

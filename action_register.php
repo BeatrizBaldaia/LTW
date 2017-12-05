@@ -9,7 +9,7 @@
     die;
   }
 
-  if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password'])) {
+  if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password'], $_POST['email'], $_POST['country'])) {
     $_SESSION['username'] = $_POST['username'];
   } else {
     print("ERROR action_register");
