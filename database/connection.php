@@ -6,7 +6,7 @@
   $dbPRAGMA = $db->prepare('PRAGMA foreign_keys=ON;');
   $dbPRAGMA->execute();
 
-  $dbCountries = new PDO('sqlite:countries.db');
+  $dbCountries = new PDO('sqlite:database/countries.db');
   $dbCountries->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $dbCountries->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $dbPRAGMA = $dbCountries->prepare('PRAGMA foreign_keys=ON;');

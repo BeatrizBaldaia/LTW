@@ -7,7 +7,6 @@ CREATE TABLE countries (
   name VARCHAR
 );
 
--- TODO: Azerbaijan is repeated
 INSERT INTO countries (name) VALUES ('Afghanistan');
 INSERT INTO countries (name) VALUES ('Albania');
 INSERT INTO countries (name) VALUES ('Algeria');
