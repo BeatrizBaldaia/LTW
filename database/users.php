@@ -38,6 +38,12 @@
     return $stmt->execute(array($name,$username));
   }
 
+  function updateUserEmail($username, $email){
+    global $db;
+    $stmt = $db->prepare('UPDATE users SET email = ? WHERE username = ?');
+    return $stmt->execute(array($email, $username));
+  }
+
   function updateUserPassword($username, $password, $check){
     if($password != $check) return false;
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
