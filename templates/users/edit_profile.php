@@ -6,9 +6,6 @@
       Name <input type="text" name="name" value="<?=htmlentities($user['name'])?>">
     </label>
     <label>
-      E-mail <input type="email" name="email" value="<?=htmlentities($user['email'])?>">
-    </label>
-    <label>
       Password <input type="password" name="password">
     </label>
     <label>

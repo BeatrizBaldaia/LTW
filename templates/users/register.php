@@ -8,6 +8,9 @@
           Username <input type="text" name="username" required="required">
         </label><br/>
         <label>
+          E-mail <input type="email" name="email">
+        </label><br/>
+        <label>
           Password <input type="password" name="password" required="required">
         </label><br/>
 		    <label>
