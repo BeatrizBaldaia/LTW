@@ -25,7 +25,6 @@
           <a href="main_page.php"><h1>To-Do Lists</h1></a>
           <h2>Organize your life!</h2>
         </div>
-        <?php include_once('templates/lists/notify.php'); ?>
       </header>
       <?php include_once('templates/users/user.php'); ?>
 
