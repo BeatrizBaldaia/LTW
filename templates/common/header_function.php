@@ -17,6 +17,7 @@
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
       <script src="scripts/countries.js" defer></script>
+      <script src="scripts/notify.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">
@@ -24,6 +25,8 @@
           <a href="main_page.php"><h1>To-Do Lists</h1></a>
           <h2>Organize your life!</h2>
         </div>
+        <?php include_once('templates/lists/notify.php'); ?>
       </header>
       <?php include_once('templates/users/user.php'); ?>
+
 <?php } ?>
