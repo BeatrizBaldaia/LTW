@@ -3,27 +3,27 @@
       <form action="action_register.php" method="post" enctype="multipart/form-data">
         <label>
           Name <input type="text" name="name" required="required">
-        </label><br/>
+        </label><!-- <br/> -->
         <label>
           Username <input type="text" name="username" required="required">
-        </label><br/>
+        </label><!-- <br/> -->
         <label>
           E-mail <input type="email" name="email">
-        </label><br/>
+        </label><!-- <br/> -->
         <label>
           Password <input type="password" name="password" required="required">
-        </label><br/>
+        </label><!-- <br/> -->
 		    <label>
           Confirm Password <input type="password" name="check_password" required="required">
-        </label><br/>
+        </label><!-- <br/> -->
         <label>Country
           <input list="countries" name="country">
           <datalist id="countries">
           </datalist>
-        </label><br/>
+        </label><!-- <br/> -->
         <label>Profile picture
           <input type="file" name="profile_picture" required="required">
-        </label><br/>
+        </label><!-- <br/> -->
         <input type="submit" value="Register">
       </form>
     </section>
