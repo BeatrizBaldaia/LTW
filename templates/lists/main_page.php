@@ -32,6 +32,15 @@
   <?php } ?>
 </section>
 <aside id="sidebar">
+  <div>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider">
+        <span class="leftToggle">lists</span>
+        <span class="rightToggle">projects</span>
+      </span>
+    </label>
+  </div>
   <div id="addNewList">
     <div class="box_popup">
       <a class="button_popup" href="#div_popup">

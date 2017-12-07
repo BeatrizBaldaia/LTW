@@ -1,5 +1,6 @@
 section.pink {
   font-family: 'Arizonia';
+  
 }
 section.pink > article {
   background: url('../images/site/pink_sheet.jpg') no-repeat center center fixed;

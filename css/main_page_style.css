@@ -162,6 +162,92 @@ div#overlay a {
 	word-wrap: break-word;
 	border-left: 5px ridge;
 }
+#sidebar div {
+	text-align: center;
+}
+
+#sidebar .switch {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 34px;
+	top: 1em;
+}
+
+#sidebar .switch input {display:none;}
+
+#sidebar .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#sidebar .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: calc(50% - 4px);
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#sidebar .switch input:checked + .slider {
+  background-color: rgb(75, 182, 182);
+}
+
+#sidebar .switch input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+/* Rounded sliders */
+#sidebar .switch .slider.round {
+  border-radius: 34px;
+}
+
+#sidebar .switch .slider .round:before {
+  border-radius: 50%;
+}
+#sidebar .switch .leftToggle {
+position: absolute;
+left: 2px;
+top: 5px;
+margin: auto;
+}
+
+#sidebar .switch .rightToggle {
+position: absolute;
+right: 2px;
+top: 5px;
+}
+
+#sidebar .switch input:checked + .slider .rightToggle {
+  opacity: 0;
+}
+#sidebar .switch input:checked + .slider .leftToggle {
+  opacity: 1;
+}
+
+#sidebar .switch input + .slider .rightToggle {
+  opacity: 1;
+-webkit-transition: opacity .4s;
+  transition: opacity .4s;
+}
+#sidebar .switch input + .slider .leftToggle {
+  opacity: 0;
+-webkit-transition: opacity .4s;
+  transition: opacity .4s;
+}
 
 /*POPUP*/
 
@@ -173,7 +259,6 @@ div#overlay a {
 }
 
 #addNewList .button_popup {
-	 width: 100%;
 	 font-size: 1em !important;
 	 padding: 10px;
 	 font-weight: bold;
