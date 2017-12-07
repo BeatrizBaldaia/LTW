@@ -5,9 +5,7 @@ html {
    overflow: auto;
 }
 
-body.after_login,
-body.after_login_pink,
-body.after_login_white {
+body.after_login {
   margin: 0px;
   min-height: 100%;
   max-height: 100vh;
@@ -26,23 +24,19 @@ body.after_login_white {
   overflow-y: hidden;
 }
 
-body.after_login_pink {
+body.pink {
   background: url('../images/site/pink_background.jpg') no-repeat center center fixed;
 }
 
-body.after_login_white {
+body.white {
   background: url('../images/site/white.jpg') no-repeat center center fixed;
 }
 
-header.after_login a,
-header.after_login_pink a,
-header.after_login_white a {
+header.after_login a {
   color: inherit;
 }
 
-header.after_login,
-header.after_login_pink,
-header.after_login_white {
+header.after_login {
   background-image: url('../images/site/todo_logo.png'), linear-gradient(#CACACA, #FAFDFF);
   background-repeat: no-repeat, no-repeat;
   background-size: 200px, auto;
@@ -53,16 +47,12 @@ header.after_login_white {
 	grid-row: 1;
 }
 
-header.after_login div,
-header.after_login_pink div,
-header.after_login_white div {
+header.after_login div {
   margin: 20px;
   width: 200px;
 }
 
-header.after_login div *,
-header.after_login_pink div *,
-header.after_login_white div * {
+header.after_login div * {
   margin-bottom: -20px;
 }
 

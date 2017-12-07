@@ -1,4 +1,4 @@
-<section id="setOfLists" class=<?= getCategory($list['category'])['cat'] ?>>
+<section id="setOfLists" class="<?= getCategory($list['category'])['cat'] ?>">
     <article>
       <h1><?=htmlentities($list['name'])?></h1>
       <span class="id"><?=htmlentities($list['id'])?></span>
@@ -14,7 +14,7 @@
       <?php } ?>
       </ul>
       <div id="new_item">
-        <input type="text" class=<?= getCategory($list['category'])['cat'] ?> name="item_name">
+        <input type="text" class="<?= getCategory($list['category'])['cat'] ?>" name="item_name">
         <div>
           <label>Priority:
             <input type="range" name="priority" min="1" max="3">
