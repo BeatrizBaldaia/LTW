@@ -50,7 +50,7 @@
             <label>List Category:
               <select name="list_category_id">
                 <?php foreach($categories as $category) { ?>
-                  <option value=<?= $category['id'] ?>><?= $category['name'] ?></option>
+                  <option value="<?= $category['id'] ?>"><?= $category['fullName'] ?></option>
                 <?php } ?>
               </select>
             </label>

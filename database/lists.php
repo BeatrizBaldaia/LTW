@@ -65,13 +65,13 @@
   }
   function getCategory($id) {
     global $db;
-    $cat = $db->prepare('SELECT categories.name AS cat FROM categories WHERE categories.id = ?');
+    $cat = $db->prepare('SELECT categories.name AS cat, categories.fullName FROM categories WHERE categories.id = ?');
     $cat->execute(array($id));
     return $cat->fetch();
   }
   function getCategories() {
     global $db;
-    $stmt = $db->prepare('SELECT id, name FROM categories');
+    $stmt = $db->prepare('SELECT id, name, fullName FROM categories');
     $stmt->execute();
     return $stmt->fetchAll();
   }
