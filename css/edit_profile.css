@@ -1,4 +1,20 @@
+#edit_profile label > input {
+  width: auto;
+  flex-grow: 1;
+}
+#edit_profile label {
+  display: flex;
+  align-items: center;
+}
 #edit_profile {
+  	grid-row: 2;
+    margin: auto;
+}
+#edit_profile {
+	grid-row: 2;
+	grid-column: 1 / 4;
+}
+/*#edit_profile {
 	margin-left: 2em;
 	max-width: 30em;
 	min-width: 30em;
@@ -27,3 +43,4 @@
 	width: 5em;
 	text-align: center;
 }
+*/
