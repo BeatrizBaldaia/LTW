@@ -73,24 +73,32 @@ input[type=text], input[type=email], input[list=countries], select {
   color: rgb(75, 182, 182);
 }
 input[type=text].pink {
-  background-color: #FCC8F8;
-  border: 2px ridge #FF8BF8;
-  color: #FF8BF8;
+  background-color: rgb(219, 165, 155);
+  border: 2px ridge rgb(156, 152, 104);
+  color: rgb(156, 152, 104);
 }
 input[type=text].white {
-  background-color: #E7ECD3;
-  border: 2px ridge #666633;
-  color: #666633;
+  background-color: rgb(239, 239, 239);
+  border: 2px ridge rgb(71, 71, 71);
+  color: rgb(71, 71, 71);
+}
+input[type=text].xmas {
+  background-color: #F0687A;
+  border: 2px ridge #D1273E;
+  color: black;
 }
 
 input[type=text]:focus {
     box-shadow: 0px 0px 20px rgb(75, 182, 182);
 }
 input[type=text].pink:focus {
-    box-shadow: 0px 0px 20px #FF8BF8;
+    box-shadow: 0px 0px 20px rgb(156, 152, 104);
 }
 input[type=text].white:focus {
-    box-shadow: 0px 0px 20px #666633;
+    box-shadow: 0px 0px 20px rgb(71, 71, 71);
+}
+input[type=text].xmas:focus {
+    box-shadow: 0px 0px 20px #D1273E;
 }
 
 input[type=password]:focus {

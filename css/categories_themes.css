@@ -4,5 +4,11 @@ section.pink > article {
 }
 
 section.white > article {
-  background: #fff;
+  background: url('../images/site/white_list.jpg') no-repeat center center fixed;
+  background-size: contain;
+}
+
+section.xmas > article {
+  background: url('../images/site/christmas_list.jpg') no-repeat center center fixed;
+  background-size: contain;
 }

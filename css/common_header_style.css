@@ -25,11 +25,16 @@ body.after_login {
 }
 
 body.pink {
-  background: url('../images/site/pink_background.jpg') no-repeat center center fixed;
+  background: url('../images/site/pink_background.jpg') no-repeat;
+  background-size: 100% 100%;
 }
 
 body.white {
   background: url('../images/site/white.jpg') no-repeat center center fixed;
+}
+
+body.xmas {
+  background: url('../images/site/christmas_background.jpg') no-repeat center center fixed;
 }
 
 header.after_login a {
