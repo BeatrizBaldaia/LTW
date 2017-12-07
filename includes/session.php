@@ -1,9 +1,10 @@
 <?php
   //TODO: Not working with the first login if code below is uncommented.
   //Unsure if this is the correct $_SERVER variable.
-  //session_set_cookie_params(0, '/', $_SERVER['SERVER_NAME'], true, true);
-  
+  session_set_cookie_params(0, '/', $_SERVER['SERVER_NAME'], true, true);
+
   session_start();
+  //session_regenerate_id(true); // Recommended in class to be turned off.
   if (!isset($_SESSION['csrf'])) {
     $_SESSION['csrf'] = generate_random_token();
   }
