@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 @import url(https://fonts.googleapis.com/css?family=Arima+Madurai);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+SC);
+@import url(https://fonts.googleapis.com/css?family=Arizonia);
 
 .link {
   font-family: 'Amatic SC';
@@ -116,7 +118,6 @@ input[type=password] {
   color: rgb(75, 182, 182);
 }
 
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
@@ -151,7 +152,6 @@ input[type=submit]:hover {
     color: white;
     border-radius: 10px;
 }
-
 
 /*Input range Priority*/
 

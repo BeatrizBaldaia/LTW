@@ -1,11 +1,26 @@
+section.pink {
+  font-family: 'Arizonia';
+}
 section.pink > article {
   background: url('../images/site/pink_sheet.jpg') no-repeat center center fixed;
   background-size: contain;
 }
+section.pink > article > #new_item {
+  background: linear-gradient( #E4CD99 , #E4D1A6, #E5DCC8);
+}
 
+section.white {
+  font-family: 'Alegreya SC';
+}
 section.white > article {
   background: url('../images/site/white_list.jpg') no-repeat center center fixed;
   background-size: contain;
+}
+section.white > article > #new_item {
+  background: linear-gradient( #393939 , #4A4A4A, #6B6B6B);
+}
+section.white > article > #new_item > div > label {
+  text-shadow: 0 0 3px white;
 }
 
 section.xmas > article {

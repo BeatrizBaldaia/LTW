@@ -34,7 +34,11 @@
 	height: 1.5em;
   margin-right: 2em;
   float: left;
-	cursor: pointer;
+  background-image: url(../images/site/minus.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  color: transparent;
 }
 
 #setOfLists > article > ul > li > span {

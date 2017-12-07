@@ -11,10 +11,10 @@
           E-mail <input type="email" name="email">
         </label><!-- <br/> -->
         <label>
-          Password <input type="password" name="password" required="required">
+          Password <input type="password" name="password" pattern=".{4,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.check_password.pattern = this.value;" required="required">
         </label><!-- <br/> -->
 		    <label>
-          Confirm Password <input type="password" name="check_password" required="required">
+          Confirm Password <input type="password" name="check_password" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" required="required">
         </label><!-- <br/> -->
         <label>Country
           <input list="countries" name="country">

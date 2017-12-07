@@ -23,7 +23,8 @@ CREATE TABLE lists (
   username VARCHAR REFERENCES users ON DELETE CASCADE,
   name VARCHAR,
   category INTEGER  REFERENCES categories,
-  dateDue DATE
+  dateDue DATE,
+  notified INTEGER DEFAULT 0
 );
 CREATE TABLE categories (
   id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
