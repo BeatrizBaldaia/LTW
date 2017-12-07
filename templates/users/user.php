@@ -20,7 +20,9 @@
             </div>
           </div>
           <a class="link" href="action_logout.php">Logout</a>
+          <?php include_once('templates/lists/notify.php'); ?>
         </div>
+
       <?php } else { ?>
       <div id="before_login">
         <form action="action_login.php" method="post">

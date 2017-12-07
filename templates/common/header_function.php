@@ -17,6 +17,7 @@
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
       <script src="scripts/countries.js" defer></script>
+      <script src="scripts/notify.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">
@@ -26,4 +27,5 @@
         </div>
       </header>
       <?php include_once('templates/users/user.php'); ?>
+
 <?php } ?>
