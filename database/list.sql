@@ -28,7 +28,8 @@ CREATE TABLE lists (
 );
 CREATE TABLE categories (
   id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
-  name VARCHAR
+  name VARCHAR,
+  fullName VARCHAR
 );
 
 CREATE TABLE items (
@@ -289,9 +290,9 @@ INSERT INTO users (username, password, name, email, country) VALUES ('zachary', 
 INSERT INTO users (username, password, name, email, country) VALUES ('alicia', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Alicia Hamilton', 'alicia@gmail.com', 'Spain');
 INSERT INTO users (username, password, name, email, country) VALUES ('abril', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Abril Cooley', 'abril@gmail.com', 'Zimbabwe');
 
-insert into categories (id, name) values (1, 'pink');
-insert into categories (id, name) values (2, 'white');
-insert into categories (id, name) values (3, 'black');
+insert into categories (id, name, fullName) values (1, 'pink', 'Spring Day');
+insert into categories (id, name, fullName) values (2, 'white', "It's cold outside");
+insert into categories (id, name, fullName) values (3, 'xmas', "Christmas Time");
 
 INSERT INTO lists (username, name, category, dateDue) VALUES ('abril', 'Wedding', 2, '2017-12-31');
 insert into lists (username, name, category, dateDue) values ('abril', 'Nunc rhoncus dui vel sem.', 1, '2017-11-01');
