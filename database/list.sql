@@ -5,6 +5,9 @@ DROP TABLE IF EXISTS lists;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS items;
 DROP TABLE IF EXISTS countries;
+DROP TABLE IF EXISTS projectUsers;
+DROP TABLE IF EXISTS projectLists;
+DROP TABLE IF EXISTS projects;
 
 CREATE TABLE countries (
   name VARCHAR PRIMARY KEY
@@ -38,6 +41,23 @@ CREATE TABLE items (
   complet INTEGER DEFAULT 0,
   id_lists INTEGER REFERENCES lists ON DELETE CASCADE,
   priority INTEGER
+);
+
+
+CREATE TABLE projects (
+  id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
+  name VARCHAR,
+  admin VARCHAR REFERENCES users ON DELETE CASCADE
+);
+
+CREATE TABLE projectUsers (
+  user VARCHAR REFERENCES users ON DELETE CASCADE,
+  project INTEGER REFERENCES projects ON DELETE CASCADE
+);
+
+CREATE TABLE projectLists (
+  list INTEGER REFERENCES lists ON DELETE CASCADE,
+  project INTEGER REFERENCES projects ON DELETE CASCADE
 );
 
 
@@ -408,3 +428,13 @@ insert into items (name, id_lists, priority) values ('Fulica cristata', 9, 1);
 insert into items (name, id_lists, priority) values ('Perameles nasuta', 9, 1);
 insert into items (name, id_lists, priority) values ('Nyctanassa violacea', 2, 1);
 insert into items (name, id_lists, priority) values ('Grus antigone', 7, 1);
+
+INSERT INTO projects (name, admin) VALUES ('sobreviver a ltw', 'abril');
+
+INSERT INTO projectUsers (user, project) VALUES ('abril', 1);
+INSERT INTO projectUsers (user, project) VALUES ('dominic', 1);
+INSERT INTO projectUsers (user, project) VALUES ('alicia', 1);
+
+
+INSERT INTO projectLists (list, project) VALUES (1, 1);
+INSERT INTO projectLists (list, project) VALUES (2, 1);

@@ -92,4 +92,11 @@
     $stmt = $db->prepare('UPDATE lists SET notified = 1 WHERE ((notified = 0) AND (username = ?) AND ( (julianday(dateDue) - julianday("now")) < 0))');
     return $stmt->execute(array($username));
   }
+
+  function getProjects($username) {
+    global $db;
+    $stmt = $db->prepare('SELECT * FROM projects INNER JOIN projectUsers ON projects.id = projectUsers.project WHERE (user = ?)');
+    $stmt->execute(array($username));
+    return $stmt->fetchAll();
+  }
 ?>

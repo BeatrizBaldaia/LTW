@@ -328,7 +328,7 @@ form[id=NewListName] {
 	flex-direction: column;
 }
 
-form[id=NewListName] #popup_new_items {
+form[id=NewListName] .popup_new_items {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	max-height: 20em;
@@ -347,6 +347,8 @@ form[id=NewListName] .popup_new_item label:first-of-type {
 form[id=NewListName] .popup_new_item label:last-of-type {
 	grid-row: 2;
 	display: flex;
+	justify-content: center;
+	margin-top: 0.5em;
 }
 
 form[id=NewListName] .popup_new_item label:last-of-type input {

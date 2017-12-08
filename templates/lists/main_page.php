@@ -1,11 +1,5 @@
-<?php   include_once('database/lists.php');
-  $categories = getCategories();
-?>
-
 <section id="lists">
   <?php
-    $lists = getLists($_SESSION['username']);
-    $numLists = count($lists);
     $displayedLists = 0;
     for ($i = 0; $i < $numLists; $i++) {
         if ($displayedLists >= 3) {
@@ -31,10 +25,13 @@
     </article>
   <?php } ?>
 </section>
+<section id="projects">
+
+</section>
 <aside id="sidebar">
   <div>
     <label class="switch">
-      <input type="checkbox">
+      <input type="checkbox" checked>
       <span class="slider">
         <span class="leftToggle">lists</span>
         <span class="rightToggle">projects</span>
@@ -42,9 +39,14 @@
     </label>
   </div>
   <div id="addNewList">
-    <div class="box_popup">
+    <div id="new_list_button" class="box_popup">
       <a class="button_popup" href="#div_popup">
         Add New List
+      </a>
+    </div>
+    <div id="new_project_button" class="box_popup">
+      <a class="button_popup" href="#div_popup">
+        Add New Project
       </a>
     </div>
     <div id="div_popup" class="overlay_popup">
@@ -66,7 +68,7 @@
             <label>Deadline:
               <input type="date" name="deadline" required="required">
             </label>
-            <div id="popup_new_items">
+            <div class="popup_new_items">
               <div class="popup_new_item">
                 <label>Task:
                   <input type="text" name="item_name[]" required="required">
@@ -79,13 +81,36 @@
             </div>
             <input type="submit" name="New List" value="Save New List">
           </form>
+          <form id="NewProjectPopup" action="action_add_new_project.php" method="post">
+            <input type="hidden" name="csrf" value="<?=$_SESSION['csrf']?>">
+            <label>Project Name:
+              <input type="text" name="project_name" required="required">
+            </label>
+            <label>Deadline:
+              <input type="date" name="deadline" required="required">
+            </label>
+            <div class="popup_new_items">
+              <div class="popup_new_item">
+                <label>List:
+                  <input type="text" name="list_name[]" required="required">
+                </label>
+              </div>
+              <input type="submit" name="add_item" value="Add Item">
+            </div>
+            <input type="submit" name="New List" value="Save New List">
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <ul>
+  <ul id="listsListing">
     <?php foreach( $lists as $list) { ?>
         <li><a href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><?=htmlentities($list['name'])?></a></li>
     <?php } ?>
-  <ul>
+  </ul>
+  <ul id="projectsListing">
+    <?php foreach( $projects as $project) { ?>
+        <li><a href="main_page_to-do_list.php?id_list=<?=urlencode($project['id'])?>"><?=htmlentities($project['name'])?></a></li>
+    <?php } ?>
+  </ul>
 </aside>
