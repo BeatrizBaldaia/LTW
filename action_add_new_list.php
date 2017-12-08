@@ -2,10 +2,6 @@
 
   include_once('includes/init.php');
 
-  /* if ($_SESSION['csrf'] !== $_GET['csrf']) {
-    header('Location: main_page.php');
-    die;
-  } */
 
   if(!isset($_SESSION['username']) || !isset($_POST['list_name'])
       || !isset($_POST['csrf']) || $_SESSION['csrf'] !== $_POST['csrf']) {

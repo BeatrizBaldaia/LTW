@@ -87,17 +87,27 @@
               <input type="text" name="project_name" required="required">
             </label>
             <label>Deadline:
-              <input type="date" name="deadline" required="required">
+              <input type="date" name="proj_deadline" required="required">
             </label>
             <div class="popup_new_items">
               <div class="popup_new_item">
                 <label>List:
                   <input type="text" name="list_name[]" required="required">
                 </label>
+                <label>List Category:
+                  <select name="list_category_id[]">
+                    <?php foreach($categories as $category) { ?>
+                      <option value="<?= $category['id'] ?>"><?= $category['fullName'] ?></option>
+                    <?php } ?>
+                  </select>
+                </label>
+                <label>Deadline:
+                  <input type="date" name="list_deadline[]" required="required">
+                </label>
               </div>
-              <input type="submit" name="add_item" value="Add Item">
+              <input type="submit" name="add_list" value="Add List">
             </div>
-            <input type="submit" name="New List" value="Save New List">
+            <input type="submit" name="new_project" value="Save New Project">
           </form>
         </div>
       </div>
