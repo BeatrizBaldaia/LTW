@@ -2,7 +2,13 @@
 @import url(https://fonts.googleapis.com/css?family=Arima+Madurai);
 @import url(https://fonts.googleapis.com/css?family=Alegreya+SC);
 @import url(https://fonts.googleapis.com/css?family=Arizonia);
-
+@media (max-width: 800px) {
+  header.before_login {
+    width: 256px;
+    height: 256px;
+    background-image: url('../images/site/logo_small.png');
+  }
+}
 .link {
   font-family: 'Amatic SC';
   font-size: 17px;

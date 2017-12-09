@@ -42,7 +42,7 @@ header.after_login a {
 }
 
 header.after_login {
-  background-image: url('../images/site/todo_logo.png'), linear-gradient(#CACACA, #FAFDFF);
+  background-image: url('../images/site/logo_small.png'), linear-gradient(#CACACA, #FAFDFF);
   background-repeat: no-repeat, no-repeat;
   background-size: 200px, auto;
   background-position:200px 0, 0 0;
@@ -66,7 +66,7 @@ header.register a {
 }
 
 header.register {
-  background-image: url('../images/site/todo_logo.png'), linear-gradient(#CACACA, #FAFDFF);
+  background-image: url('../images/site/logo_small.png'), linear-gradient(#CACACA, #FAFDFF);
   background-repeat: no-repeat, no-repeat;
   background-size: 200px, auto;
   background-position:200px 0, 0 0;
