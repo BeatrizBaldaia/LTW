@@ -10,7 +10,9 @@ if (btn_popup_addItem != null) {
   btn_popup_addItem.addEventListener('click', popup_AddItem);
 }
 
-
+/*
+@brief Adiciona item a basa de dados
+*/
 function addItem(event){
   let itemName = document.querySelector('#setOfLists > article > #new_item > input[type="text"]').value;
   let itemPriority = document.querySelector('#setOfLists > article > #new_item > div > label > input[type="range"]').value;
@@ -20,6 +22,9 @@ function addItem(event){
   request.addEventListener('load', allItems);
   request.send();
 }
+/*
+@brief Adiciona item a lista do html
+*/
 function allItems(event){
   let new_item = document.createElement('li');
   let itemInfo = JSON.parse(this.responseText);
@@ -43,7 +48,7 @@ function popup_AddItem(event) {
   let newItem = document.createElement('div');
   newItem.className = "popup_new_item";
 
-  let itemNameLabel = '<label>Item:';
+  let itemNameLabel = '<label>Task:';
   itemNameLabel += '<input type="text" name="item_name[]" required="required">';
   itemNameLabel += '</label>';
   let priorityLabel = '<label>Priority:';

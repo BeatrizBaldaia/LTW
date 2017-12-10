@@ -16,6 +16,7 @@
       <link href="css/register.css" rel="stylesheet">
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
+      <script src="scripts/add_list.js" defer></script>
       <script src="scripts/countries.js" defer></script>
       <script src="scripts/notify.js" defer></script>
       <script src="scripts/toggle_views.js" defer></script>

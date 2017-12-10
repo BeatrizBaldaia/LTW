@@ -89,8 +89,8 @@
             <label>Deadline:
               <input type="date" name="proj_deadline" required="required">
             </label>
-            <div class="popup_new_items">
-              <div class="popup_new_item">
+            <div class="popup_new_lists">
+              <div class="popup_new_list">
                 <label>List:
                   <input type="text" name="list_name[]" required="required">
                 </label>

@@ -28,6 +28,15 @@ function addProject($name, $admin) {
   return $db->lastInsertId();
 }
 
+function addUserToProject($user_id, $project_id) {
+  global $db;
+  $stmt = $db->prepare('INSERT INTO projectUsers (user, project) VALUES (?, ?);');
+  if(!$stmt->execute(array($user_id, $project_id))){
+    return false;
+  }
+  return $db->lastInsertId();
+}
+
 
 function addListToProject($list_id, $project_id) {
   global $db;

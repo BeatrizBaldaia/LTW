@@ -12,17 +12,21 @@
 
   if(($projectId = addProject($_POST['project_name'] ,$_SESSION['username'])) == false){
     //TODO erro ao adicioane
+    print("Erro a obter o id do projeto");
     die;
   }
+  addUserToProject($_SESSION['username'], $projectId);
 
   $listNames = $_POST['list_name'];
   $numLists = count($listNames);
+  $projDeadline = $_POST['proj_deadline'];
   $listCategories = $_POST['list_category_id'];
-  $listDeadlines = $_POST['deadline'];
+  $listDeadlines = $_POST['list_deadline'];
+
   for ($i = 0; $i < $numLists; $i++) {
     $listId = addList($_SESSION['username'], $listNames[$i], $listCategories[$i], $listDeadlines[$i]);
     addListToProject($listId, $projectId);
   }
 
-  header("Location: main_page_to-do_list.php?id_list=$listId");
+  header('Location: main_page.php');
 ?>
