@@ -8,6 +8,33 @@
     height: 256px;
     background-image: url('../images/site/logo_small.png');
   }
+  div.before_login {
+    bottom: 50px;
+  }
+  label > input[type=text] {
+    width: auto;
+  }
+  label > input[type=password] {
+    width: auto;
+  }
+}
+@media (orientation:landscape) and (max-width: 800px) {
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  #before_login {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+  }
+  body.before_login {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 10px;
+  }
 }
 .link {
   font-family: 'Amatic SC';

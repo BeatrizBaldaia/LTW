@@ -1,3 +1,15 @@
+@media (max-width: 800px) {
+  #setOfLists > article {
+    height: auto;
+    max-width: none;
+  }
+  section#setOfLists > article > ul {
+    max-height: none;
+  }
+  section#setOfLists > article > #new_item {
+    position: static;
+  }
+}
 #setOfLists .id {
   display: none;
 }
