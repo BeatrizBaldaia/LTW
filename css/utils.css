@@ -6,7 +6,45 @@
   header.before_login {
     width: 256px;
     height: 256px;
-    background-image: url('../images/site/logo_small.png');
+    background-image: none;
+  }
+   header.after_login {
+    background-image: none;
+    background: linear-gradient(#CACACA, #FAFDFF);
+  }
+  div.before_login {
+    bottom: 50px;
+  }
+  label > input[type=text] {
+    width: auto;
+  }
+  label > input[type=password] {
+    width: auto;
+  }
+  html {
+    background: url('../images/site/white_background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media (min-aspect-ratio: 13/9) and (max-width: 800px) {
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  #before_login {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+  }
+  body.before_login {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 10px;
   }
 }
 .link {
