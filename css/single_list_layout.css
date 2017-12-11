@@ -9,14 +9,14 @@
   section#setOfLists > article > #new_item {
     position: static;
   }
-  section.pink > article {
-    background-size: auto;
+  section#setOfLists.pink > article {
+    background-size: cover;
   }
-  section.white > article {
-    background-size: auto;
+  section#setOfLists.white > article {
+    background-size: cover;
   }
-  section.xmas > article {
-    background-size: auto;
+  section#setOfLists.xmas > article {
+    background-size: cover;
   }
   body.pink {
     background-size: auto;
