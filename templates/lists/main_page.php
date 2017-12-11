@@ -26,12 +26,37 @@
   <?php } ?>
 </section>
 <section id="projects">
+  <?php
+    $displayedProjects = 0;
+    for ($i = 0; $i < $numProjects; $i++) {
+        if ($displayedProjects >= 3) {
+            break;
+        }
+        $project = $projects[$i];
+        if ($project['diff'] < 0) {
+            continue;
+        }
+        $displayedProjects++; ?>
+    <article class="project">
+      <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($project['id'])?>"><h3><?=htmlentities($project['name'])?></h3></a>
+      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($project['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
+      <span class="dateDue">Deadline: <?=htmlentities($project['deadline'])?></span>
+      <ul>
+      <?php $listsOfProject = getProjectLists($project['id']);
+        foreach( $listsOfProject as $projectList) { ?>
+            <div>
 
+              <li class="normal_text"><?= htmlentities($projectList['name']);?></li>
+            </div>
+      <?php } ?>
+      </ul>
+    </article>
+  <?php } ?>
 </section>
 <aside id="sidebar">
   <div>
     <label class="switch">
-      <input type="checkbox" checked>
+      <input type="checkbox" <?= $_SESSION['toggleState'] ?>>
       <span class="slider">
         <span class="leftToggle">lists</span>
         <span class="rightToggle">projects</span>

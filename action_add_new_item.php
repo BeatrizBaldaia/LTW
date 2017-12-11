@@ -12,6 +12,7 @@
     //TODO erro ao adicioane
     die;
   }
+  
   echo json_encode(getItemById($id));
 
 ?>

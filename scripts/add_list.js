@@ -1,6 +1,6 @@
-let btn_popup_addList = document.querySelector('#NewProjectPopup input[name="add_list"]');
+let btn_popup_addList = document.querySelector('#NewProjectPopup input[name=add_list]');
 if (btn_popup_addList != null) {
-  btn_popup_addItem.addEventListener('click', popup_AddList);
+  btn_popup_addList.addEventListener('click', popup_AddList);
 }
 
 function popup_AddList(event) {
@@ -10,8 +10,8 @@ function popup_AddList(event) {
   newList.className = "popup_new_list";
 
   let listNameLabel = '<label>List:';
-  itemNameLabel += '<input type="text" name="list_name[]" required="required">';
-  itemNameLabel += '</label>';
+  listNameLabel += '<input type="text" name="list_name[]" required="required">';
+  listNameLabel += '</label>';
   let categoryLabel = '<label>List Category:';
   categoryLabel += '<select name="list_category_id[]">';
   categoryLabel += '<?php foreach($categories as $category) { ?>';

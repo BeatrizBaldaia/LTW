@@ -26,6 +26,10 @@ function addItem(event){
 @brief Adiciona item a lista do html
 */
 function allItems(event){
+//<input type="button" class="delete_item_btn" onclick="location.href='action_delete_item.php?item_id=<?=urlencode($item['id'])?>&csrf=<?= $_SESSION['csrf']?>&list_id=<?=urlencode($list['id'])?>';" value="-"/>
+
+  let new_item_btn = document.createElement('input');
+
   let new_item = document.createElement('li');
   let itemInfo = JSON.parse(this.responseText);
   new_item.setAttribute('class', 'priority' + itemInfo.priority);

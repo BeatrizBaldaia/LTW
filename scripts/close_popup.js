@@ -6,7 +6,7 @@ if (closeBtn != null) {
 }
 
 function removeExtraFields(event) {
-  let extraFields = document.querySelectorAll('#div_popup .popup_new_items');
+  let extraFields = document.querySelectorAll('#div_popup .popup_new_items, .popup_new_lists');
   while (extraFields[0].children.length > 2) {
       extraFields[0].removeChild(extraFields[0].firstChild);
   }

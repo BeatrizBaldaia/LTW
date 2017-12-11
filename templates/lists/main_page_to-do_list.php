@@ -8,9 +8,11 @@
       <?php $items = getItems($list['id']);
         foreach( $items as $item) { ?>
           <input type="button" class="delete_item_btn" onclick="location.href='action_delete_item.php?item_id=<?=urlencode($item['id'])?>&csrf=<?= $_SESSION['csrf']?>&list_id=<?=urlencode($list['id'])?>';" value="-"/>
-          <li class="priority<?= getPriority($item['id'])['priority'] ?>"><span><?=htmlentities($item['name'])?>
-          <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
-        </span></li>
+          <li class="priority<?= getPriority($item['id'])['priority'] ?>">
+            <span><?=htmlentities($item['name'])?>
+              <input type="checkbox" name="item_complete" value="<?=htmlentities($item['id'])?>" <?= ($item['complet'] ? 'checked' : '')?>>
+            </span>
+          </li>
       <?php } ?>
       </ul>
       <div id="new_item">
