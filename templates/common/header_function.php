@@ -22,6 +22,7 @@
       <script src="scripts/toggle_views.js" defer></script>
       <script src="scripts/close_popup.js" defer></script>
       <script src="scripts/toggle_switch.js" defer></script>
+      <script src="scripts/set_default_dates.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">
