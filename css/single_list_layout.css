@@ -12,7 +12,19 @@
   section.pink > article {
     background-size: auto;
   }
+  section.white > article {
+    background-size: auto;
+  }
+  section.xmas > article {
+    background-size: auto;
+  }
   body.pink {
+    background-size: auto;
+  }
+  body.white {
+    background-size: auto;
+  } 
+  body.xmas {
     background-size: auto;
   }
   body {
