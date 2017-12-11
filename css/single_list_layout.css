@@ -9,6 +9,15 @@
   section#setOfLists > article > #new_item {
     position: static;
   }
+  section.pink > article {
+    background-size: auto;
+  }
+  body.pink {
+    background-size: auto;
+  }
+  body {
+    background-size: auto;
+  }
 }
 #setOfLists .id {
   display: none;

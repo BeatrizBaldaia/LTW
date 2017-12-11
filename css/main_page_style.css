@@ -4,6 +4,7 @@
     overflow-y: auto;
 		max-height: none;
 		min-height: 0;
+		grid-template-columns: auto auto auto;
 	}
 	#lists {
 		flex-direction: column;
