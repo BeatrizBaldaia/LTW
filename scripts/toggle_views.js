@@ -42,6 +42,8 @@ function setProjectsView() {
   projectsListingView.style.display = projectsListingInitialDisplay;
   projectsPopupButton.style.display = projectsPopupButtonInitialDisplay;
   projectsPopup.style.display = projectsPopupInitialDisplay;
+
+  sessionStorage.setItem("toggleState", "");
 }
 
 function setListsView() {
@@ -54,6 +56,8 @@ function setListsView() {
   projectsListingView.style.display = "none";
   projectsPopupButton.style.display = "none";
   projectsPopup.style.display = "none";
+  
+  sessionStorage.setItem("toggleState", "checked");
 }
 
 function toggleViews(event) {
