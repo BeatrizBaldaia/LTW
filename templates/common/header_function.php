@@ -16,6 +16,7 @@
       <link href="css/common_footer_style.css" rel="stylesheet">
       <link href="css/utils.css" rel="stylesheet">
       <link href="css/register.css" rel="stylesheet">
+        <link href="css/allProjects_page_style.css" rel="stylesheet">
       <link href="css/media.css" rel="stylesheet">
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
