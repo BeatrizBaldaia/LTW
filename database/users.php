@@ -13,7 +13,7 @@
     global $db;
     $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
     $stmt->execute(array($username));
-    return ($stmt->fetch() !== false);
+    return (count($stmt->fetch()) > 0);
   }
 
 //TODO

@@ -2,10 +2,7 @@
 
   include_once('includes/init.php');
 
-  session_start();
-
   if(!isset($_SESSION['username'])
-   || !isset($_POST['item'])
    || !isset($_POST['project'])
    || !isset($_POST['username'])
    || !isset($_POST['csrf'])
@@ -14,12 +11,14 @@
     die;
   }
 
-  if (!isUserInProject($_POST['username'], $_POST['project'])) {
+  if (isUserInProject($_POST['username'], $_POST['project']) || !usernameExists($_POST['username'])) {
     die;
   }
 
-  if (!assignItemToUser($_POST['username'], $_POST['item'])) {
+  if (!addUserToProject($_POST['username'], $_POST['project'])) {
     die;
   }
+
+  echo json_encode($_POST['username']);
 
 ?>

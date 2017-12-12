@@ -48,12 +48,21 @@
         <li><?= htmlentities($member['user']); ?></li>
       <?php } ?>
      </ul>
+     <form action="action_add_user_to_project.php" method="post">
+       <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
+       <input type="hidden" name="item" value="<?= $item['id'] ?>">
+       <input type="hidden" name="project" value="<?= $project['id'] ?>">
+       <label>
+         Invite User <input type="text" placeholder="username" name="username">
+       </label>
+       <button type="button" name="invite" value="Invite to Project">
+     </form>
     </section>
   </section>
   <section class="projectAssignedTasks">
     <h1>My Assigned Tasks</h1>
     <section class="scroll_section">
-    
+
     </section>
   </section>
 </section>
