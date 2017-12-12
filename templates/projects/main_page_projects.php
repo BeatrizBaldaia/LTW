@@ -29,7 +29,7 @@
                   <label>
                     Assign User <input type="text" placeholder="username" name="username">
                   </label>
-                  <button type="button" name="assign" value="Assign">
+                  <button type="button" name="assign">Assign</button>
                 </form>
               <?php } ?>
             </li>
@@ -53,7 +53,7 @@
   <section class="projectAssignedTasks">
     <h1>My Assigned Tasks</h1>
     <section class="scroll_section">
-    
+
     </section>
   </section>
 </section>
