@@ -1,32 +1,3 @@
-@media (max-width: 800px) {
-  html {
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-  }
-	body.after_login {
-    overflow-x: auto;
-    overflow-y: auto;
-		max-height: none;
-	
-		grid-template-columns: auto auto auto;
-		min-height: 100%;
-	}
-	#lists {
-		flex-direction: column;
-	}
-	#lists > article > a {
-		font-size: 16px;
-	}
-	#lists > article.list > ul {
-    max-height: none;
-	}
-	aside#sidebar {
-    height: auto;
-	}
-}
 
 #after_login {
 	margin: 0;
@@ -394,15 +365,6 @@ form[id=NewListName] input[name=add_item] {
   height: auto;
   padding: 0;
   margin: 8px 0px;
-}
-
-@media screen and (max-width: 700px){
-  .box_popup{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
 }
 
 #sidebar > ul li {

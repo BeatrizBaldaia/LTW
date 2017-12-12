@@ -1,36 +1,4 @@
-@media (max-width: 800px) {
-  #setOfLists > article {
-    height: auto;
-    max-width: none;
-  }
-  section#setOfLists > article > ul {
-    max-height: none;
-  }
-  section#setOfLists > article > #new_item {
-    position: static;
-  }
-  section#setOfLists.pink > article {
-    background-size: cover;
-  }
-  section#setOfLists.white > article {
-    background-size: cover;
-  }
-  section#setOfLists.xmas > article {
-    background-size: cover;
-  }
-  body.pink {
-    background-size: auto;
-  }
-  body.white {
-    background-size: auto;
-  } 
-  body.xmas {
-    background-size: auto;
-  }
-  body {
-    background-size: auto;
-  }
-}
+
 #setOfLists .id {
   display: none;
 }

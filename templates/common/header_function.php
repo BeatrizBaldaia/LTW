@@ -4,7 +4,7 @@
     <head>
       <title>To-Do</title>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=.5">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="css/common_header_style.css" rel="stylesheet">
       <link href="css/categories_themes.css" rel="stylesheet">
       <link href="css/single_list_layout.css" rel="stylesheet">
@@ -14,6 +14,7 @@
       <link href="css/common_footer_style.css" rel="stylesheet">
       <link href="css/utils.css" rel="stylesheet">
       <link href="css/register.css" rel="stylesheet">
+      <link href="css/media.css" rel="stylesheet">
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
       <script src="scripts/countries.js" defer></script>

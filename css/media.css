@@ -1,0 +1,115 @@
+@media screen and (max-width: 700px){
+  .box_popup{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  #setOfLists > article {
+    height: auto;
+    max-width: none;
+  }
+  section#setOfLists > article > ul {
+    max-height: none;
+  }
+  section#setOfLists > article > #new_item {
+    position: static;
+  }
+  section#setOfLists.pink > article {
+    background-size: cover;
+  }
+  section#setOfLists.white > article {
+    background-size: cover;
+  }
+  section#setOfLists.xmas > article {
+    background-size: cover;
+  }
+  body.pink {
+    background-size: auto;
+  }
+  body.white {
+    background-size: auto;
+  } 
+  body.xmas {
+    background-size: auto;
+  }
+  body {
+    background-size: auto;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+	body.after_login {
+    overflow-x: auto;
+    overflow-y: auto;
+		max-height: none;
+	
+		grid-template-columns: auto auto auto;
+		min-height: 100%;
+	}
+	#lists {
+		flex-direction: column;
+	}
+	#lists > article > a {
+		font-size: 16px;
+	}
+	#lists > article.list > ul {
+    max-height: none;
+	}
+	aside#sidebar {
+    height: auto;
+	}
+}
+@media (max-width: 800px) {
+  header.before_login {
+    width: 256px;
+    height: 256px;
+    background-image: none;
+  }
+   header.after_login {
+    background-image: none;
+    background: linear-gradient(#CACACA, #FAFDFF);
+  }
+  div.before_login {
+    bottom: 50px;
+  }
+  label > input[type=text] {
+    width: auto;
+  }
+  label > input[type=password] {
+    width: auto;
+  }
+  html {
+    background: url('../images/site/white_background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+@media (min-aspect-ratio: 13/9) and (max-width: 800px) {
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  header.before_login {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+  #before_login {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+  }
+  body.before_login {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr 10px;
+  }
+}
