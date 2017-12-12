@@ -1,28 +1,28 @@
 'use strict';
 
 let listsView = document.querySelector('#lists');
-let listsInitialDisplay = listsView.style.display;
+let listsInitialDisplay = (listsView != null ? listsView.style.display : null);
 
 let listsListingView = document.querySelector('#listsListing');
-let listsListingInitialDisplay = listsListingView.style.display;
+let listsListingInitialDisplay = (listsListingView != null ? listsListingView.style.display : null);
 
 let listsPopupButton = document.querySelector('#new_list_button');
-let listsPopupButtonInitialDisplay = listsPopupButton.style.display;
+let listsPopupButtonInitialDisplay = (listsPopupButton != null ? listsPopupButton.style.display : null);
 
 let listsPopup = document.querySelector('#NewListName');
-let listsPopupInitialDisplay = listsPopup.style.display;
+let listsPopupInitialDisplay = (listsPopup != null ? listsPopup.style.display : null);
 
 let projectsView = document.querySelector('#projects');
-let projectsInitialDisplay = projectsView.style.display;
+let projectsInitialDisplay = (projectsView != null ? projectsView.style.display : null);
 
 let projectsListingView = document.querySelector('#projectsListing');
-let projectsListingInitialDisplay = projectsListingView.style.display;
+let projectsListingInitialDisplay = (projectsListingView != null ? projectsListingView.style.display : null);
 
 let projectsPopupButton = document.querySelector('#new_project_button');
-let projectsPopupButtonInitialDisplay = projectsPopupButton.style.display;
+let projectsPopupButtonInitialDisplay = (projectsPopupButton != null ? projectsPopupButton.style.display : null);
 
 let projectsPopup = document.querySelector('#NewProjectPopup');
-let projectsPopupInitialDisplay = projectsPopup.style.display;
+let projectsPopupInitialDisplay = (projectsPopup != null ? projectsPopup.style.display : null);
 
 let checkbox = document.querySelector('#sidebar input[type=checkbox]');
 if (checkbox != null) {
@@ -30,7 +30,9 @@ if (checkbox != null) {
 }
 
 // Only show one view at the beginning.
-setListsView();
+if (listsView != null) {
+  setListsView();
+}
 
 function setProjectsView() {
   listsView.style.display = "none";

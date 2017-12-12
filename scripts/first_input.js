@@ -13,5 +13,4 @@
 
  function setEdited(event) {
    this.className = "startedInput";
-   console.log(this);
  }
