@@ -23,7 +23,7 @@ function inviteUser_updateHtml(event) {
   let username = JSON.parse(this.responseText);
   let new_member = document.createElement('li');
   new_member.innerHTML = htmlEntities(username);
-  let memebers = document.querySelector('#projectArea .projectMembers ul');
-  memebers.append(new_member);
+  let members = document.querySelector('#projectArea .projectMembers ul');
+  members.append(new_member);
   document.querySelector('#projectArea .projectMembers label > input[type="text"]').value = "";
 }

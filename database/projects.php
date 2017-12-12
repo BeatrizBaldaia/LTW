@@ -41,10 +41,10 @@ function addProject($name, $admin, $deadline) {
   return $db->lastInsertId();
 }
 
-function addUserToProject($user_id, $project_id) {
+function addUserToProject($username, $project_id) {
   global $db;
   $stmt = $db->prepare('INSERT INTO projectUsers (user, project) VALUES (?, ?);');
-  if(!$stmt->execute(array($user_id, $project_id))){
+  if(!$stmt->execute(array($username, $project_id))){
     return false;
   }
   return $db->lastInsertId();
@@ -60,10 +60,10 @@ function addListToProject($list_id, $project_id) {
   return $db->lastInsertId();
 }
 
-function isUserInProject($user_id, $project_id) {
+function isUserInProject($username, $project_id) {
   global $db;
   $stmt = $db->prepare('SELECT * FROM projectUsers WHERE (user = ? AND project = ?)');
-  if (!$stmt->execute(array($user_id, $project_id))) {
+  if (!$stmt->execute(array($username, $project_id))) {
     return false;
   }
 
@@ -80,8 +80,26 @@ function getMembers($project_id) {
   return $stmt->fetchAll();
 }
 
-function getTasks($user_id, $project_id) {
+function getListsOfUserInProject($username, $project_id) {
+  global $db;
+  $stmt = $db->prepare('SELECT * FROM projectUsers WHERE (user = ? AND project = ?)');
+  if (!$stmt->execute(array($username, $project_id))) {
+    return false;
+  }
 
+  return $stmt->fetchAll();
+}
+
+function getTasks($username, $project_id) {
+  global $db;
+  $listIds = getListsOfUserInProject($username, $project_id);
+
+  $taskIds = [];
+  foreach ($listIds as $listId) {
+    $taskIds = array_merge($taskIds, getItems($listId));
+  }
+
+  return $taskIds;
 }
 
 ?>
