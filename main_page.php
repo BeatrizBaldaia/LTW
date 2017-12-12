@@ -10,7 +10,7 @@
   $numLists = count($lists);
   $categories = getCategories();
   $projects = getProjects($_SESSION['username']);
-
+  $numProjects = count($projects);
   set_header("after_login");
   include('templates/lists/main_page.php');
   include('templates/common/footer.php');

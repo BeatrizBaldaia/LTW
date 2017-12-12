@@ -1,7 +1,11 @@
 <?php
 function getProjects($username) {
   global $db;
-  $stmt = $db->prepare('SELECT * FROM projects INNER JOIN projectUsers ON projects.id = projectUsers.project WHERE (user = ?)');
+  $stmt = $db->prepare('SELECT *, (julianday(deadline) - julianday("now")) AS diff
+  FROM projects INNER JOIN projectUsers
+  ON projects.id = projectUsers.project
+  WHERE (user = ?)
+  ORDER BY diff');
   $stmt->execute(array($username));
   return $stmt->fetchAll();
 }
@@ -14,15 +18,33 @@ function getProjectByName($admin, $name) {
 
 function getProjectById($id) {
   global $db;
-  $stmt = $db->prepare('SELECT * FROM projects WHERE id = ?');
+  $stmt = $db->prepare('SELECT * FROM projects WHERE id = ? ');
   $stmt->execute(array($id));
   return $stmt->fetch();
 }
 
-function addProject($name, $admin) {
+function getProjectLists($id) {
   global $db;
-  $stmt = $db->prepare('INSERT INTO projects (name, admin) VALUES (?, ?);');
-  if(!$stmt->execute(array($name, $admin))){
+  $stmt = $db->prepare('SELECT lists.id AS id, lists.name AS name
+    FROM lists, projectLists
+    WHERE projectLists.project = ? AND projectLists.list = id');
+  $stmt->execute(array($id));
+  return $stmt->fetchAll();
+}
+
+function addProject($name, $admin, $deadline) {
+  global $db;
+  $stmt = $db->prepare('INSERT INTO projects (name, admin, deadline) VALUES (?, ?, ?);');
+  if(!$stmt->execute(array($name, $admin, $deadline))){
+    return false;
+  }
+  return $db->lastInsertId();
+}
+
+function addUserToProject($user_id, $project_id) {
+  global $db;
+  $stmt = $db->prepare('INSERT INTO projectUsers (user, project) VALUES (?, ?);');
+  if(!$stmt->execute(array($user_id, $project_id))){
     return false;
   }
   return $db->lastInsertId();

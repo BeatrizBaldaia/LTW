@@ -8,6 +8,7 @@ $currentTime = time();
 if ($currentTime > $_SESSION['endTimeout']) {
     if (correctLogin($_POST['username'], $_POST['password'])) {
         $_SESSION['username'] = $_POST['username'];
+        $_SESSION['toggleState'] = 'checked';
         $_SESSION['failedLoginAttempts'] = 0;
     } else {
         $_SESSION['failedLoginAttempts']++;

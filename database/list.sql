@@ -1,5 +1,6 @@
 PRAGMA foreign_keys=ON;
 
+DROP TABLE IF EXISTS userItem;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS lists;
 DROP TABLE IF EXISTS categories;
@@ -47,7 +48,8 @@ CREATE TABLE items (
 CREATE TABLE projects (
   id INTEGER PRIMARY KEY ,--AUTOINCREMENT,
   name VARCHAR,
-  admin VARCHAR REFERENCES users ON DELETE CASCADE
+  admin VARCHAR REFERENCES users ON DELETE CASCADE,
+  deadline DATE
 );
 
 CREATE TABLE projectUsers (
@@ -58,6 +60,11 @@ CREATE TABLE projectUsers (
 CREATE TABLE projectLists (
   list INTEGER REFERENCES lists ON DELETE CASCADE,
   project INTEGER REFERENCES projects ON DELETE CASCADE
+);
+
+CREATE TABLE userItem (
+  user INTEGER REFERENCES users ON DELETE CASCADE,
+  item INTEGER REFERENCES items ON DELETE CASCADE
 );
 
 
@@ -429,7 +436,7 @@ insert into items (name, id_lists, priority) values ('Perameles nasuta', 9, 1);
 insert into items (name, id_lists, priority) values ('Nyctanassa violacea', 2, 1);
 insert into items (name, id_lists, priority) values ('Grus antigone', 7, 1);
 
-INSERT INTO projects (name, admin) VALUES ('sobreviver a ltw', 'abril');
+INSERT INTO projects (name, admin, deadline) VALUES ('sobreviver a ltw', 'abril', '2017-12-31');
 
 INSERT INTO projectUsers (user, project) VALUES ('abril', 1);
 INSERT INTO projectUsers (user, project) VALUES ('dominic', 1);
