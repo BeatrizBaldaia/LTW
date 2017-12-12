@@ -60,4 +60,28 @@ function addListToProject($list_id, $project_id) {
   return $db->lastInsertId();
 }
 
+function isUserInProject($user_id, $project_id) {
+  global $db;
+  $stmt = $db->prepare('SELECT * FROM projectUsers WHERE (user = ? AND project = ?)');
+  if (!$stmt->execute(array($user_id, $project_id))) {
+    return false;
+  }
+
+  return (count($stmt->fetchAll()) > 0);
+}
+
+function getMembers($project_id) {
+  global $db;
+  $stmt = $db->prepare('SELECT * FROM projectUsers WHERE (project = ?)');
+  if (!$stmt->execute(array($project_id))) {
+    return false;
+  }
+
+  return $stmt->fetchAll();
+}
+
+function getTasks($user_id, $project_id) {
+
+}
+
 ?>

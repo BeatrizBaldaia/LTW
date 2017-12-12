@@ -25,6 +25,7 @@
                 <form action="action_assign_item_to_user.php" method="post">
                   <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
                   <input type="hidden" name="item" value="<?= $item['id'] ?>">
+                  <input type="hidden" name="project" value="<?= $project['id'] ?>">
                   <label>
                     Assign User <input type="text" placeholder="username" name="username">
                   </label>
@@ -41,12 +42,18 @@
   <section class="projectMembers">
     <h1>Members</h1>
     <section class="scroll_section">
-      
+      <ul>
+      <?php $members = getMembers($project['id']);
+      foreach ($members as $member) { ?>
+        <li><?= htmlentities($member['user']); ?></li>
+      <?php } ?>
+     </ul>
     </section>
   </section>
   <section class="projectAssignedTasks">
     <h1>My Assigned Tasks</h1>
     <section class="scroll_section">
+    
     </section>
   </section>
 </section>

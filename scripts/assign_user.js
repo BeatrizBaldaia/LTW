@@ -9,16 +9,17 @@ if (btn_assignUser != null) {
 @brief Adiciona item a basa de dados
 */
 function assignUser(event){
-  let csrf = this.parentNode[0].value;
-  let itemId = this.parentNode[1].value;
-  let username = this.parentNode[2].value;
+  let csrf = this.parentNode['csrf'].value;
+  let itemId = this.parentNode['item'].value;
+  let projectId = this.parentNode['project'].value;
+  let username = this.parentNode['username'].value;
   let request = new XMLHttpRequest();
   request.open('POST', 'action_assign_item_to_user.php', true);
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.addEventListener('load', assignUser_updateHtml);
-  request.send(encodeForAjax({'username': username, 'item': itemId, 'csrf': csrf}));
+  request.send(encodeForAjax({'username': username, 'item': itemId, 'project': projectId, 'csrf': csrf}));
 }
 
 function assignUser_updateHtml() {
-  
+
 }
