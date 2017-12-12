@@ -1,7 +1,7 @@
 #projectArea {
   grid-column: 1 / 4;
-	grid-row: 2 / 4;
-  display: block;
+	grid-row: 2 / 3;
+  /*display: flex;*/
 }
 #projectArea .project_header > *{
   display: flex;
@@ -10,12 +10,20 @@
 #projectArea .id {
   display: none;
 }
-#projectArea .container {
+#projectArea .scroll_section {
+  /*height: 60vh;*/
   display: flex;
   flex-flow: row wrap;
+  overflow: auto;
 }
 
-#projectArea .container > *{
-  max-height: 500px;
-  overflow: scroll;
+#projectArea .container {
+  display: flex;
+  flex-direction: row;
+  min-height: 0;
+}
+
+#projectArea .container > * {
+  flex-grow: 1;
+  min-height: 0;
 }

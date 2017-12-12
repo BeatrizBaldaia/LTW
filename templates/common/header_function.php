@@ -26,6 +26,7 @@
       <script src="scripts/toggle_switch.js" defer></script>
       <script src="scripts/set_default_dates.js" defer></script>
       <script src="scripts/first_input.js" defer></script>
+      <script src="scripts/assign_user.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">

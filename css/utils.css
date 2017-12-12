@@ -180,7 +180,7 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px rgb(171, 195, 249)inset;
 }
 
-input[type=submit] {
+input[type=submit], button {
     background-color: #FFFFFF;
     border: 2px solid #A0A0A0;
     color: #A0A0A0;
@@ -195,7 +195,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
     background-color: #A0A0A0;
     color: white;
     border-radius: 10px;

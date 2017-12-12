@@ -12,22 +12,23 @@
     <ul>
     <?php $lists = getProjectLists($project['id']);
       foreach( $lists as $list) {
-        ?>
-        <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h2><?=htmlentities($list['name'])?></h2></a>
-        <?php
         $items = getItems($list['id']);
         ?>
+        <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h2><?=htmlentities($list['name'])?></h2></a>
         <ul>
-        <?php $items = getItems($list['id']);
+        <?php
           foreach( $items as $item) { ?>
             <li>
               <span><?=htmlentities($item['name'])?></span>
               <?php
               if(!isItemAssigned($item['id'])) { ?>
                 <form action="action_assign_item_to_user.php" method="post">
+                  <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
+                  <input type="hidden" name="item" value="<?= $item['id'] ?>">
                   <label>
                     Assign User <input type="text" placeholder="username" name="username">
                   </label>
+                  <button type="button" name="assign" value="Assign">
                 </form>
               <?php } ?>
             </li>
@@ -40,6 +41,7 @@
   <section class="projectMembers">
     <h1>Members</h1>
     <section class="scroll_section">
+      
     </section>
   </section>
   <section class="projectAssignedTasks">
