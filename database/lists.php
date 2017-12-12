@@ -92,4 +92,23 @@
     $stmt = $db->prepare('UPDATE lists SET notified = 1 WHERE ((notified = 0) AND (username = ?) AND ( (julianday(dateDue) - julianday("now")) < 0))');
     return $stmt->execute(array($username));
   }
+  function isItemAssigned($id) {
+    global $db;
+    $stmt = $db->prepare('SELECT *  FROM userItem WHERE item = ?');
+    $stmt->execute(array($id));
+    $result = $stmt->fetchAll();
+    if(count($result) == 0) {
+      return false;
+    }
+    return true;
+  }
+  function assignItemToUser($user_id, $item_id) {
+    global $db;
+    $stmt = $db->prepare('INSERT INTO userItem (user, item) VALUES (?, ?);');
+    if(!$stmt->execute(array($user_id, $item_id))){
+      return false;
+    }
+    return;
+  }
+
 ?>

@@ -9,6 +9,7 @@
       <link href="css/common_header_style.css" rel="stylesheet">
       <link href="css/categories_themes.css" rel="stylesheet">
       <link href="css/single_list_layout.css" rel="stylesheet">
+      <link href="css/single_project_layout.css" rel="stylesheet">
       <link href="css/main_page_style.css" rel="stylesheet">
       <link href="css/login_style.css" rel="stylesheet">
       <link href="css/edit_profile.css" rel="stylesheet">
