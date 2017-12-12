@@ -26,15 +26,23 @@ function addItem(event){
 @brief Adiciona item a lista do html
 */
 function allItems(event){
-//<input type="button" class="delete_item_btn" onclick="location.href='action_delete_item.php?item_id=<?=urlencode($item['id'])?>&csrf=<?= $_SESSION['csrf']?>&list_id=<?=urlencode($list['id'])?>';" value="-"/>
-
-  let new_item_btn = document.createElement('input');
-
-  let new_item = document.createElement('li');
   let itemInfo = JSON.parse(this.responseText);
+  let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
+  let btn_csrf = document.querySelector('#setOfLists > article > ul > input').getAttribute('onclick');
+  let regexS = "[\\?&]"+'csrf'+"=([^&#]*)";
+  let regex = new RegExp( regexS );
+  let results = regex.exec(btn_csrf);
+  btn_csrf = results[1];
+  let new_item_btn = document.createElement('input');
+  new_item_btn.setAttribute('type', 'button');
+  new_item_btn.setAttribute('class', 'delete_item_btn');
+  new_item_btn.setAttribute('value', '-');
+  new_item_btn.setAttribute('onclick', 'location.href=\'action_delete_item.php?item_id=' + htmlEntities(itemInfo.id) + '&csrf=' + btn_csrf + '&list_id=' + listId + ';');
+  let new_item = document.createElement('li');
   new_item.setAttribute('class', 'priority' + itemInfo.priority);
-  new_item.innerHTML = htmlEntities(itemInfo.name) + '<input type="checkbox" name="item_complete" value="' + htmlEntities(itemInfo.id) + '">';
+  new_item.innerHTML ='<span>' + htmlEntities(itemInfo.name) + '<input type="checkbox" name="item_complete" value="' + htmlEntities(itemInfo.id) + '"></span>';
   let items = document.querySelector('#setOfLists > article > ul');
+  items.append(new_item_btn);
   items.append(new_item);
   document.querySelector('#setOfLists > article > #new_item input[type="text"]').value = "";
 }
@@ -44,7 +52,6 @@ function allItems(event){
 function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
-
 
 function popup_AddItem(event) {
   event.preventDefault();
