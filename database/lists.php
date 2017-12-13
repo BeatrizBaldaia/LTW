@@ -104,6 +104,9 @@
   }
   function assignItemToUser($user_id, $item_id) {
     global $db;
+    if(isItemAssigned($item_id)) {
+      return false;
+    }
     $stmt = $db->prepare('INSERT INTO userItem (user, item) VALUES (?, ?);');
     if(!$stmt->execute(array($user_id, $item_id))){
       return false;

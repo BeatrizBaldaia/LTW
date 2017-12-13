@@ -21,5 +21,23 @@ function assignUser(event){
 }
 
 function assignUser_updateHtml() {
+  let itemInfo = JSON.parse(this.responseText);
 
+  removeForm(itemInfo.id);
+
+  addAssignedTask(itemInfo.name);
+}
+
+function removeForm(itemID) {
+  let inputItemID = document.querySelector('#projectArea .projectLists form input[value="' + itemID + '"]');
+  let formToDelete = inputItemID.parentNode;
+  let liParent = formToDelete.parentNode;
+  liParent.removeChild(formToDelete);
+}
+
+function addAssignedTask(itemName) {
+  let new_task = document.createElement('li');
+  new_task.innerHTML = htmlEntities(itemName);
+  let tasks = document.querySelector('#projectArea .projectAssignedTasks ul');
+  tasks.append(new_task );
 }

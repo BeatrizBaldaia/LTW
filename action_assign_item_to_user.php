@@ -21,5 +21,6 @@
   if (!assignItemToUser($_POST['username'], $_POST['item'])) {
     die;
   }
-
+  $item = getItemById($_POST['item']);
+  echo json_encode($item);
 ?>
