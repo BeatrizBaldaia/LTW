@@ -27,9 +27,7 @@
           $original = imagecreatefrompng($_FILES['profile_picture']['tmp_name']);
           break;
         default:
-          //TODO Not a valid type
-          header('Location: main_page.php');
-          die;
+          $original = imagecreatefrompng('images/favicon.png');
           break;
       }
       $width = imagesx($original);

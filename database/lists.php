@@ -33,7 +33,6 @@
     global $db;
     $stmt = $db->prepare('INSERT INTO items (name, id_lists, priority) VALUES (?, ?, ?);');
     if(!$stmt->execute(array($itemName, $list, $priority))){
-      //TODO ERRO
       return false;
     }
     return $db->lastInsertId();
@@ -48,7 +47,6 @@
     global $db;
     $stmt = $db->prepare('INSERT INTO lists (username, name, category, dateDue) VALUES (?,?,?,?);');
     if(!$stmt->execute(array($username, $name, $category, $dateDue))){
-      //TODO ERRO
       return false;
     }
     return $db->lastInsertId();

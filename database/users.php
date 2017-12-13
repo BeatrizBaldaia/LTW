@@ -16,7 +16,6 @@
     return (count($stmt->fetchAll()) > 0);
   }
 
-//TODO
   function registerUser($username, $name, $password, $check, $email, $country){
     if($password != $check) return false;
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);

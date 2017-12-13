@@ -11,7 +11,6 @@
   }
 
   if(($projectId = addProject($_POST['project_name'] ,$_SESSION['username'], $_POST['proj_deadline'])) == false){
-    //TODO erro ao adicioane
     print("Erro a obter o id do projeto");
     die;
   }

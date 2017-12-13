@@ -12,7 +12,6 @@
   include_once('database/lists.php');
 
   if(($listId = addList($_SESSION['username'], $_POST['list_name'], $_POST['list_category_id'], $_POST['deadline'])) == false){
-    //TODO erro ao adicioane
     die;
   }
 

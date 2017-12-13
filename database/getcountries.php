@@ -1,6 +1,5 @@
 <?php
 
-// TODO: Shouldn't be remaking PDO but wtf how
   $db = new PDO('sqlite:list.db');
   $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
