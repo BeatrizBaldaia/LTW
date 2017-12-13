@@ -7,7 +7,7 @@
   </section>
   <section class="container">
   <section class="projectLists">
-    <h1>Lists</h1>
+    <h1 class="columnTitle">Lists</h1>
     <section class="scroll_section">
     <ul>
     <?php $lists = getProjectLists($project['id']);
@@ -40,7 +40,7 @@
   </section>
   </section>
   <section class="projectMembers">
-    <h1>Members</h1>
+    <h1 class="columnTitle">Members</h1>
     <section class="scroll_section">
       <ul>
       <?php $members = getMembers($project['id']);
@@ -61,7 +61,7 @@
   </section>
   <section class="projectAssignedTasks">
     <?php $tasks = getTasks($_SESSION['username'], $project['id']); ?>
-    <h1>My Assigned Tasks</h1>
+    <h1 class="columnTitle">My Assigned Tasks</h1>
     <section class="scroll_section">
       <ul>
         <?php foreach ($tasks as $task) { ?>
