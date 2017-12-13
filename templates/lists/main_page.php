@@ -145,7 +145,7 @@
   </ul>
   <ul id="projectsListing">
     <?php foreach( $projects as $project) { ?>
-        <li><a href="main_page_to-do_list.php?id_list=<?=urlencode($project['id'])?>"><?=htmlentities($project['name'])?></a></li>
+        <li><a href="main_page_project.php?id_project=<?=urlencode($project['id'])?>"><?=htmlentities($project['name'])?></a></li>
     <?php } ?>
   </ul>
 </aside>
