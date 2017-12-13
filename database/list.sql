@@ -67,6 +67,11 @@ CREATE TABLE userItem (
   item INTEGER REFERENCES items ON DELETE CASCADE
 );
 
+CREATE TRIGGER IF NOT EXISTS deleteProjectLists
+BEFORE DELETE ON projectLists
+BEGIN
+  DELETE FROM lists WHERE OLD.list = lists.id;
+END;
 
 INSERT INTO countries (name) VALUES ('Afghanistan');
 INSERT INTO countries (name) VALUES ('Albania');
