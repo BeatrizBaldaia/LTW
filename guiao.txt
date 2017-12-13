@@ -1,0 +1,18 @@
+- Register: Demonstrar campos required, validação e-mail e confirmação da passe.
+- Log out.
+- Login: abril , 1234.
+- Criar projeto: Campos required, data listas até à do projeto, data é a atual por omissão.
+	- Criar com deadline anterior para não aparecer.
+	- Criar normal.
+	- Entrar no normal e apagá-lo.
+- Dentro do projeto existente: Verificar listas, assign user a tasks com enter e botão, adicionar membros demonstrando a lista dinâmica.
+- Entrar num projeto pela sidebar.
+- Criar lista: Campos required, data é a atual por omissão.
+	- Criar com data anterior para não aparecer.
+	- Criar com diferentes categorias e tasks com diferentes prioridades.
+	- Demonstrar os itens com diferentes prioridades e as diferentes categorias.
+	- Adicionar itens.
+	- Apagar lista atual.
+- Demonstrar uma lista existente: usar checkboxes, demonstrar que se mantêm ao reentrar na lista e que itens são riscados na página principal.
+- Entrar numa lista pela sidebar.
+- Demonstrar notificações.
