@@ -1,4 +1,10 @@
 <?php
+  function getListsFromMyProjects($username) {
+    global $db;
+    $stmt = $db->prepare('SELECT projectLists.list FROM projectUsers, projectLists WHERE ((projectUsers.user = ?) AND (projectUsers.project = projectLists.project));');
+    $stmt->execute(array($username));
+    return $stmt->fetchAll();
+  }
   function deleteProject($id) {
     global $db;
     $stmt = $db->prepare('DELETE FROM projects WHERE id = ?;');

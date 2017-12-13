@@ -19,5 +19,5 @@
     die;
   }
 
-  header('Location: main_page_to-do_list.php?id_list='.$_GET['list_id']);
+  //header('Location: main_page_to-do_list.php?id_list='.$_GET['list_id']);
 ?>
