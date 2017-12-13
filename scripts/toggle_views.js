@@ -28,12 +28,13 @@ let checkbox = document.querySelector('#sidebar input[type=checkbox]');
 if (checkbox != null) {
   checkbox.addEventListener('click', toggleViews);
 }
-
+console.log(checkbox);
 // Only show one view at the beginning.
 /*if (listsView != null) {
   setListsView();
 }*/
 if(sessionStorage.getItem("toggleState")==""){
+  checkbox.checked = false;
   setProjectsView();
 } else {
   setListsView();
