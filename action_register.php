@@ -11,6 +11,7 @@
 
   if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password'], $_POST['email'], $_POST['country'])) {
     $_SESSION['username'] = $_POST['username'];
+    $_SESSION['toggleState'] = 'checked';
   } else {
     print("ERROR action_register");
     die;
