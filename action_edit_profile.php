@@ -9,20 +9,17 @@
   }
 
   if(!updateUserName($_SESSION['username'], $_POST['name'])){
-    //TODO erro;
     echo "Falhou update do nome";
     die;
   }
 
   if (!updateUserEmail($_SESSION['username'], $_POST['email'])) {
-    //TODO erro
     echo "Falhou update do email";
     die;
   }
 
   if($_POST['password'] != ''){
     if (!updateUserPassword($_SESSION['username'], $_POST['password'], $_POST['check_password'])) {
-      //TODO ERROR
       echo "Falhou update da password";
       die;
     };
@@ -37,7 +34,6 @@
           $original = imagecreatefrompng($_FILES['profile_picture']['tmp_name']);
           break;
         default:
-          //TODO Not a valid type
           header('Location: main_page.php');
           die;
           break;

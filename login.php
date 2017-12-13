@@ -7,8 +7,6 @@
     die;
   }
 
-  // include('templates/common/header.php');
   set_header("before_login");
-  // include('templates/users/user.php');
   include('templates/common/footer.php');
 ?>

@@ -9,7 +9,6 @@
   include_once('database/lists.php');
 
   if(($id = addItem($_POST['list'], $_POST['item'], $_POST['priority'])) == false){
-    //TODO erro ao adicioane
     die;
   }
 
