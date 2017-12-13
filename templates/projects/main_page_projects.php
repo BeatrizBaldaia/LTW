@@ -63,7 +63,7 @@
     <h1>My Assigned Tasks</h1>
     <section class="scroll_section">
       <ul>
-        <?php $tasks = getTasks($_SESSION['username'], $project['id']);
+        <?php $tasks = getTasks($_SESSION['username'], $project['id']); ?>
       </ul>
     </section>
   </section>
