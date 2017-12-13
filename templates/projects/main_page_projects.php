@@ -60,10 +60,13 @@
     </section>
   </section>
   <section class="projectAssignedTasks">
+    <?php $tasks = getTasks($_SESSION['username'], $project['id']); ?>
     <h1>My Assigned Tasks</h1>
     <section class="scroll_section">
       <ul>
-        <?php $tasks = getTasks($_SESSION['username'], $project['id']); ?>
+        <?php foreach ($tasks as $task) { ?>
+          <li><?= $task['name']; ?></li>
+        <?php } ?>
       </ul>
     </section>
   </section>

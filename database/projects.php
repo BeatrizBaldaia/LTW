@@ -80,26 +80,22 @@ function getMembers($project_id) {
   return $stmt->fetchAll();
 }
 
-function getListsOfUserInProject($username, $project_id) {
+function getTasks($username, $project_id) {
   global $db;
-  $stmt = $db->prepare('SELECT * FROM projectUsers WHERE (user = ? AND project = ?)');
+  $stmt = $db->prepare('SELECT i.* FROM projectLists pL INNER JOIN items i ON pL.list = i.id_lists INNER JOIN userItem uI ON i.id = uI.item WHERE (uI.user = ? AND pL.project = ?)');
   if (!$stmt->execute(array($username, $project_id))) {
     return false;
   }
 
   return $stmt->fetchAll();
-}
+  // $listIds = getListsOfUserInProject($username, $project_id);
+  //
+  // $taskIds = [];
+  // foreach ($listIds as $listId) {
+  // }
+  //   $taskIds = array_merge($taskIds, getItems($listId));
 
-function getTasks($username, $project_id) {
-  global $db;
-  $listIds = getListsOfUserInProject($username, $project_id);
-
-  $taskIds = [];
-  foreach ($listIds as $listId) {
-    $taskIds = array_merge($taskIds, getItems($listId));
-  }
-
-  return $taskIds;
+  // return $taskIds;
 }
 
 ?>
