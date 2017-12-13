@@ -108,7 +108,7 @@
     if(!$stmt->execute(array($user_id, $item_id))){
       return false;
     }
-    return;
+    return true;
   }
 
 ?>
