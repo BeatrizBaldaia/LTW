@@ -2,7 +2,7 @@
 
 function deleteItem(event){
   let li = event.nextElementSibling;
-  let item_id = li.firstChild.nextElementSibling.firstChild.nextElementSibling.value;
+  let item_id = li.firstElementChild.firstChild.nextElementSibling.value;
   let csrf = li.parentNode.id;
   let list_id = document.querySelector('.id').innerHTML;
   let request = new XMLHttpRequest();
