@@ -3,7 +3,7 @@
 
   function getLists($username) {
     global $db;
-    $stmt = $db->prepare('SELECT *, (julianday(dateDue) - julianday("now")) AS diff FROM lists WHERE (username = ?) ORDER BY diff');
+    $stmt = $db->prepare('SELECT *, julianday(strftime("%Y-%m-%d", dateDue)) - julianday(strftime("%Y-%m-%d", "now")) AS diff FROM lists WHERE (username = ?) ORDER BY diff');
     $stmt->execute(array($username));
     return $stmt->fetchAll();
   }
@@ -83,7 +83,7 @@
   }
   function getNotify($username) {
     global $db;
-    $stmt = $db->prepare('SELECT name, id,(julianday(dateDue) - julianday("now")) AS diff  FROM lists WHERE (notified = 0 AND username = ? AND diff < 0)');
+    $stmt = $db->prepare('SELECT name, id, julianday(strftime("%Y-%m-%d", dateDue)) - julianday(strftime("%Y-%m-%d", "now")) AS diff  FROM lists WHERE (notified = 0 AND username = ? AND diff <= 0)');
     $stmt->execute(array($username));
     return $stmt->fetchAll();
   }
