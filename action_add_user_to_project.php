@@ -7,7 +7,8 @@
    || !isset($_POST['username'])
    || !isset($_POST['csrf'])
    || $_SESSION['csrf'] !== $_POST['csrf']) {
-    header('Location: main_page.php');
+    // header('Location: main_page.php');
+    echo 1;
     die;
   }
 
