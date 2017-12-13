@@ -1,5 +1,9 @@
     <section id="register">
       <h1>Register</h1>
+      <?php
+        if((isset($_SESSION['invalidUsername'])) && ($_SESSION['invalidUsername'] == true))
+          echo "<p>That username is already used! Try a new one.</p>";
+      ?>
       <form action="action_register.php" method="post" enctype="multipart/form-data">
         <label>
           Name <input type="text" name="name" required="required">
