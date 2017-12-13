@@ -21,6 +21,10 @@ function inviteUser(event){
 }
 
 function inviteUser_updateHtml(event) {
+  if(this.responseText == "") {
+    console.log("Invalid User");
+    return;
+  }
   let username = JSON.parse(this.responseText);
   let new_member = document.createElement('li');
   new_member.innerHTML = htmlEntities(username);

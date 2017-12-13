@@ -2,7 +2,6 @@
 
   include_once('includes/init.php');
 
-  //session_start();
 
   if(!isset($_SESSION['username'])
    || !isset($_POST['item'])

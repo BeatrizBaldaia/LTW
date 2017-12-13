@@ -22,6 +22,10 @@ function assignUser(event) {
 }
 
 function assignUser_updateHtml() {
+  if(this.responseText == "") {
+    console.log("Invalid User");
+    return;
+  }
   let itemInfo = JSON.parse(this.responseText);
 
   removeForm(itemInfo.id);
