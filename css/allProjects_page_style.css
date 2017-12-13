@@ -28,3 +28,29 @@
 	background-size: cover;
 	cursor: pointer;
 }
+
+/* POPUP */
+
+/* div#div_popup form#NewProjectPopup > *{
+  display: flex;
+}
+div#div_popup form#NewProjectPopup div.popup_new_lists{
+  display: flex;
+  flex-direction: column;
+
+
+} */
+/* div#div_popup form#NewProjectPopup div.popup_new_list{
+  display: flex;
+  flex-direction: column;
+} */
+
+/* div#div_popup form#NewProjectPopup div.popup_new_list {
+  max-height: 30px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-height: 20em;
+  overflow-y: auto;
+
+  text-align: center;
+} */

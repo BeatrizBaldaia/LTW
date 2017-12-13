@@ -322,12 +322,12 @@ top: 5px;
   overflow: auto;
 }
 
-form[id=NewListName] {
+form[id=NewListName], form[id=NewProjectPopup] {
 	display: flex;
 	flex-direction: column;
 }
 
-form[id=NewListName] .popup_new_items {
+form[id=NewListName] .popup_new_items, form[id=NewProjectPopup] .popup_new_lists {
 	margin-top: 2em;
 	margin-bottom: 2em;
 	max-height: 20em;
@@ -337,6 +337,12 @@ form[id=NewListName] .popup_new_items {
 form[id=NewListName] .popup_new_item {
 	margin-bottom: 1em;
 	display: grid;
+}
+
+form[id=NewProjectPopup] .popup_new_list {
+	display: flex;
+	flex-direction: column;
+	flex-flow: center;
 }
 
 form[id=NewListName] .popup_new_item label:first-of-type {
@@ -355,7 +361,7 @@ form[id=NewListName] .popup_new_item label:last-of-type input {
 	width: 50%;
 }
 
-form[id=NewListName] input[name=add_item] {
+form[id=NewListName] input[name=add_item], form[id=NewProjectPopup] input[name=add_list] {
 	background-image: url('../images/site/plus.png');
   background-repeat: no-repeat;
   background-size: contain;
