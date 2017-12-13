@@ -1,9 +1,12 @@
 'use strict';
 
-let form_assignUser = document.querySelector('#projectArea .projectLists form.assignForm');
-if (form_assignUser != null) {
-  form_assignUser.addEventListener('submit', assignUser);
+let form_assignUser = document.querySelectorAll('#projectArea .projectLists form.assignForm');
+for (let i = 0; i < form_assignUser.length; i++){
+  form_assignUser[i].addEventListener('submit', assignUser);
 }
+/*if (form_assignUser != null) {
+  form_assignUser.addEventListener('submit', assignUser);
+}*/
 
 /*
 @brief Adiciona item a basa de dados
