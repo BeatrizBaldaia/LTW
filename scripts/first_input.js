@@ -12,5 +12,6 @@
  }
 
  function setEdited(event) {
-   this.className = "startedInput";
+   if ( !this.classList.contains('startedInput'))
+    this.className = "startedInput " + this.className;
  }
