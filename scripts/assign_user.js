@@ -4,9 +4,7 @@ let form_assignUser = document.querySelectorAll('#projectArea .projectLists form
 for (let i = 0; i < form_assignUser.length; i++){
   form_assignUser[i].addEventListener('submit', assignUser);
 }
-/*if (form_assignUser != null) {
-  form_assignUser.addEventListener('submit', assignUser);
-}*/
+
 
 /*
 @brief Adiciona item a basa de dados
