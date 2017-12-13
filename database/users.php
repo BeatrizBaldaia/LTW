@@ -11,9 +11,9 @@
 
   function usernameExists($username){
     global $db;
-    $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
+    $stmt = $db->prepare('SELECT * FROM users WHERE username = ?;');
     $stmt->execute(array($username));
-    return (count($stmt->fetch()) > 0);
+    return (count($stmt->fetchAll()) > 0);
   }
 
 //TODO
