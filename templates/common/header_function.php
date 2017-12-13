@@ -30,6 +30,7 @@
       <script src="scripts/set_default_dates.js" defer></script>
       <script src="scripts/first_input.js" defer></script>
       <script src="scripts/assign_user.js" defer></script>
+      <script src="scripts/popup_date_max.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">
