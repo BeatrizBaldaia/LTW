@@ -3,7 +3,7 @@
     $notify = getNotify($_SESSION['username']); ?>
     <div id="notify" class=<?= (count($notify) > 0) ? 'visible' : 'invisible' ?>>
       <input type="checkbox" id="notify_input">
-      <label for="notify_input"></label>
+      <label for="notify_input" style="font-size: 0;"> . </label>
       <div id="notify_popup" class="overlay_popup">
         <div class="popup">
           <label class="close" for="notify_input">&times; </label>

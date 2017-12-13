@@ -11,7 +11,17 @@
   border-color: black;
   margin: 10px;
   background: rgba(164, 163, 163, 0.3);
+  min-height: 0;
+  max-height: 30%;
+  /* overflow-y: auto; */
 }
+
+#projects article ul {
+  min-height: 0;
+  max-height: 30px;
+  overflow-y: auto;
+}
+
 #projects article > a > h1{
   font-size:20px ;
 }
@@ -28,29 +38,3 @@
 	background-size: cover;
 	cursor: pointer;
 }
-
-/* POPUP */
-
-/* div#div_popup form#NewProjectPopup > *{
-  display: flex;
-}
-div#div_popup form#NewProjectPopup div.popup_new_lists{
-  display: flex;
-  flex-direction: column;
-
-
-} */
-/* div#div_popup form#NewProjectPopup div.popup_new_list{
-  display: flex;
-  flex-direction: column;
-} */
-
-/* div#div_popup form#NewProjectPopup div.popup_new_list {
-  max-height: 30px;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  max-height: 20em;
-  overflow-y: auto;
-
-  text-align: center;
-} */
