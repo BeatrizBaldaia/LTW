@@ -22,14 +22,14 @@
               <span><?=htmlentities($item['name'])?></span>
               <?php
               if(!isItemAssigned($item['id'])) { ?>
-                <form action="action_assign_item_to_user.php" method="post">
+                <form class="assignForm" action="action_assign_item_to_user.php" method="post">
                   <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
                   <input type="hidden" name="item" value="<?= $item['id'] ?>">
                   <input type="hidden" name="project" value="<?= $project['id'] ?>">
                   <label>
                     Assign User <input type="text" placeholder="username" name="username">
                   </label>
-                  <button type="button" name="assign">Assign</button>
+                  <input type="submit" name="assign" value="Assign"/>
                 </form>
               <?php } ?>
             </li>
