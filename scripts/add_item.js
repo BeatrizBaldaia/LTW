@@ -1,8 +1,8 @@
 'use strict';
 
-let btn_addItem = document.querySelector('#setOfLists article #new_item input[value="Add"]');
-if (btn_addItem != null) {
-  btn_addItem.addEventListener('click', addItem);
+let form_addItem = document.querySelector('#setOfLists article #new_item');
+if (form_addItem != null) {
+  form_addItem.addEventListener('submit', addItem);
 }
 
 let btn_popup_addItem = document.querySelector('#NewListName input[name="add_item"]');
@@ -14,18 +14,23 @@ if (btn_popup_addItem != null) {
 @brief Adiciona item a basa de dados
 */
 function addItem(event){
-  let itemName = document.querySelector('#setOfLists > article > #new_item > input[type="text"]').value;
-  let itemPriority = document.querySelector('#setOfLists > article > #new_item > div > label > input[type="range"]').value;
-  let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
+  event.preventDefault();
+  let itemName = this['item_name'].value; //document.querySelector('#setOfLists > article > #new_item > input[type="text"]').value;
+  let itemPriority = this['priority'].value; //document.querySelector('#setOfLists > article > #new_item > div > label > input[type="range"]').value;
+  let listId = this['listId'].value; //document.querySelector('#setOfLists > article > .id').innerHTML;
   let request = new XMLHttpRequest();
-  request.open('get', 'action_add_new_item.php?' + encodeForAjax({'item': itemName, 'list': listId, 'priority': itemPriority}), true);
+  request.open('POST', 'action_add_new_item.php', true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.addEventListener('load', allItems);
-  request.send();
+  request.send(encodeForAjax({'item': itemName, 'list': listId, 'priority': itemPriority}));
 }
 /*
 @brief Adiciona item a lista do html
 */
 function allItems(event){
+  if (this.responseText == "") {
+    return;
+  }
   let itemInfo = JSON.parse(this.responseText);
   let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
   let btn_csrf = document.querySelector('#setOfLists > article > ul > input').getAttribute('onclick');
