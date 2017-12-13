@@ -5,13 +5,14 @@
 
   if (usernameExists($_POST['username'])) {
     header('Location: register.php');
-    //TODO avisar username ja usado
+    $_SESSION['invalidUsername'] = true;
     die;
   }
 
   if(registerUser($_POST['username'],$_POST['name'],$_POST['password'],$_POST['check_password'], $_POST['email'], $_POST['country'])) {
     $_SESSION['username'] = $_POST['username'];
     $_SESSION['toggleState'] = 'checked';
+    $_SESSION['invalidUsername'] = false;
   } else {
     print("ERROR action_register");
     die;

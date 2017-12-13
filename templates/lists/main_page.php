@@ -39,7 +39,7 @@
         $displayedProjects++; ?>
     <article class="project">
       <a class="title_link" href="main_page_project.php?id_project=<?=urlencode($project['id'])?>"><h1><?=htmlentities($project['name'])?></h1></a>
-      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($project['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
+      <input type="button" onclick="location.href='action_delete_project.php?project_id=<?=urlencode($project['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
       <span class="dateDue">Deadline: <?=htmlentities($project['deadline'])?></span>
       <ul>
       <?php $listsOfProject = getProjectLists($project['id']);
@@ -112,7 +112,7 @@
               <input type="text" name="project_name" required="required">
             </label>
             <label>Deadline:
-              <input type="date" name="proj_deadline" required="required">
+              <input type="date" name="proj_deadline" onchange="updatePopupDateMax(this);" required="required">
             </label>
             <div class="popup_new_lists">
               <div class="popup_new_list">
@@ -145,7 +145,7 @@
   </ul>
   <ul id="projectsListing">
     <?php foreach( $projects as $project) { ?>
-        <li><a href="main_page_to-do_list.php?id_list=<?=urlencode($project['id'])?>"><?=htmlentities($project['name'])?></a></li>
+        <li><a href="main_page_project.php?id_project=<?=urlencode($project['id'])?>"><?=htmlentities($project['name'])?></a></li>
     <?php } ?>
   </ul>
 </aside>

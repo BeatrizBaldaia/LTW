@@ -16,10 +16,11 @@
       <link href="css/common_footer_style.css" rel="stylesheet">
       <link href="css/utils.css" rel="stylesheet">
       <link href="css/register.css" rel="stylesheet">
-        <link href="css/allProjects_page_style.css" rel="stylesheet">
+      <link href="css/allProjects_page_style.css" rel="stylesheet">
       <link href="css/media.css" rel="stylesheet">
       <script src="scripts/complete_item.js" defer></script>
       <script src="scripts/add_item.js" defer></script>
+      <script src="scripts/delete_item.js" defer></script>
       <script src="scripts/add_list.js" defer></script>
       <script src="scripts/countries.js" defer></script>
       <script src="scripts/invite_to_project.js" defer></script>
@@ -30,6 +31,7 @@
       <script src="scripts/set_default_dates.js" defer></script>
       <script src="scripts/first_input.js" defer></script>
       <script src="scripts/assign_user.js" defer></script>
+      <script src="scripts/popup_date_max.js" defer></script>
     </head>
     <body class="<?=$id?>">
       <header class="<?=$id?>">
