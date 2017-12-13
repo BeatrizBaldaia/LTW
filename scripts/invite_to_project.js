@@ -1,17 +1,18 @@
 'use strict';
 
-let btn_inviteUser = document.querySelector('#projectArea .projectMembers form button[name=invite]');
-if (btn_inviteUser != null) {
-  btn_inviteUser.addEventListener('click', inviteUser);
+let form_inviteUser = document.querySelector('#projectArea .projectMembers form.addMemberForm');
+if (form_inviteUser != null) {
+  form_inviteUser.addEventListener('submit', inviteUser);
 }
 
 /*
 @brief Adiciona item a basa de dados
 */
 function inviteUser(event){
-  let csrf = this.parentNode['csrf'].value;
-  let projectId = this.parentNode['project'].value;
-  let username = this.parentNode['username'].value;
+  event.preventDefault();
+  let csrf = this['csrf'].value;
+  let projectId = this['project'].value;
+  let username = this['username'].value;
   let request = new XMLHttpRequest();
   request.open('POST', 'action_add_user_to_project.php', true);
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

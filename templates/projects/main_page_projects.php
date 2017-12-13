@@ -22,7 +22,7 @@
               <span><?=htmlentities($item['name'])?></span>
               <?php
               if(!isItemAssigned($item['id'])) { ?>
-                <form class="assignForm" action="action_assign_item_to_user.php" method="post">
+                <form class="assignForm">
                   <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
                   <input type="hidden" name="item" value="<?= $item['id'] ?>">
                   <input type="hidden" name="project" value="<?= $project['id'] ?>">
@@ -48,14 +48,14 @@
         <li><?= htmlentities($member['user']); ?></li>
       <?php } ?>
      </ul>
-     <form action="action_add_user_to_project.php" method="post">
+     <form class="addMemberForm">
        <input type="hidden" name="csrf" value="<?= $_SESSION['csrf'] ?>">
        <input type="hidden" name="item" value="<?= $item['id'] ?>">
        <input type="hidden" name="project" value="<?= $project['id'] ?>">
        <label>
          Invite User <input type="text" placeholder="username" name="username">
        </label>
-       <button type="button" name="invite" value="Invite to Project">
+       <input type="submit" name="invite" value="Invite to Project">
      </form>
     </section>
   </section>
