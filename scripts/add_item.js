@@ -33,16 +33,11 @@ function allItems(event){
   }
   let itemInfo = JSON.parse(this.responseText);
   let listId = document.querySelector('#setOfLists > article > .id').innerHTML;
-  let btn_csrf = document.querySelector('#setOfLists > article > ul > input').getAttribute('onclick');
-  let regexS = "[\\?&]"+'csrf'+"=([^&#]*)";
-  let regex = new RegExp( regexS );
-  let results = regex.exec(btn_csrf);
-  btn_csrf = results[1];
   let new_item_btn = document.createElement('input');
   new_item_btn.setAttribute('type', 'button');
   new_item_btn.setAttribute('class', 'delete_item_btn');
   new_item_btn.setAttribute('value', '-');
-  new_item_btn.setAttribute('onclick', 'location.href=\'action_delete_item.php?item_id=' + htmlEntities(itemInfo.id) + '&csrf=' + btn_csrf + '&list_id=' + listId + ';');
+  new_item_btn.setAttribute('onclick', 'deleteItem(this);');
   let new_item = document.createElement('li');
   new_item.setAttribute('class', 'priority' + itemInfo.priority);
   new_item.innerHTML ='<span>' + htmlEntities(itemInfo.name) + '<input type="checkbox" name="item_complete" value="' + htmlEntities(itemInfo.id) + '"></span>';
