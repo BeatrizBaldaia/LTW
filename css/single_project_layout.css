@@ -68,7 +68,7 @@
 }
 
 #projectArea .container .projectMembers ul {
-  max-height: 50vh;
+  max-height: 40vh;
   overflow-y: auto;
   list-style-type: none;
   margin: auto;
