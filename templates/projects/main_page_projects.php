@@ -14,7 +14,7 @@
       foreach( $lists as $list) {
         $items = getItems($list['id']);
         ?>
-        <a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h2><?=htmlentities($list['name'])?></h2></a>
+        <li><a class="title_link" href="main_page_to-do_list.php?id_list=<?=urlencode($list['id'])?>"><h2><?=htmlentities($list['name'])?></h2></a>
         <ul>
         <?php
           foreach( $items as $item) { ?>
@@ -35,6 +35,7 @@
             </li>
         <?php } ?>
         </ul>
+        </li>
       <?php } ?>
     </ul>
   </section>
