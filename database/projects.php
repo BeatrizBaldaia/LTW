@@ -1,4 +1,10 @@
 <?php
+  function deleteProject($id) {
+    global $db;
+    $stmt = $db->prepare('DELETE FROM projects WHERE id = ?;');
+    return $stmt->execute(array($id));
+  }
+
 function getProjects($username) {
   global $db;
   $stmt = $db->prepare('SELECT *, (julianday(deadline) - julianday("now")) AS diff
