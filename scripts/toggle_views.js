@@ -30,7 +30,12 @@ if (checkbox != null) {
 }
 
 // Only show one view at the beginning.
-if (listsView != null) {
+/*if (listsView != null) {
+  setListsView();
+}*/
+if(sessionStorage.getItem("toggleState")==""){
+  setProjectsView();
+} else {
   setListsView();
 }
 
