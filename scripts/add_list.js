@@ -8,6 +8,7 @@ function popup_AddList(event) {
   let listsContainer = document.querySelector('#div_popup .popup_new_lists');
   let newList = document.createElement('div');
   newList.className = "popup_new_list";
+  let projDeadline = document.querySelector('#NewProjectPopup input[name=proj_deadline]');
 
   let listNameLabel = '<label>List:';
   listNameLabel += '<input type="text" name="list_name[]" required="required">';
@@ -20,7 +21,7 @@ function popup_AddList(event) {
   categoryLabel += '</select>';
   categoryLabel += '</label>';
   let deadlineNameLabel = '<label>Deadline:';
-  deadlineNameLabel += '<input type="date" name="list_deadline[]" required="required">';
+  deadlineNameLabel += '<input type="date" name="list_deadline[]" max=' + projDeadline.value +  ' required="required">';
   deadlineNameLabel += '</label>';
 
   newList.innerHTML = listNameLabel;
