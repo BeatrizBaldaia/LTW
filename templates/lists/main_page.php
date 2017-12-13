@@ -39,7 +39,7 @@
         $displayedProjects++; ?>
     <article class="project">
       <a class="title_link" href="main_page_project.php?id_project=<?=urlencode($project['id'])?>"><h1><?=htmlentities($project['name'])?></h1></a>
-      <input type="button" onclick="location.href='action_delete_list.php?list_id=<?=urlencode($project['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
+      <input type="button" onclick="location.href='action_delete_project.php?project_id=<?=urlencode($project['id'])?>&csrf=<?= $_SESSION['csrf'] ?>';"/>
       <span class="dateDue">Deadline: <?=htmlentities($project['deadline'])?></span>
       <ul>
       <?php $listsOfProject = getProjectLists($project['id']);
