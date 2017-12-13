@@ -112,7 +112,7 @@
               <input type="text" name="project_name" required="required">
             </label>
             <label>Deadline:
-              <input type="date" name="proj_deadline" onload="updatePopupDateMax(this);" onchange="updatePopupDateMax(this);" required="required">
+              <input type="date" name="proj_deadline" onchange="updatePopupDateMax(this);" required="required">
             </label>
             <div class="popup_new_lists">
               <div class="popup_new_list">

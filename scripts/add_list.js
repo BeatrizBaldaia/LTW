@@ -20,13 +20,19 @@ function popup_AddList(event) {
   categoryLabel += '<?php } ?>';
   categoryLabel += '</select>';
   categoryLabel += '</label>';
-  let deadlineNameLabel = '<label>Deadline:';
-  deadlineNameLabel += '<input type="date" name="list_deadline[]" max=' + projDeadline.value +  ' required="required">';
-  deadlineNameLabel += '</label>';
+  let deadlineNameLabel = document.createElement('label');
+  deadlineNameLabel.appendChild(document.createTextNode('Deadline:'));
+  let deadlineInput = document.createElement('input');
+  deadlineInput.setAttribute('type', 'date');
+  deadlineInput.setAttribute('name', 'list_deadline[]');
+  deadlineInput.setAttribute('max', projDeadline.value);
+  deadlineInput.setAttribute('required', 'required');
+  deadlineInput.valueAsDate = new Date();
+  deadlineNameLabel.appendChild(deadlineInput);
 
   newList.innerHTML = listNameLabel;
   newList.innerHTML += categoryLabel;
-  newList.innerHTML += deadlineNameLabel;
+  newList.appendChild(deadlineNameLabel);
 
   listsContainer.insertBefore(newList, listsContainer.lastElementChild);
 }
