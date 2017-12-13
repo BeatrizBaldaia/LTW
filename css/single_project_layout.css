@@ -7,11 +7,28 @@
   display: flex;
  justify-content: center;
 }
+#projectArea .project_header h1 {
+  text-decoration: underline;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#projectArea .project_header { position: relative; }
+#projectArea .project_header > input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+	width: 1.5em;
+	height: 1.5em;
+	background-image: url('../images/site/X.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
 #projectArea .id {
   display: none;
 }
 #projectArea .scroll_section {
-  /*height: 60vh;*/
   display: flex;
   flex-flow: row wrap;
   overflow: auto;
@@ -19,13 +36,67 @@
 
 #projectArea .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   min-height: 0;
 }
 
 #projectArea .container > * {
   flex-grow: 1;
-  min-height: 0;
-  max-height: 60vh;
-  overflow-y: auto;
 }
+
+#projectArea .container .scroll_section {
+  display: flex;
+  flex-direction: column;
+}
+
+#projectArea .container .scroll_section > * {
+  flex-grow: 1;
+  min-height: 0;
+  max-height: 50vh;
+  overflow-y: auto;
+  margin-bottom: 10px !important;
+}
+
+#projectArea .container .scroll_section:nth-child(n+1) > * {
+  display: flex;
+  flex-direction: column;
+}
+
+#projectArea .container .projectMembers ul {
+  max-height: 50vh;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: auto;
+  margin-top: 20px;
+  padding-right: 40px;
+  border-style: inset;
+}
+
+#projectArea .columnTitle {
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #808080;
+}
+
+#projectArea input[type=text] {
+  height: 30px !important;
+  margin: auto;
+}
+
+#projectArea li {
+  margin-bottom: 20px;
+}
+
+#projectArea form > * {
+  margin-bottom: 10px;
+}
+#projectArea .projectMembers { position: realtive; }
+
+/* #projectArea .projectMembers form {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+} */
