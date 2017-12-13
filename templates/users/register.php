@@ -12,7 +12,7 @@
           Username <input type="text" name="username" required="required">
         </label><!-- <br/> -->
         <label>
-          E-mail <input type="email" name="email">
+          E-mail <input type="email" name="email" required="required">
         </label><!-- <br/> -->
         <label>
           Password <input type="password" name="password" pattern=".{4,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.check_password.pattern = this.value;" required="required">
