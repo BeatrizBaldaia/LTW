@@ -13,7 +13,7 @@
 
 function getProjects($username) {
   global $db;
-  $stmt = $db->prepare('SELECT *, (julianday(deadline) - julianday("now")) AS diff
+  $stmt = $db->prepare('SELECT *, julianday(strftime("%Y-%m-%d", deadline)) - julianday(strftime("%Y-%m-%d", "now")) AS diff
   FROM projects INNER JOIN projectUsers
   ON projects.id = projectUsers.project
   WHERE (user = ?)
