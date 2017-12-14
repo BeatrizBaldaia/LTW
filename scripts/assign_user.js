@@ -16,7 +16,8 @@ function assignUser(event) {
   let projectId = this['project'].value;
   let username = this['username'].value;
   let request = new XMLHttpRequest();
-  request.addToHTML = (username == document.querySelector('#after_login > p')?true:false);
+  console.log(document.querySelector('#after_login > p').innerHTML);
+  request.addToHTML = (username == document.querySelector('#after_login > p').innerHTML?true:false);
   request.open('POST', 'action_assign_item_to_user.php', true);
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.addEventListener('load', assignUser_updateHtml);
