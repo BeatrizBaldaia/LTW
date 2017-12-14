@@ -317,11 +317,11 @@ INSERT INTO countries (name) VALUES ('Zambia');
 INSERT INTO countries (name) VALUES ('Zimbabwe');
 
 
-INSERT INTO users (username, password, name, email, country) VALUES ('jamie_the_cooker', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'James Trevor Oliver', 'jamie_oliver@gmail.com', 'United Kingdom');
-INSERT INTO users (username, password, name, email, country) VALUES ('santa', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Saint Nicholas', 'santa_claus@gmail.com', 'Nepal');
-INSERT INTO users (username, password, name, email, country) VALUES ('beatriz', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Beatriz Baldaia', 'up201505633@fe.up.pt', 'Portugal');
-INSERT INTO users (username, password, name, email, country) VALUES ('anabela', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Anabela Silva', 'up201506034@fe.up.pt', 'Portugal');
-INSERT INTO users (username, password, name, email, country) VALUES ('esteves', '$2y$10$ZQ6ykVkVrl7mjKMF8lN0OeRBRVGNd/5vw4YxD9TzAcxvyMxxc79Hq', 'Joao Esteves', 'up201505145@fe.up.pt', 'Portugal');
+INSERT INTO users (username, password, name, email, country) VALUES ('jamie_the_cooker', '$2y$10$WXU6LdQ2weSYsHC.CILbAupQlREbxa.eKonXRRHFDVUPJUSPxbrZC', 'James Trevor Oliver', 'jamie_oliver@gmail.com', 'United Kingdom');
+INSERT INTO users (username, password, name, email, country) VALUES ('santa', '$2y$10$f483vsuvZ47IAEGXxMeVIeGpbhABGRkcD3gl07c08Gu11xsVfEQXO', 'Saint Nicholas', 'santa_claus@gmail.com', 'Nepal');
+INSERT INTO users (username, password, name, email, country) VALUES ('beatriz', '$2y$10$JP8B9gyXxoVRS1HrgbIR1eNN/WCtyYof34tAIN1H5dFyCpcgRPbRO', 'Beatriz Baldaia', 'up201505633@fe.up.pt', 'Portugal');
+INSERT INTO users (username, password, name, email, country) VALUES ('anabela', '$2y$10$qfdrwsAp0Vi1HuDsMdau5eMheIkRwJZmqQ7DHsyZrw/d1fhmc1ToS', 'Anabela Silva', 'up201506034@fe.up.pt', 'Portugal');
+INSERT INTO users (username, password, name, email, country) VALUES ('esteves', '$2y$10$Dj/Gw8GN2AuXIphkoB3RzO5mMAJGbvi2WhXNerkMVCr3N4WhFiw0u', 'Joao Esteves', 'up201505145@fe.up.pt', 'Portugal');
 
 insert into categories (id, name, fullName) values (1, 'pink', 'Spring Day');
 insert into categories (id, name, fullName) values (2, 'white', "It's cold outside");
